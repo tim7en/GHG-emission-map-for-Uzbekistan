@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Data files (large)
+*.h5
+*.hdf5
+*.nc
+*.tiff
+*.tif
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Google Earth Engine
+.earthengine/
+ee_credentials.json
+
+# Analysis outputs (keep structure but ignore large outputs)
+outputs/*/data/
+outputs/*/*.tiff
+outputs/*/*.h5

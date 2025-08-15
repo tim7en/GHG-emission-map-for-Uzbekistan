@@ -50,6 +50,10 @@
   ],
   "paths": {
     "data": "data",
+    "ipcc_2022_data": "data/ipcc_2022_data",
+    "raw": "data/raw",
+    "processed": "data/processed",
+    "validation": "data/validation",
     "outputs": "outputs",
     "figs": "figs", 
     "reports": "reports"
