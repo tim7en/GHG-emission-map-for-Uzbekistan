@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ba71bae6843678d5e82d7fd13effd1c6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+                <h3 align="center" style="font-size:16px"><b>Carbon Monoxide Concentrations - 2024</b></h3>
+                
+    
+            <div class="folium-map" id="map_ba71bae6843678d5e82d7fd13effd1c6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ba71bae6843678d5e82d7fd13effd1c6 = L.map(
+                "map_ba71bae6843678d5e82d7fd13effd1c6",
+                {
+                    center: [41.0, 64.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_90e83160e49850233384f391489b7c4b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_90e83160e49850233384f391489b7c4b.addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+            var circle_marker_2153c0983df946b0cf6ef2d150045206 = L.circleMarker(
+                [41.2995, 69.2401],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#df412f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 135.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_7a935e7b6bc4bf972d367957cdd16db6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c35ec01180b6c93ee9e7c6ca9c6de6b = $(`<div id="html_5c35ec01180b6c93ee9e7c6ca9c6de6b" style="width: 100.0%; height: 100.0%;">                         <b>Tashkent</b><br>                         Carbon Monoxide: 3.55e-02 mol/m²<br>                         Population: 2,500,000<br>                         Type: Capital<br>                         Region: Tashkent                         </div>`)[0];
+                popup_7a935e7b6bc4bf972d367957cdd16db6.setContent(html_5c35ec01180b6c93ee9e7c6ca9c6de6b);
+            
+        
+
+        circle_marker_2153c0983df946b0cf6ef2d150045206.bindPopup(popup_7a935e7b6bc4bf972d367957cdd16db6)
+        ;
+
+        
+    
+    
+            var circle_marker_cf22618d3625d2284208ef078e3de19f = L.circleMarker(
+                [39.627, 66.9597],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_db9f00045c0608bfcba1f3d6f13c7b4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1322f853124456f7e9c5d4820373776b = $(`<div id="html_1322f853124456f7e9c5d4820373776b" style="width: 100.0%; height: 100.0%;">                         <b>Samarkand</b><br>                         Carbon Monoxide: 3.22e-02 mol/m²<br>                         Population: 520,000<br>                         Type: Historic<br>                         Region: Samarkand                         </div>`)[0];
+                popup_db9f00045c0608bfcba1f3d6f13c7b4d.setContent(html_1322f853124456f7e9c5d4820373776b);
+            
+        
+
+        circle_marker_cf22618d3625d2284208ef078e3de19f.bindPopup(popup_db9f00045c0608bfcba1f3d6f13c7b4d)
+        ;
+
+        
+    
+    
+            var circle_marker_1fa15d325811da1130a29546db790f50 = L.circleMarker(
+                [40.9983, 71.6726],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e65035", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_f9805eee9905ca38980e76d288d0bf93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7137cd39fb4de52d4e6512a91be10ebb = $(`<div id="html_7137cd39fb4de52d4e6512a91be10ebb" style="width: 100.0%; height: 100.0%;">                         <b>Namangan</b><br>                         Carbon Monoxide: 3.54e-02 mol/m²<br>                         Population: 480,000<br>                         Type: Industrial<br>                         Region: Fergana Valley                         </div>`)[0];
+                popup_f9805eee9905ca38980e76d288d0bf93.setContent(html_7137cd39fb4de52d4e6512a91be10ebb);
+            
+        
+
+        circle_marker_1fa15d325811da1130a29546db790f50.bindPopup(popup_f9805eee9905ca38980e76d288d0bf93)
+        ;
+
+        
+    
+    
+            var circle_marker_020583e46e1b32a420ecd850238acf7a = L.circleMarker(
+                [40.7821, 72.3442],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b20d26", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.5, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_a320907cc7ae5d8361f89da909ff309c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69808dc21d5621ca650bd959e4b513cf = $(`<div id="html_69808dc21d5621ca650bd959e4b513cf" style="width: 100.0%; height: 100.0%;">                         <b>Andijan</b><br>                         Carbon Monoxide: 3.59e-02 mol/m²<br>                         Population: 450,000<br>                         Type: Industrial<br>                         Region: Fergana Valley                         </div>`)[0];
+                popup_a320907cc7ae5d8361f89da909ff309c.setContent(html_69808dc21d5621ca650bd959e4b513cf);
+            
+        
+
+        circle_marker_020583e46e1b32a420ecd850238acf7a.bindPopup(popup_a320907cc7ae5d8361f89da909ff309c)
+        ;
+
+        
+    
+    
+            var circle_marker_efd7787215bf30195154d667e95d53cf = L.circleMarker(
+                [39.7747, 64.4207],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b1dd71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_e09be23f6d8f34abaa662b8e437e3d4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1479cd6ff23708262c8e239800ed013c = $(`<div id="html_1479cd6ff23708262c8e239800ed013c" style="width: 100.0%; height: 100.0%;">                         <b>Bukhara</b><br>                         Carbon Monoxide: 3.34e-02 mol/m²<br>                         Population: 280,000<br>                         Type: Historic<br>                         Region: Central                         </div>`)[0];
+                popup_e09be23f6d8f34abaa662b8e437e3d4c.setContent(html_1479cd6ff23708262c8e239800ed013c);
+            
+        
+
+        circle_marker_efd7787215bf30195154d667e95d53cf.bindPopup(popup_e09be23f6d8f34abaa662b8e437e3d4c)
+        ;
+
+        
+    
+    
+            var circle_marker_1aafc1c9aff598f190914a269b37fc61 = L.circleMarker(
+                [42.4531, 59.6103],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c9e880", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_3aa20312659ee4c8a6f76d5f970ea313 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5486401a28fee6584162be7615c830d = $(`<div id="html_f5486401a28fee6584162be7615c830d" style="width: 100.0%; height: 100.0%;">                         <b>Nukus</b><br>                         Carbon Monoxide: 3.36e-02 mol/m²<br>                         Population: 260,000<br>                         Type: Regional<br>                         Region: Karakalpakstan                         </div>`)[0];
+                popup_3aa20312659ee4c8a6f76d5f970ea313.setContent(html_f5486401a28fee6584162be7615c830d);
+            
+        
+
+        circle_marker_1aafc1c9aff598f190914a269b37fc61.bindPopup(popup_3aa20312659ee4c8a6f76d5f970ea313)
+        ;
+
+        
+    
+    
+            var circle_marker_9838c55fc3c0d29253ad5876528ea948 = L.circleMarker(
+                [38.8569, 65.7887],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#86cb66", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_97305d3ca792e5cdf52153bbf1a58ba3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afc0f2d55161d3a17ebcc3e6721122a2 = $(`<div id="html_afc0f2d55161d3a17ebcc3e6721122a2" style="width: 100.0%; height: 100.0%;">                         <b>Qarshi</b><br>                         Carbon Monoxide: 3.31e-02 mol/m²<br>                         Population: 240,000<br>                         Type: Regional<br>                         Region: Kashkadarya                         </div>`)[0];
+                popup_97305d3ca792e5cdf52153bbf1a58ba3.setContent(html_afc0f2d55161d3a17ebcc3e6721122a2);
+            
+        
+
+        circle_marker_9838c55fc3c0d29253ad5876528ea948.bindPopup(popup_97305d3ca792e5cdf52153bbf1a58ba3)
+        ;
+
+        
+    
+    
+            var circle_marker_b2c3b9c26729079bd981f0faf7f6e7dc = L.circleMarker(
+                [40.5258, 70.9428],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.5, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_a272cc663920a733dcd4bde7342903ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_579fb29dfe90772ab6ab8c68b1a94dd5 = $(`<div id="html_579fb29dfe90772ab6ab8c68b1a94dd5" style="width: 100.0%; height: 100.0%;">                         <b>Kokand</b><br>                         Carbon Monoxide: 3.60e-02 mol/m²<br>                         Population: 230,000<br>                         Type: Historic<br>                         Region: Fergana Valley                         </div>`)[0];
+                popup_a272cc663920a733dcd4bde7342903ca.setContent(html_579fb29dfe90772ab6ab8c68b1a94dd5);
+            
+        
+
+        circle_marker_b2c3b9c26729079bd981f0faf7f6e7dc.bindPopup(popup_a272cc663920a733dcd4bde7342903ca)
+        ;
+
+        
+    
+    
+            var circle_marker_ee29cbbb5857b33132534abaa104cbaa = L.circleMarker(
+                [41.55, 60.6348],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f6fbb3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.5, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_7a2b3e783f1becac031f7226339a8b03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc93144aa42b13dce29dd296674d7bd5 = $(`<div id="html_fc93144aa42b13dce29dd296674d7bd5" style="width: 100.0%; height: 100.0%;">                         <b>Urgench</b><br>                         Carbon Monoxide: 3.40e-02 mol/m²<br>                         Population: 150,000<br>                         Type: Regional<br>                         Region: Khorezm                         </div>`)[0];
+                popup_7a2b3e783f1becac031f7226339a8b03.setContent(html_fc93144aa42b13dce29dd296674d7bd5);
+            
+        
+
+        circle_marker_ee29cbbb5857b33132534abaa104cbaa.bindPopup(popup_7a2b3e783f1becac031f7226339a8b03)
+        ;
+
+        
+    
+    
+            var circle_marker_b44316513154db44df6a36980279e824 = L.circleMarker(
+                [40.4731, 71.7246],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de3f2e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 2}
+            ).addTo(map_ba71bae6843678d5e82d7fd13effd1c6);
+        
+    
+        var popup_3cc8e105b8ba1e9861a7e9eaa9952af2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b596261b5cb63aaa8d48972b03e5097b = $(`<div id="html_b596261b5cb63aaa8d48972b03e5097b" style="width: 100.0%; height: 100.0%;">                         <b>Margilan</b><br>                         Carbon Monoxide: 3.55e-02 mol/m²<br>                         Population: 140,000<br>                         Type: Industrial<br>                         Region: Fergana Valley                         </div>`)[0];
+                popup_3cc8e105b8ba1e9861a7e9eaa9952af2.setContent(html_b596261b5cb63aaa8d48972b03e5097b);
+            
+        
+
+        circle_marker_b44316513154db44df6a36980279e824.bindPopup(popup_3cc8e105b8ba1e9861a7e9eaa9952af2)
+        ;
+
+        
+    
+</script>
+</html>
