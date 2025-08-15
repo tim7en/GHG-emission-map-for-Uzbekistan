@@ -1,0 +1,36 @@
+{
+  "NO2_vs_CO2": {
+    "satellite_mean": 9.6e-05,
+    "satellite_std": 9.2e-05,
+    "satellite_cv_percent": 95.83333333333333,
+    "measurement_count": "120",
+    "emission_total_gg": 130075.385,
+    "emission_intensity": 0.29073622038444347,
+    "sat_emission_ratio": 7.380335641520492e-10
+  },
+  "CO_vs_CO2": {
+    "satellite_mean": 0.031877,
+    "satellite_std": 0.004027,
+    "satellite_cv_percent": 12.632932835586786,
+    "measurement_count": "120",
+    "emission_total_gg": 130075.385,
+    "emission_intensity": 0.29073622038444347,
+    "sat_emission_ratio": 2.450655825466133e-07
+  },
+  "CH4_vs_CH4": {
+    "satellite_mean": 1911.353304,
+    "satellite_std": 13.719605,
+    "satellite_cv_percent": 0.7177953427703913,
+    "measurement_count": "75",
+    "emission_total_gg": 59080.349,
+    "emission_intensity": 0.13205263522574878,
+    "sat_emission_ratio": 0.032351760549010976
+  },
+  "sectoral_analysis": {
+    "transport_co2_gg": 16015.623,
+    "energy_co2_gg": 98153.94300000001,
+    "agriculture_ch4_gg": 25299.117,
+    "total_co2_gg": 130075.385,
+    "total_ch4_gg": 59080.349
+  }
+}

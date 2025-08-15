@@ -1,0 +1,38 @@
+{
+  "NO2": {
+    "slope_per_year": 3.50188495657283e-06,
+    "r_squared": 0.03327858444958298,
+    "p_value": 0.11723606870761283,
+    "is_significant": "False",
+    "relative_trend_percent_per_year": 4.12695745207021,
+    "trend_direction": "increasing",
+    "data_points": 75,
+    "time_span_years": 6.166666666666515,
+    "baseline_concentration": 8.485391471182181e-05,
+    "related_inventory_emissions": 130075.385
+  },
+  "CO": {
+    "slope_per_year": 5.460680128464719e-05,
+    "r_squared": 0.001222208685744297,
+    "p_value": 0.7674526396091328,
+    "is_significant": "False",
+    "relative_trend_percent_per_year": 0.1623621473069778,
+    "trend_direction": "increasing",
+    "data_points": 74,
+    "time_span_years": 6.0833333333332575,
+    "baseline_concentration": 0.03363271685573499,
+    "related_inventory_emissions": 130075.385
+  },
+  "CH4": {
+    "slope_per_year": 9.16241866875152,
+    "r_squared": 0.6230614006149461,
+    "p_value": 1.509903313490213e-14,
+    "is_significant": "True",
+    "relative_trend_percent_per_year": 0.4809789285536211,
+    "trend_direction": "increasing",
+    "data_points": 63,
+    "time_span_years": 5.75,
+    "baseline_concentration": 1904.952197449553,
+    "related_inventory_emissions": 59080.349
+  }
+}

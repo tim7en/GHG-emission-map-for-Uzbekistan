@@ -1,0 +1,98 @@
+{
+  "satellite": {
+    "NO2": {
+      "temporal_cv_percent": 44.62485008586067,
+      "spatial_cv_percent": 75.42218328408424,
+      "interannual_cv_percent": 13.605557644570604,
+      "total_measurements": 750,
+      "cities_covered": 10,
+      "years_covered": 7
+    },
+    "CO": {
+      "temporal_cv_percent": 9.252514898722776,
+      "spatial_cv_percent": 4.915229436712129,
+      "interannual_cv_percent": 3.4728703161179797,
+      "total_measurements": 740,
+      "cities_covered": 10,
+      "years_covered": 7
+    },
+    "CH4": {
+      "temporal_cv_percent": 0.9657153635731682,
+      "spatial_cv_percent": 0.31577323200898466,
+      "interannual_cv_percent": 0.8356505865143979,
+      "total_measurements": 380,
+      "cities_covered": 10,
+      "years_covered": 7
+    }
+  },
+  "inventory": {
+    "CH4": {
+      "weighted_uncertainty_percent": 8.411613983526061,
+      "total_emissions_gg": 59080.349,
+      "sector_count": 6,
+      "uncertainty_range": {
+        "min": 0.9,
+        "max": 11.1,
+        "mean": 4.683333333333334
+      },
+      "sector_contributions": {
+        "Agriculture": {
+          "emissions_2022_co2_eq": 25299.117,
+          "uncertainty_percent": 6.0
+        },
+        "Energy": {
+          "emissions_2022_co2_eq": 24072.943,
+          "uncertainty_percent": 5.75
+        },
+        "Waste": {
+          "emissions_2022_co2_eq": 9708.289,
+          "uncertainty_percent": 2.3
+        }
+      }
+    },
+    "CO2": {
+      "weighted_uncertainty_percent": 8.824614011328894,
+      "total_emissions_gg": 130075.385,
+      "sector_count": 13,
+      "uncertainty_range": {
+        "min": 0.5,
+        "max": 14.5,
+        "mean": 4.76923076923077
+      },
+      "sector_contributions": {
+        "Energy": {
+          "emissions_2022_co2_eq": 74081.0,
+          "uncertainty_percent": 7.08
+        },
+        "Industry": {
+          "emissions_2022_co2_eq": 39978.762,
+          "uncertainty_percent": 3.1666666666666665
+        },
+        "Transport": {
+          "emissions_2022_co2_eq": 16015.623,
+          "uncertainty_percent": 3.8
+        }
+      }
+    },
+    "N2O": {
+      "weighted_uncertainty_percent": 1.7996713206376083,
+      "total_emissions_gg": 10991.259,
+      "sector_count": 4,
+      "uncertainty_range": {
+        "min": 0.8,
+        "max": 2.7,
+        "mean": 1.325
+      },
+      "sector_contributions": {
+        "Agriculture": {
+          "emissions_2022_co2_eq": 9331.83,
+          "uncertainty_percent": 1.5
+        },
+        "Industry": {
+          "emissions_2022_co2_eq": 1659.429,
+          "uncertainty_percent": 0.8
+        }
+      }
+    }
+  }
+}

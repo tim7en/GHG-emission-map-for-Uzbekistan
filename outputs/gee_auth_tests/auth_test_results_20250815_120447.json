@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-08-15T12:04:36.767320",
+  "project_id": "ee-sabitovty",
+  "tests": {
+    "authentication": {
+      "status": "passed",
+      "method": "user_token",
+      "project": "ee-sabitovty"
+    },
+    "basic_api": {
+      "status": "failed",
+      "error": "type object 'Date' has no attribute 'now'"
+    },
+    "data_access": {
+      "NO2": {
+        "status": "available",
+        "image_count": 10,
+        "bands": [
+          "NO2_column_number_density",
+          "tropospheric_NO2_column_number_density",
+          "stratospheric_NO2_column_number_density",
+          "NO2_slant_column_number_density",
+          "tropopause_pressure",
+          "absorbing_aerosol_index",
+          "cloud_fraction",
+          "sensor_altitude",
+          "sensor_azimuth_angle",
+          "sensor_zenith_angle"
+        ]
+      },
+      "CO": {
+        "status": "available",
+        "image_count": 10,
+        "bands": [
+          "CO_column_number_density",
+          "H2O_column_number_density",
+          "cloud_height",
+          "sensor_altitude",
+          "sensor_azimuth_angle",
+          "sensor_zenith_angle",
+          "solar_azimuth_angle",
+          "solar_zenith_angle"
+        ]
+      },
+      "CH4": {
+        "status": "available",
+        "image_count": 10,
+        "bands": [
+          "CH4_column_volume_mixing_ratio_dry_air",
+          "aerosol_height",
+          "aerosol_optical_depth",
+          "sensor_azimuth_angle",
+          "sensor_zenith_angle",
+          "solar_azimuth_angle",
+          "solar_zenith_angle",
+          "CH4_column_volume_mixing_ratio_dry_air_bias_corrected",
+          "CH4_column_volume_mixing_ratio_dry_air_uncertainty"
+        ]
+      },
+      "Landsat": {
+        "status": "available",
+        "image_count": 10,
+        "bands": [
+          "SR_B1",
+          "SR_B2",
+          "SR_B3",
+          "SR_B4",
+          "SR_B5",
+          "SR_B6",
+          "SR_B7",
+          "SR_QA_AEROSOL",
+          "ST_B10",
+          "ST_ATRAN"
+        ]
+      }
+    },
+    "computation": {
+      "status": "passed",
+      "computation_time": 2.484593629837036,
+      "images_processed": 412,
+      "sample_features": 1
+    },
+    "project_resources": {
+      "status": "passed",
+      "asset_access": "none_found",
+      "large_collection_size": 417
+    }
+  },
+  "overall": {
+    "status": "good",
+    "success_rate": 60.0,
+    "passed_tests": 3,
+    "total_tests": 5
+  }
+}
