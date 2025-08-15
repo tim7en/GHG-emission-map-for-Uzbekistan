@@ -58,67 +58,67 @@ def test_ipcc_data_loading():
         print(f"TEST FAILED: Missing columns: {missing_cols}")
         return False
     
-    print("SUCCESS: All required columns present")
+    print("OK - All required columns present")
     
     # Data summary
     print("\n4. Data Summary:")
-    print(f"   CHART: Total records: {len(ipcc_data)}")
-    print(f"   FACTORY: Categories: {ipcc_data['IPCC Category'].nunique()}")
-    print(f"   EMISSION: Gases: {ipcc_data['Greenhouse gas'].value_counts().to_dict()}")
+    print(f"   Total records: {len(ipcc_data)}")
+    print(f"   Total columns: {len(ipcc_data.columns)}")
     
-    if 'emissions_2022_gg_co2eq' in ipcc_data.columns:
-        total_emissions = ipcc_data['emissions_2022_gg_co2eq'].sum()
-        print(f"   EARTH: Total emissions: {total_emissions:.1f} Gg CO2-eq")
+    # Check for emissions data
+    emission_cols = [col for col in ipcc_data.columns if 'emission' in col.lower() or 'co2' in col.lower()]
+    if emission_cols:
+        print(f"   Emission columns found: {emission_cols}")
+        for col in emission_cols:
+            if pd.api.types.is_numeric_dtype(ipcc_data[col]):
+                total = ipcc_data[col].sum()
+                print(f"   Total {col}: {total:.1f}")
     
-    # Show top emission sources
-    print("\n5. Top 5 Emission Sources:")
-    if 'emissions_2022_gg_co2eq' in ipcc_data.columns:
-        top_sources = ipcc_data.nlargest(5, 'emissions_2022_gg_co2eq')[
-            ['IPCC Category', 'Greenhouse gas', 'emissions_2022_gg_co2eq']
-        ]
-        for idx, row in top_sources.iterrows():
-            print(f"   {row['IPCC Category'][:50]:<50} | {row['Greenhouse gas']:<4} | {row['emissions_2022_gg_co2eq']:>8.1f}")
+    # Gas types
+    if 'Greenhouse gas' in ipcc_data.columns:
+        gas_types = ipcc_data['Greenhouse gas'].unique()
+        print(f"   Gas types: {list(gas_types)}")
     
-    print("\nSUCCESS: TEST PASSED: IPCC data loaded and validated successfully!")
+    print("\nTEST PASSED: IPCC data loaded and validated successfully!")
     return True
 
 
 def test_data_quality():
-    """Test data quality checks"""
-    print("\nSEARCH: SMALL SCALE TEST: Data Quality Validation")
+    """Test data quality"""
+    print("\nSMALL SCALE TEST: Data Quality")
     print("=" * 50)
     
     loader = RealDataLoader()
     ipcc_data = loader.load_ipcc_2022_data()
     
-    if len(ipcc_data) == 0:
+    if ipcc_data is None or len(ipcc_data) == 0:
         print("ERROR: No data to validate")
         return False
     
     # Check for missing values
     print("\n1. Checking for Missing Values:")
-    missing_counts = ipcc_data.isnull().sum()
-    if missing_counts.sum() > 0:
-        print("WARNING:  Found missing values:")
-        for col, count in missing_counts[missing_counts > 0].items():
-            print(f"   {col}: {count} missing")
-    else:
-        print("SUCCESS: No missing values found")
+    missing_count = ipcc_data.isnull().sum().sum()
+    print(f"   Total missing values: {missing_count}")
     
-    # Check data types
+    if missing_count == 0:
+        print("OK - No missing values found")
+    
+    # Data types
     print("\n2. Checking Data Types:")
-    for col, dtype in ipcc_data.dtypes.items():
-        print(f"   {col}: {dtype}")
+    print(f"   Data types summary:")
+    for dtype in ipcc_data.dtypes.unique():
+        count = (ipcc_data.dtypes == dtype).sum()
+        print(f"   {dtype}: {count} columns")
     
     # Check for duplicates
     print("\n3. Checking for Duplicates:")
-    duplicates = ipcc_data.duplicated().sum()
-    if duplicates > 0:
-        print(f"WARNING:  Found {duplicates} duplicate rows")
-    else:
-        print("SUCCESS: No duplicate rows found")
+    duplicate_count = ipcc_data.duplicated().sum()
+    print(f"   Duplicate rows: {duplicate_count}")
     
-    print("\nSUCCESS: Data quality validation completed!")
+    if duplicate_count == 0:
+        print("OK - No duplicate rows found")
+    
+    print("\nOK - Data quality validation completed!")
     return True
 
 

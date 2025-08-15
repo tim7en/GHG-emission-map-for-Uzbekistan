@@ -4,7 +4,7 @@ A comprehensive atmospheric concentration analysis system using **real satellite
 
 ![Atmospheric Analysis](https://img.shields.io/badge/Analysis-Atmospheric%20Data-green) ![Resolution](https://img.shields.io/badge/Resolution-1km-blue) ![Status](https://img.shields.io/badge/Status-Operational-brightgreen) ![Data](https://img.shields.io/badge/Data-Real%20Satellite-orange)
 
-## 🎯 Objectives
+## TARGET: Objectives
 
 - **Real Satellite Data**: Use actual Sentinel-5P atmospheric concentration measurements
 - **High-Resolution Analysis**: 1km spatial resolution atmospheric mapping
@@ -39,7 +39,7 @@ ghg_emissions_uzb/
 └── README.md                      # This file
 ```
 
-## 🚀 Quick Start
+## STARTING: Quick Start
 
 ### 1. Setup Environment
 
@@ -84,7 +84,7 @@ python high_resolution_analysis.py
 python server_side_analysis.py
 ```
 
-## 📊 Features
+## CHART: Features
 
 ### Real Satellite Data Sources
 
@@ -129,16 +129,16 @@ python server_side_analysis.py
    - Methodology documentation
    - Quality control results
 
-## 📈 Latest Results (August 2025)
+## TRENDING: Latest Results (August 2025)
 
 ### High-Resolution Analysis Results
 
 **10 Cities Analyzed at 1km Resolution**:
-- **Tashkent**: NO₂: 1.52e-04 ± 1.43e-05 mol/m² (highest pollution)
-- **Samarkand**: NO₂: 7.45e-05 ± 2.84e-06 mol/m²
-- **Namangan**: NO₂: 6.32e-05 ± 8.25e-06 mol/m²
-- **Andijan**: NO₂: 6.57e-05 ± 5.05e-06 mol/m²
-- **Nukus**: NO₂: 2.81e-05 ± 5.26e-07 mol/m² (lowest pollution)
+- **Tashkent**: NO₂: 1.52e-04 +/- 1.43e-05 mol/m^2 (highest pollution)
+- **Samarkand**: NO₂: 7.45e-05 +/- 2.84e-06 mol/m^2
+- **Namangan**: NO₂: 6.32e-05 +/- 8.25e-06 mol/m^2
+- **Andijan**: NO₂: 6.57e-05 +/- 5.05e-06 mol/m^2
+- **Nukus**: NO₂: 2.81e-05 +/- 5.26e-07 mol/m^2 (lowest pollution)
 
 **Processing Statistics**:
 - **Satellite Images Processed**: 3,852 images (1,284 per gas)
@@ -194,7 +194,7 @@ Edit `config_ghg.json` to customize:
 - **Model parameters**: ML algorithm settings
 - **Output options**: Visualization and reporting preferences
 
-## 📈 Methodology
+## TRENDING: Methodology
 
 ### 1. Satellite Data Collection
 - **Sentinel-5P**: Real-time atmospheric concentration retrieval
@@ -221,7 +221,7 @@ Edit `config_ghg.json` to customize:
 - **Validation**: Cross-checks between multiple gas species
 
 ### 4. Validation and Analysis
-- Model performance assessment (R², RMSE, MAE)
+- Model performance assessment (R^2, RMSE, MAE)
 - Spatial pattern analysis
 - Regional emissions aggregation
 - Hotspot identification
@@ -240,7 +240,7 @@ Edit `config_ghg.json` to customize:
 - **Temporal Trends**: Year-to-year changes (if multi-year data available)
 - **Technical Report**: Complete methodology and findings
 
-## 🔧 Technical Requirements
+## SETTINGS: Technical Requirements
 
 ### Google Earth Engine Setup
 ```bash
@@ -336,12 +336,12 @@ python test_server_analysis.py  # 3 cities only
 - **Better Quality**: Decrease spatial resolution, more training data
 - **Memory Efficiency**: Process regions separately, reduce grid density
 
-## 🔬 Scientific Validation
+## MICROSCOPE: Scientific Validation
 
 ### Model Validation
 - **Cross-validation**: 5-fold spatial cross-validation
 - **Test Set**: 20% hold-out for independent validation  
-- **Performance Metrics**: R², RMSE, MAE for emissions prediction
+- **Performance Metrics**: R^2, RMSE, MAE for emissions prediction
 - **Uncertainty**: Prediction intervals and confidence bounds
 
 ### Quality Control

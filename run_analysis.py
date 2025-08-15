@@ -3,7 +3,7 @@
 GHG Emissions Analysis for Uzbekistan - Main Entry Point
 
 This script provides a clear, structured approach to GHG emissions analysis
-following the progressive testing methodology: small → medium → large scale.
+following the progressive testing methodology: small -> medium -> large scale.
 
 Features:
 - No mock data usage (real IPCC 2022 data only)
@@ -30,7 +30,7 @@ import subprocess
 
 def print_banner():
     """Print welcome banner"""
-    print("🌍 GHG EMISSIONS ANALYSIS FOR UZBEKISTAN")
+    print("EARTH: GHG EMISSIONS ANALYSIS FOR UZBEKISTAN")
     print("=" * 50)
     print("Advanced Greenhouse Gas Emissions Downscaling System")
     print("Using Real IPCC 2022 Data + Google Earth Engine")
@@ -40,40 +40,40 @@ def print_banner():
 def print_help():
     """Print detailed help information"""
     help_text = """
-📖 ANALYSIS METHODOLOGY
+BOOK: ANALYSIS METHODOLOGY
 
 This system follows a progressive testing approach to ensure reliability:
 
-🔬 PHASE 1: SMALL SCALE TESTS
-   • Validate IPCC 2022 data loading
-   • Check data quality and completeness  
-   • Verify system configuration
+MICROSCOPE: PHASE 1: SMALL SCALE TESTS
+   * Validate IPCC 2022 data loading
+   * Check data quality and completeness  
+   * Verify system configuration
    Duration: ~30 seconds
 
-🏙️  PHASE 2: MEDIUM SCALE TESTS  
-   • Pilot region analysis (Tashkent area, 100km²)
-   • Spatial grid generation and validation
-   • Emission estimation with mass balance
+CITY:  PHASE 2: MEDIUM SCALE TESTS  
+   * Pilot region analysis (Tashkent area, 100km^2)
+   * Spatial grid generation and validation
+   * Emission estimation with mass balance
    Duration: ~2 minutes
 
-🗺️  PHASE 3: LARGE SCALE TESTS
-   • Full country data loading and validation
-   • National spatial coverage assessment
-   • Performance and scalability testing  
+MAP:  PHASE 3: LARGE SCALE TESTS
+   * Full country data loading and validation
+   * National spatial coverage assessment
+   * Performance and scalability testing  
    Duration: ~5 minutes
 
-🚀 PHASE 4: PRODUCTION ANALYSIS
-   • Complete Uzbekistan emissions mapping
-   • High-resolution spatial downscaling
-   • Comprehensive reports and visualizations
+STARTING: PHASE 4: PRODUCTION ANALYSIS
+   * Complete Uzbekistan emissions mapping
+   * High-resolution spatial downscaling
+   * Comprehensive reports and visualizations
    Duration: 10-30 minutes
 
-📊 DATA SOURCES (NO MOCK DATA)
-   • IPCC 2022 National Inventory (Primary)
-   • Google Earth Engine satellite data (Optional)
-   • Real geospatial auxiliary data only
+CHART: DATA SOURCES (NO MOCK DATA)
+   * IPCC 2022 National Inventory (Primary)
+   * Google Earth Engine satellite data (Optional)
+   * Real geospatial auxiliary data only
 
-📁 FOLDER STRUCTURE
+FOLDER: FOLDER STRUCTURE
    data/
    ├── ipcc_2022_data/     # IPCC 2022 emissions data
    ├── raw/                # Raw datasets  
@@ -90,7 +90,7 @@ This system follows a progressive testing approach to ensure reliability:
    configs/              # Configuration files
    outputs/              # Analysis results
 
-🔧 COMMANDS
+SETTINGS: COMMANDS
    
    python run_analysis.py
    # Interactive menu for guided analysis
@@ -110,18 +110,18 @@ This system follows a progressive testing approach to ensure reliability:
    python run_analysis.py --help
    # Show this help information
 
-⚠️  REQUIREMENTS
-   • Python 3.8+
-   • Required packages: pip install -r requirements.txt
-   • IPCC 2022 data files in data/ipcc_2022_data/
-   • (Optional) Google Earth Engine authentication
+WARNING:  REQUIREMENTS
+   * Python 3.8+
+   * Required packages: pip install -r requirements.txt
+   * IPCC 2022 data files in data/ipcc_2022_data/
+   * (Optional) Google Earth Engine authentication
 
-✅ VALIDATION
+SUCCESS: VALIDATION
    Each phase includes comprehensive validation:
-   • Data loading and quality checks
-   • Mass balance conservation
-   • Performance benchmarking
-   • Result verification
+   * Data loading and quality checks
+   * Mass balance conservation
+   * Performance benchmarking
+   * Result verification
 """
     print(help_text)
 
@@ -134,7 +134,7 @@ def run_tests(scale):
     test_file = f"tests/test_{scale}_scale.py"
     
     if not Path(test_file).exists():
-        print(f"❌ Test file not found: {test_file}")
+        print(f"ERROR: Test file not found: {test_file}")
         return False
     
     try:
@@ -148,24 +148,24 @@ def run_tests(scale):
         
         # Check if tests passed
         if result.returncode == 0:
-            print(f"\n✅ {scale.upper()} SCALE TESTS PASSED!")
+            print(f"\nSUCCESS: {scale.upper()} SCALE TESTS PASSED!")
             return True
         else:
-            print(f"\n❌ {scale.upper()} SCALE TESTS FAILED!")
+            print(f"\nERROR: {scale.upper()} SCALE TESTS FAILED!")
             return False
             
     except Exception as e:
-        print(f"❌ Error running tests: {e}")
+        print(f"ERROR: Error running tests: {e}")
         return False
 
 
 def run_full_analysis():
     """Run full country analysis"""
-    print("\n🚀 Starting Full Country Analysis")
+    print("\nSTARTING: Starting Full Country Analysis")
     print("=" * 40)
     
     # Check if all tests have been run successfully
-    print("1️⃣ Verifying Prerequisites...")
+    print("1. Verifying Prerequisites...")
     
     # Run prerequisite tests quickly
     prereq_tests = ['small', 'medium', 'large']
@@ -174,20 +174,20 @@ def run_full_analysis():
     for test_scale in prereq_tests:
         print(f"   Checking {test_scale} scale prerequisites...")
         if not run_tests(test_scale):
-            print(f"   ❌ {test_scale} scale tests failed")
+            print(f"   ERROR: {test_scale} scale tests failed")
             all_passed = False
             break
         else:
-            print(f"   ✅ {test_scale} scale tests passed")
+            print(f"   SUCCESS: {test_scale} scale tests passed")
     
     if not all_passed:
-        print("\n❌ Prerequisites not met. Please run and fix tests first:")
+        print("\nERROR: Prerequisites not met. Please run and fix tests first:")
         print("   python run_analysis.py --test small")
         print("   python run_analysis.py --test medium") 
         print("   python run_analysis.py --test large")
         return False
     
-    print("\n2️⃣ Starting Full Analysis...")
+    print("\n2. Starting Full Analysis...")
     
     # Import and run the main analysis
     try:
@@ -198,34 +198,34 @@ def run_full_analysis():
         # Initialize analysis
         loader = RealDataLoader()
         
-        print("\n📊 Loading National Emissions Data...")
+        print("\nCHART: Loading National Emissions Data...")
         all_data = loader.get_all_available_data()
         
         if len(all_data) == 0:
-            print("❌ No data available for analysis")
+            print("ERROR: No data available for analysis")
             return False
         
-        print(f"✅ Loaded {len(all_data)} data sources")
+        print(f"SUCCESS: Loaded {len(all_data)} data sources")
         
         # For now, just validate the data loading
         # Full analysis implementation would go here
         for source, data in all_data.items():
             print(f"   {source}: {len(data)} records")
         
-        print("\n✅ Full Country Analysis Framework Ready!")
+        print("\nSUCCESS: Full Country Analysis Framework Ready!")
         print("   (Complete analysis implementation in progress)")
         
         return True
         
     except Exception as e:
-        print(f"❌ Analysis failed: {e}")
+        print(f"ERROR: Analysis failed: {e}")
         return False
 
 
 def interactive_menu():
     """Show interactive menu for user guidance"""
     while True:
-        print("\n🎯 INTERACTIVE ANALYSIS MENU")
+        print("\nTARGET: INTERACTIVE ANALYSIS MENU")
         print("=" * 40)
         print("1. Run Small Scale Tests (Quick validation)")
         print("2. Run Medium Scale Tests (Pilot region)")  
@@ -260,7 +260,7 @@ def interactive_menu():
                 if input("Run full analysis now? (y/n): ").lower().startswith('y'):
                     run_full_analysis()
             else:
-                print("\n⚠️  Please fix failing tests before proceeding.")
+                print("\nWARNING:  Please fix failing tests before proceeding.")
                 
         elif choice == '6':
             print_help()
@@ -268,7 +268,7 @@ def interactive_menu():
             print("👋 Goodbye!")
             break
         else:
-            print("❌ Invalid choice. Please select 1-7.")
+            print("ERROR: Invalid choice. Please select 1-7.")
 
 
 def main():

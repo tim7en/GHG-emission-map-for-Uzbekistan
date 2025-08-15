@@ -15,7 +15,7 @@ def check_sentinel5p_data():
     
     try:
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Connected to GEE project: ee-sabitovty")
+        print("SUCCESS: Connected to GEE project: ee-sabitovty")
         
         # Test Sentinel-5P datasets (these are more commonly accessible)
         sentinel_datasets = [
@@ -28,7 +28,7 @@ def check_sentinel5p_data():
             'COPERNICUS/S5P/OFFL/L3_CH4'
         ]
         
-        print("\n🌍 Testing Sentinel-5P Atmospheric Data:")
+        print("\nEARTH: Testing Sentinel-5P Atmospheric Data:")
         uzbekistan = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
         
         for dataset in sentinel_datasets:
@@ -41,13 +41,13 @@ def check_sentinel5p_data():
                 if size > 0:
                     first_image = collection.first()
                     bands = first_image.bandNames().getInfo()
-                    print(f"✅ {dataset}")
+                    print(f"SUCCESS: {dataset}")
                     print(f"   Images in 2023: {size}")
                     print(f"   Bands: {bands}")
                 else:
-                    print(f"⚠️  {dataset} - No data for Uzbekistan in 2023")
+                    print(f"WARNING:  {dataset} - No data for Uzbekistan in 2023")
             except Exception as e:
-                print(f"❌ {dataset} - Error: {str(e)[:80]}...")
+                print(f"ERROR: {dataset} - Error: {str(e)[:80]}...")
         
         # Test other atmospheric datasets
         print("\n🌬️  Testing Other Atmospheric Datasets:")
@@ -65,14 +65,14 @@ def check_sentinel5p_data():
                 
                 size = collection.size().getInfo()
                 if size > 0:
-                    print(f"✅ {dataset} - {size} images in Jan 2023")
+                    print(f"SUCCESS: {dataset} - {size} images in Jan 2023")
                 else:
-                    print(f"⚠️  {dataset} - No data")
+                    print(f"WARNING:  {dataset} - No data")
             except Exception as e:
-                print(f"❌ {dataset} - Error: {str(e)[:80]}...")
+                print(f"ERROR: {dataset} - Error: {str(e)[:80]}...")
                 
     except Exception as e:
-        print(f"❌ Dataset check failed: {e}")
+        print(f"ERROR: Dataset check failed: {e}")
 
 if __name__ == "__main__":
     check_sentinel5p_data()

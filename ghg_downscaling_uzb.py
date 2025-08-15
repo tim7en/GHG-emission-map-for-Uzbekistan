@@ -55,30 +55,30 @@ def check_dependencies():
     for package in required_packages:
         try:
             __import__(package)
-            print(f"✅ {package}")
+            print(f"SUCCESS: {package}")
         except ImportError:
             missing_required.append(package)
-            print(f"❌ {package}")
+            print(f"ERROR: {package}")
     
     for package in optional_packages:
         try:
             __import__(package)
-            print(f"✅ {package} (optional)")
+            print(f"SUCCESS: {package} (optional)")
         except ImportError:
             missing_optional.append(package)
-            print(f"⚠️  {package} (optional - simulation mode will be used)")
+            print(f"WARNING:  {package} (optional - simulation mode will be used)")
     
     if missing_required:
-        print(f"\n❌ Missing required packages: {', '.join(missing_required)}")
+        print(f"\nERROR: Missing required packages: {', '.join(missing_required)}")
         print("Please install with: pip install " + " ".join(missing_required))
         return False
     
     if missing_optional:
-        print(f"\n⚠️  Missing optional packages: {', '.join(missing_optional)}")
+        print(f"\nWARNING:  Missing optional packages: {', '.join(missing_optional)}")
         print("For full GEE functionality, install with: pip install earthengine-api geemap")
         print("Analysis will continue in simulation mode.")
     
-    print("\n✅ Dependency check complete")
+    print("\nSUCCESS: Dependency check complete")
     return True
 
 def check_gee_authentication():
@@ -97,57 +97,57 @@ def check_gee_authentication():
                 with open(auth_status_file, 'r') as f:
                     status = json.load(f)
                 if status.get("authenticated", False):
-                    print("✅ Previous authentication detected")
+                    print("SUCCESS: Previous authentication detected")
             except:
                 pass
         
         # Try to initialize
         try:
             ee.Initialize(project='ee-sabitovty')
-            print("✅ Google Earth Engine authentication successful with project ee-sabitovty")
+            print("SUCCESS: Google Earth Engine authentication successful with project ee-sabitovty")
             
             # Test basic functionality
             test_result = ee.Number(2025).getInfo()
-            print(f"✅ GEE connection test successful: {test_result}")
+            print(f"SUCCESS: GEE connection test successful: {test_result}")
             
             return True
             
         except Exception as e:
-            print(f"❌ GEE authentication failed: {e}")
-            print("🔧 To authenticate, run: python gee_auth.py")
+            print(f"ERROR: GEE authentication failed: {e}")
+            print("SETTINGS: To authenticate, run: python gee_auth.py")
             print("   Or the analysis will run in simulation mode")
             return False
             
     except ImportError:
-        print("⚠️  Google Earth Engine API not available")
+        print("WARNING:  Google Earth Engine API not available")
         print("   Analysis will run in simulation mode")
         return False
 
 def show_startup_banner():
     """Display startup banner with project information"""
-    print("🏭" + "=" * 70 + "🌍")
+    print("🏭" + "=" * 70 + "EARTH:")
     print("    GHG EMISSIONS DOWNSCALING ANALYSIS FOR UZBEKISTAN")
     print("    High-Resolution Greenhouse Gas Mapping Using Machine Learning")
     print("=" * 72)
     print()
-    print("🎯 OBJECTIVES:")
-    print("   • Spatial downscaling of GHG emissions (1km → 200m resolution)")
-    print("   • Multi-source data integration (ODIAC, EDGAR, auxiliary data)")
-    print("   • Sector-specific emissions analysis")
-    print("   • Uncertainty quantification and validation")
-    print("   • Comprehensive mapping and reporting")
+    print("TARGET: OBJECTIVES:")
+    print("   * Spatial downscaling of GHG emissions (1km -> 200m resolution)")
+    print("   * Multi-source data integration (ODIAC, EDGAR, auxiliary data)")
+    print("   * Sector-specific emissions analysis")
+    print("   * Uncertainty quantification and validation")
+    print("   * Comprehensive mapping and reporting")
     print()
-    print("📊 OUTPUTS:")
-    print("   • High-resolution emissions maps")
-    print("   • Regional emissions summaries")
-    print("   • Model performance metrics")
-    print("   • Technical analysis report")
+    print("CHART: OUTPUTS:")
+    print("   * High-resolution emissions maps")
+    print("   * Regional emissions summaries")
+    print("   * Model performance metrics")
+    print("   * Technical analysis report")
     print()
-    print("🔬 METHODS:")
-    print("   • Machine learning-based spatial downscaling")
-    print("   • Multi-variate regression with auxiliary predictors")
-    print("   • Cross-validation and uncertainty assessment")
-    print("   • Google Earth Engine integration")
+    print("MICROSCOPE: METHODS:")
+    print("   * Machine learning-based spatial downscaling")
+    print("   * Multi-variate regression with auxiliary predictors")
+    print("   * Cross-validation and uncertainty assessment")
+    print("   * Google Earth Engine integration")
     print()
     print("=" * 72)
 
@@ -166,9 +166,9 @@ def create_project_structure():
     
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
-        print(f"✅ {directory}/")
+        print(f"SUCCESS: {directory}/")
     
-    print("✅ Project structure ready")
+    print("SUCCESS: Project structure ready")
 
 def create_requirements_file():
     """Create requirements.txt file for the project"""
@@ -206,9 +206,9 @@ def show_analysis_options():
     """Show available analysis options to user"""
     print("\n🎛️  Analysis Options")
     print("-" * 25)
-    print("1. 🚀 Run Complete Analysis (Recommended)")
+    print("1. STARTING: Run Complete Analysis (Recommended)")
     print("2. 🔐 Setup/Test GEE Authentication")
-    print("3. 📊 Load and Explore Data Only")
+    print("3. CHART: Load and Explore Data Only")
     print("4. 🤖 Train Models Only")
     print("5. 🗺️  Create Maps Only")
     print("6. ❓ Show Help")
@@ -227,13 +227,13 @@ def run_authentication_setup():
         success = auth_main()
         return success
     except Exception as e:
-        print(f"❌ Authentication setup failed: {e}")
+        print(f"ERROR: Authentication setup failed: {e}")
         print("   You can still run the analysis in simulation mode")
         return False
 
 def run_data_exploration():
     """Run data exploration only"""
-    print("\n📊 Data Exploration Mode")
+    print("\nCHART: Data Exploration Mode")
     print("-" * 30)
     
     try:
@@ -246,11 +246,11 @@ def run_data_exploration():
         downscaler.load_emissions_data()
         downscaler.load_auxiliary_data()
         
-        print("\n✅ Data exploration complete!")
+        print("\nSUCCESS: Data exploration complete!")
         print("   Check data/ directory for loaded datasets")
         
     except Exception as e:
-        print(f"❌ Data exploration failed: {e}")
+        print(f"ERROR: Data exploration failed: {e}")
         import traceback
         traceback.print_exc()
 
@@ -271,11 +271,11 @@ def run_model_training():
         integrated_data = downscaler.prepare_downscaling_dataset()
         downscaler.train_downscaling_models(integrated_data)
         
-        print("\n✅ Model training complete!")
+        print("\nSUCCESS: Model training complete!")
         print("   Check outputs/ directory for model performance metrics")
         
     except Exception as e:
-        print(f"❌ Model training failed: {e}")
+        print(f"ERROR: Model training failed: {e}")
         import traceback
         traceback.print_exc()
 
@@ -288,7 +288,7 @@ def run_mapping_only():
     output_files = list(Path("outputs").glob("downscaled_*_emissions.csv"))
     
     if not output_files:
-        print("❌ No downscaled data found. Run complete analysis first.")
+        print("ERROR: No downscaled data found. Run complete analysis first.")
         return
     
     try:
@@ -307,11 +307,11 @@ def run_mapping_only():
         for gas_type in downscaler.downscaled_data.keys():
             downscaler.create_emissions_maps(gas_type)
         
-        print("\n✅ Mapping complete!")
+        print("\nSUCCESS: Mapping complete!")
         print("   Check figs/ directory for generated maps")
         
     except Exception as e:
-        print(f"❌ Mapping failed: {e}")
+        print(f"ERROR: Mapping failed: {e}")
         import traceback
         traceback.print_exc()
 
@@ -324,38 +324,38 @@ def show_help():
 This tool performs high-resolution spatial downscaling of greenhouse gas 
 emissions for Uzbekistan using machine learning and geospatial data.
 
-🔧 SETUP:
+SETTINGS: SETUP:
 1. Install dependencies: pip install -r requirements.txt
 2. (Optional) Authenticate with Google Earth Engine: python gee_auth.py
 3. Run analysis: python ghg_downscaling_uzb.py
 
-📊 ANALYSIS MODES:
+CHART: ANALYSIS MODES:
 
 1. COMPLETE ANALYSIS (Recommended)
-   • Runs full end-to-end analysis
-   • Loads emissions data, trains models, creates maps
-   • Generates comprehensive report
-   • Duration: 10-30 minutes
+   * Runs full end-to-end analysis
+   * Loads emissions data, trains models, creates maps
+   * Generates comprehensive report
+   * Duration: 10-30 minutes
 
 2. AUTHENTICATION SETUP
-   • Tests/configures Google Earth Engine access
-   • Required for real satellite data
-   • Falls back to simulation mode if unavailable
+   * Tests/configures Google Earth Engine access
+   * Required for real satellite data
+   * Falls back to simulation mode if unavailable
 
 3. DATA EXPLORATION
-   • Loads and examines emissions datasets
-   • No model training or prediction
-   • Quick overview of available data
+   * Loads and examines emissions datasets
+   * No model training or prediction
+   * Quick overview of available data
 
 4. MODEL TRAINING
-   • Trains machine learning models only
-   • Uses loaded emissions and auxiliary data
-   • Generates model performance metrics
+   * Trains machine learning models only
+   * Uses loaded emissions and auxiliary data
+   * Generates model performance metrics
 
 5. MAPPING
-   • Creates visualizations from existing results
-   • Requires previous analysis run
-   • Generates high-quality maps and plots
+   * Creates visualizations from existing results
+   * Requires previous analysis run
+   * Generates high-quality maps and plots
 
 📁 OUTPUT STRUCTURE:
 ├── data/           # Loaded datasets
@@ -365,10 +365,10 @@ emissions for Uzbekistan using machine learning and geospatial data.
 └── src/            # Source code
 
 🔍 TROUBLESHOOTING:
-• Missing packages: pip install -r requirements.txt
-• GEE errors: Run python gee_auth.py for authentication
-• Simulation mode: Analysis works without GEE authentication
-• Memory issues: Reduce target resolution in config
+* Missing packages: pip install -r requirements.txt
+* GEE errors: Run python gee_auth.py for authentication
+* Simulation mode: Analysis works without GEE authentication
+* Memory issues: Reduce target resolution in config
 
 📧 SUPPORT:
 For technical support or questions about the methodology,
@@ -379,7 +379,7 @@ refer to the generated technical report or documentation.
 
 def run_complete_analysis():
     """Run the complete GHG emissions downscaling analysis"""
-    print("\n🚀 Starting Complete Analysis")
+    print("\nSTARTING: Starting Complete Analysis")
     print("-" * 35)
     
     try:
@@ -392,30 +392,30 @@ def run_complete_analysis():
         # Show completion summary
         print("\n🎉 ANALYSIS COMPLETED SUCCESSFULLY! 🎉")
         print("=" * 45)
-        print("📊 Results Summary:")
-        print(f"   • Emissions data processed: {len(downscaler.emissions_data)} sources")
-        print(f"   • Models trained: {len(downscaler.models)} gas types")
-        print(f"   • Maps created: {len(downscaler.downscaled_data)} gas types")
+        print("CHART: Results Summary:")
+        print(f"   * Emissions data processed: {len(downscaler.emissions_data)} sources")
+        print(f"   * Models trained: {len(downscaler.models)} gas types")
+        print(f"   * Maps created: {len(downscaler.downscaled_data)} gas types")
         print()
         print("📁 Output Locations:")
-        print(f"   • Data: {Path('data').absolute()}")
-        print(f"   • Results: {Path('outputs').absolute()}")
-        print(f"   • Maps: {Path('figs').absolute()}")
-        print(f"   • Reports: {Path('reports').absolute()}")
+        print(f"   * Data: {Path('data').absolute()}")
+        print(f"   * Results: {Path('outputs').absolute()}")
+        print(f"   * Maps: {Path('figs').absolute()}")
+        print(f"   * Reports: {Path('reports').absolute()}")
         print()
         print("🔍 Next Steps:")
-        print("   • Review the technical report in reports/")
-        print("   • Examine emissions maps in figs/")
-        print("   • Check model performance in outputs/")
-        print("   • Validate results with field data (if available)")
+        print("   * Review the technical report in reports/")
+        print("   * Examine emissions maps in figs/")
+        print("   * Check model performance in outputs/")
+        print("   * Validate results with field data (if available)")
         
     except Exception as e:
-        print(f"❌ Analysis failed: {e}")
-        print("\n🔧 Troubleshooting:")
-        print("   • Check dependency installation: pip install -r requirements.txt")
-        print("   • Verify project permissions and disk space")
-        print("   • Try running in smaller segments using other menu options")
-        print("   • Check the detailed error above for specific issues")
+        print(f"ERROR: Analysis failed: {e}")
+        print("\nSETTINGS: Troubleshooting:")
+        print("   * Check dependency installation: pip install -r requirements.txt")
+        print("   * Verify project permissions and disk space")
+        print("   * Try running in smaller segments using other menu options")
+        print("   * Check the detailed error above for specific issues")
         
         import traceback
         traceback.print_exc()
@@ -432,7 +432,7 @@ def main():
     
     # Check dependencies
     if not check_dependencies():
-        print("\n❌ Cannot proceed without required dependencies")
+        print("\nERROR: Cannot proceed without required dependencies")
         print("   Install them with: pip install -r requirements.txt")
         sys.exit(1)
     
@@ -440,7 +440,7 @@ def main():
     gee_available = check_gee_authentication()
     
     if not gee_available:
-        print("\n⚠️  Google Earth Engine not available")
+        print("\nWARNING:  Google Earth Engine not available")
         print("   Analysis will run in simulation mode with synthetic data")
         print("   For real satellite data, run: python gee_auth.py")
     
@@ -465,7 +465,7 @@ def main():
             print("\n👋 Goodbye!")
             break
         else:
-            print("\n❌ Invalid choice. Please select 1-7.")
+            print("\nERROR: Invalid choice. Please select 1-7.")
         
         # Ask if user wants to continue
         if choice in ["1"]:

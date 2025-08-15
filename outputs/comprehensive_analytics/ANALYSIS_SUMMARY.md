@@ -1,6 +1,6 @@
 ## 🎉 COMPREHENSIVE ATMOSPHERIC ANALYTICS RESULTS (2017-2024)
 
-### 📊 Analysis Summary
+### CHART: Analysis Summary
 - **Period**: June 2018 - August 2024 (6+ years)
 - **Total Records**: 1,870 data points
 - **Cities**: 10 major cities in Uzbekistan
@@ -11,15 +11,15 @@
 ### 🏆 Key Findings
 
 #### **Nitrogen Dioxide (NO₂)**
-- **Highest Pollution**: Tashkent (2.56e-04 mol/m²) - Capital city
-- **Lowest Pollution**: Nukus (2.78e-05 mol/m²) - Remote northern city
-- **Trend**: Increasing by 2.84e-06 mol/m²/year
+- **Highest Pollution**: Tashkent (2.56e-04 mol/m^2) - Capital city
+- **Lowest Pollution**: Nukus (2.78e-05 mol/m^2) - Remote northern city
+- **Trend**: Increasing by 2.84e-06 mol/m^2/year
 - **Total Records**: 750 measurements
 
 #### **Carbon Monoxide (CO)**
-- **Highest Pollution**: Andijan (3.56e-02 mol/m²) - Industrial center
-- **Lowest Pollution**: Samarkand (3.07e-02 mol/m²) - Historic city
-- **Trend**: Increasing by 1.99e-04 mol/m²/year
+- **Highest Pollution**: Andijan (3.56e-02 mol/m^2) - Industrial center
+- **Lowest Pollution**: Samarkand (3.07e-02 mol/m^2) - Historic city
+- **Trend**: Increasing by 1.99e-04 mol/m^2/year
 - **Total Records**: 740 measurements
 
 #### **Methane (CH₄)**
@@ -57,12 +57,12 @@
 4. **Increasing Trends**: All three gases show upward trends over the analysis period
 5. **Seasonal Patterns**: Clear monthly variations captured in seasonal analysis
 
-### 📈 Trend Analysis
+### TRENDING: Trend Analysis
 - **NO₂**: Rising trend indicates increasing vehicle/industrial emissions
 - **CO**: Steady increase suggests growing combustion sources
 - **CH₄**: Growing methane levels likely from agriculture and industry
 
-### 🎯 Data Quality
+### TARGET: Data Quality
 - High-quality satellite data from Copernicus Sentinel-5P
 - Monthly temporal resolution provides good trend analysis
 - 5km spatial resolution suitable for city-level analysis

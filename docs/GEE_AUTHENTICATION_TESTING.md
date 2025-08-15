@@ -5,11 +5,11 @@ This repository includes automated testing for Google Earth Engine (GEE) authent
 ## Overview
 
 The authentication testing system validates:
-- ✅ Service account authentication with `ee-sabitovty` project
-- ✅ Basic API functionality (geometry, computations, collections)
-- ✅ Atmospheric satellite data access (Sentinel-5P: NO₂, CO, CH₄)
-- ✅ Computational capabilities and quota management
-- ✅ Project-specific resource access
+- SUCCESS: Service account authentication with `ee-sabitovty` project
+- SUCCESS: Basic API functionality (geometry, computations, collections)
+- SUCCESS: Atmospheric satellite data access (Sentinel-5P: NO₂, CO, CH₄)
+- SUCCESS: Computational capabilities and quota management
+- SUCCESS: Project-specific resource access
 
 ## Files
 
@@ -34,7 +34,7 @@ Add the following secret to your GitHub repository:
 **`GEE_SERVICE_ACCOUNT_KEY`** - Your Google Earth Engine service account key (JSON format)
 
 To create this secret:
-1. Go to your repository → Settings → Secrets and variables → Actions
+1. Go to your repository -> Settings -> Secrets and variables -> Actions
 2. Click "New repository secret"
 3. Name: `GEE_SERVICE_ACCOUNT_KEY`
 4. Value: Paste your service account JSON key (entire file content)
@@ -80,10 +80,10 @@ python test_gee_authentication.py
 5. **Resource Test**: Project quotas, asset access, large collection handling
 
 ### Success Criteria
-- ✅ **Excellent**: 80%+ tests pass
-- ✅ **Good**: 60-79% tests pass  
-- ⚠️ **Limited**: 40-59% tests pass
-- ❌ **Poor**: <40% tests pass
+- SUCCESS: **Excellent**: 80%+ tests pass
+- SUCCESS: **Good**: 60-79% tests pass  
+- WARNING: **Limited**: 40-59% tests pass
+- ERROR: **Poor**: <40% tests pass
 
 ## Troubleshooting
 
@@ -134,9 +134,9 @@ This authentication testing supports:
 The CI/CD pipeline ensures:
 - 🔄 **Daily authentication validation**
 - 🧪 **Multi-Python version compatibility**
-- 📊 **Automated reporting and artifacts**
+- CHART: **Automated reporting and artifacts**
 - 🔒 **Secure credential management**
-- 🚀 **Ready-to-deploy validation**
+- STARTING: **Ready-to-deploy validation**
 
 ## Links
 
@@ -146,6 +146,6 @@ The CI/CD pipeline ensures:
 
 ---
 
-**Status**: ✅ Automated GEE authentication testing active
+**Status**: SUCCESS: Automated GEE authentication testing active
 **Last Updated**: August 15, 2025
 **Environment**: ee-sabitovty project, Sentinel-5P atmospheric data

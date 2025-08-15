@@ -94,19 +94,19 @@ jobs:
         
         if [ "${{ needs.gee-auth-check.result }}" == "success" ]; then
           echo "🎉 All authentication checks passed!"
-          echo "✅ Google Earth Engine authentication is working correctly"
-          echo "🚀 Ready for atmospheric analysis workflows"
+          echo "SUCCESS: Google Earth Engine authentication is working correctly"
+          echo "STARTING: Ready for atmospheric analysis workflows"
           exit 0
         elif [ "${{ needs.gee-auth-check.result }}" == "failure" ]; then
-          echo "❌ Authentication checks failed"
-          echo "🔧 Please check:"
+          echo "ERROR: Authentication checks failed"
+          echo "SETTINGS: Please check:"
           echo "   - GEE_SERVICE_ACCOUNT_KEY secret is properly configured"
           echo "   - Service account has access to ee-sabitovty project"
           echo "   - Service account has Earth Engine permissions"
           echo "   - All GitHub Actions are using latest versions"
           exit 1
         else
-          echo "⚠️  Authentication checks were cancelled or skipped"
+          echo "WARNING:  Authentication checks were cancelled or skipped"
           echo "🔄 This may be due to workflow configuration issues"
           exit 1
         fi

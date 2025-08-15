@@ -20,17 +20,17 @@ def test_server_side_analysis():
     
     print("🧪 TEST SERVER-SIDE ATMOSPHERIC ANALYSIS")
     print("=" * 50)
-    print("🔬 Reduced scope for testing:")
-    print("   • 3 cities only")
-    print("   • 2 gases only") 
-    print("   • 30-day period only")
-    print("   • Lower resolution")
+    print("MICROSCOPE: Reduced scope for testing:")
+    print("   * 3 cities only")
+    print("   * 2 gases only") 
+    print("   * 30-day period only")
+    print("   * Lower resolution")
     print("=" * 50)
     
     try:
         # Initialize GEE
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Google Earth Engine initialized")
+        print("SUCCESS: Google Earth Engine initialized")
         
         # Define test area (smaller bounding box)
         test_bounds = ee.Geometry.Rectangle([64.0, 39.0, 72.0, 42.0])  # Central Uzbekistan only
@@ -88,7 +88,7 @@ def test_server_side_analysis():
                 
                 # Check data availability
                 size = collection.size().getInfo()
-                print(f"   📊 Found {size} images")
+                print(f"   CHART: Found {size} images")
                 
                 if size > 0:
                     # Compute mean on server
@@ -120,10 +120,10 @@ def test_server_side_analysis():
                             }
                     
                     results[gas] = city_data
-                    print(f"   ✅ Extracted data for {len(city_data)} cities")
+                    print(f"   SUCCESS: Extracted data for {len(city_data)} cities")
                     
                     # Quick server-side statistics
-                    print("   📈 Computing regional stats on server...")
+                    print("   TRENDING: Computing regional stats on server...")
                     stats = mean_image.reduceRegion(
                         reducer=ee.Reducer.mean().combine(
                             reducer2=ee.Reducer.minMax(),
@@ -135,17 +135,17 @@ def test_server_side_analysis():
                     )
                     
                     region_stats = stats.getInfo()
-                    print(f"   📊 Regional statistics computed")
+                    print(f"   CHART: Regional statistics computed")
                     
                 else:
-                    print(f"   ⚠️  No {gas} data available")
+                    print(f"   WARNING:  No {gas} data available")
                     
             except Exception as e:
-                print(f"   ❌ Error processing {gas}: {str(e)[:80]}...")
+                print(f"   ERROR: Error processing {gas}: {str(e)[:80]}...")
         
         # Display results
         if results:
-            print(f"\n📊 TEST RESULTS:")
+            print(f"\nCHART: TEST RESULTS:")
             print("=" * 30)
             
             for city in test_cities.keys():
@@ -154,9 +154,9 @@ def test_server_side_analysis():
                     if city in gas_data:
                         conc = gas_data[city]['concentration']
                         if gas == 'NO2':
-                            print(f"   {gas}: {conc:.2e} mol/m²")
+                            print(f"   {gas}: {conc:.2e} mol/m^2")
                         elif gas == 'CO':
-                            print(f"   {gas}: {conc:.2e} mol/m²")
+                            print(f"   {gas}: {conc:.2e} mol/m^2")
                     else:
                         print(f"   {gas}: No data")
             
@@ -196,27 +196,27 @@ def test_server_side_analysis():
             with open(metadata_file, 'w') as f:
                 json.dump(test_metadata, f, indent=2)
             
-            print(f"\n💾 Test results saved:")
+            print(f"\nSTORAGE: Test results saved:")
             print(f"   Data: {test_file}")
             print(f"   Metadata: {metadata_file}")
             
             print(f"\n🎉 TEST SUCCESSFUL!")
-            print(f"✅ Server-side processing confirmed working")
-            print(f"📊 {len(test_cities)} cities analyzed")
-            print(f"💨 {len(results)} gases detected")
+            print(f"SUCCESS: Server-side processing confirmed working")
+            print(f"CHART: {len(test_cities)} cities analyzed")
+            print(f"EMISSION: {len(results)} gases detected")
             
             return True
             
         else:
-            print("\n❌ No data extracted in test")
+            print("\nERROR: No data extracted in test")
             return False
             
     except Exception as e:
-        print(f"\n❌ Test failed: {e}")
+        print(f"\nERROR: Test failed: {e}")
         return False
 
 if __name__ == "__main__":
-    print("🚀 Starting lightweight test...")
+    print("STARTING: Starting lightweight test...")
     start_time = time.time()
     
     success = test_server_side_analysis()
@@ -224,14 +224,14 @@ if __name__ == "__main__":
     end_time = time.time()
     duration = end_time - start_time
     
-    print(f"\n⏱️  Test completed in {duration:.1f} seconds")
+    print(f"\nSTOPWATCH:️  Test completed in {duration:.1f} seconds")
     
     if success:
-        print("✅ Ready for full-scale analysis!")
+        print("SUCCESS: Ready for full-scale analysis!")
         print("\n💡 If test worked well, we can:")
-        print("   • Increase number of cities")
-        print("   • Add more gases")
-        print("   • Extend time period")
-        print("   • Increase spatial resolution")
+        print("   * Increase number of cities")
+        print("   * Add more gases")
+        print("   * Extend time period")
+        print("   * Increase spatial resolution")
     else:
-        print("❌ Test failed - need to debug first")
+        print("ERROR: Test failed - need to debug first")

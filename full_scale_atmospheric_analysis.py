@@ -53,7 +53,7 @@ class ProgressTracker:
         print(f"\r🔄 {self.description} [{bar}] {progress:.1f}% ({self.current_step}/{self.total_steps}) ETA: {eta_str} - {step_description}", end='', flush=True)
         
         if self.current_step >= self.total_steps:
-            print(f"\n✅ {self.description} completed in {elapsed:.1f}s")
+            print(f"\nSUCCESS: {self.description} completed in {elapsed:.1f}s")
 
 class FullScaleAtmosphericAnalyzer:
     """Full-scale atmospheric data analyzer with progress tracking"""
@@ -66,20 +66,20 @@ class FullScaleAtmosphericAnalyzer:
         
     def initialize_gee(self):
         """Initialize Google Earth Engine"""
-        print("🔧 Initializing Google Earth Engine...")
+        print("SETTINGS: Initializing Google Earth Engine...")
         try:
             ee.Initialize(project=self.project_id)
             self.uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
             self.gee_initialized = True
-            print(f"✅ GEE initialized with project: {self.project_id}")
+            print(f"SUCCESS: GEE initialized with project: {self.project_id}")
             return True
         except Exception as e:
-            print(f"❌ GEE initialization failed: {e}")
+            print(f"ERROR: GEE initialization failed: {e}")
             return False
     
     def create_sampling_grid(self, resolution=0.05):
         """Create systematic sampling grid across Uzbekistan"""
-        print(f"📐 Creating sampling grid (resolution: {resolution}°)...")
+        print(f"📐 Creating sampling grid (resolution: {resolution}deg)...")
         
         # Uzbekistan bounds
         min_lon, min_lat, max_lon, max_lat = 55.9, 37.2, 73.2, 45.6
@@ -102,7 +102,7 @@ class FullScaleAtmosphericAnalyzer:
                 })
                 point_id += 1
         
-        print(f"✅ Created {len(grid_points)} sampling points")
+        print(f"SUCCESS: Created {len(grid_points)} sampling points")
         return grid_points
     
     def process_atmospheric_data_batch(self, gas_info, sample_points, batch_size=50):
@@ -129,17 +129,17 @@ class FullScaleAtmosphericAnalyzer:
                 .select(band)
             
             collection_size = collection.size().getInfo()
-            print(f"📊 Found {collection_size} {gas} images for 2024")
+            print(f"CHART: Found {collection_size} {gas} images for 2024")
             
             if collection_size == 0:
-                print(f"⚠️  No {gas} data available for 2024")
+                print(f"WARNING:  No {gas} data available for 2024")
                 return pd.DataFrame()
             
             # Calculate mean image
             mean_image = collection.mean()
             
         except Exception as e:
-            print(f"❌ Error accessing {gas} collection: {e}")
+            print(f"ERROR: Error accessing {gas} collection: {e}")
             return pd.DataFrame()
         
         # Process each batch
@@ -196,10 +196,10 @@ class FullScaleAtmosphericAnalyzer:
         # Convert to DataFrame
         if all_results:
             df = pd.DataFrame(all_results)
-            print(f"\n✅ {gas} extraction complete: {len(df)} points with valid data")
+            print(f"\nSUCCESS: {gas} extraction complete: {len(df)} points with valid data")
             return df
         else:
-            print(f"\n⚠️  No valid {gas} data extracted")
+            print(f"\nWARNING:  No valid {gas} data extracted")
             return pd.DataFrame()
     
     def load_auxiliary_data_batch(self, sample_points, batch_size=100):
@@ -218,7 +218,7 @@ class FullScaleAtmosphericAnalyzer:
         
         try:
             # Prepare auxiliary datasets
-            print("📊 Preparing auxiliary datasets...")
+            print("CHART: Preparing auxiliary datasets...")
             
             # MODIS Land Surface Temperature (2024 mean)
             lst_collection = ee.ImageCollection('MODIS/061/MOD11A1') \
@@ -303,23 +303,23 @@ class FullScaleAtmosphericAnalyzer:
                 df = pd.DataFrame(all_results)
                 # Remove rows with all null auxiliary data
                 df = df.dropna(subset=['temperature', 'ndvi', 'land_cover', 'elevation'], how='all')
-                print(f"\n✅ Auxiliary data extraction complete: {len(df)} points")
+                print(f"\nSUCCESS: Auxiliary data extraction complete: {len(df)} points")
                 return df
             else:
-                print(f"\n⚠️  No auxiliary data extracted")
+                print(f"\nWARNING:  No auxiliary data extracted")
                 return pd.DataFrame()
                 
         except Exception as e:
-            print(f"\n❌ Error in auxiliary data processing: {e}")
+            print(f"\nERROR: Error in auxiliary data processing: {e}")
             return pd.DataFrame()
     
     def run_full_analysis(self):
         """Run complete full-scale analysis"""
         
-        print("🌍 FULL-SCALE REAL ATMOSPHERIC DATA ANALYSIS - UZBEKISTAN")
+        print("EARTH: FULL-SCALE REAL ATMOSPHERIC DATA ANALYSIS - UZBEKISTAN")
         print("=" * 70)
-        print("🎯 Comprehensive analysis with progress tracking")
-        print("📊 High-resolution sampling across entire country")
+        print("TARGET: Comprehensive analysis with progress tracking")
+        print("CHART: High-resolution sampling across entire country")
         print("🛰️  Real satellite data only - no simulations")
         print("=" * 70)
         
@@ -368,14 +368,14 @@ class FullScaleAtmosphericAnalyzer:
             self.save_full_results(combined_df, atmospheric_results)
             
             print(f"\n🎉 FULL-SCALE ANALYSIS COMPLETE!")
-            print(f"✅ Final dataset: {len(combined_df)} points")
+            print(f"SUCCESS: Final dataset: {len(combined_df)} points")
             print(f"🛰️  Atmospheric gases: {len(atmospheric_results)}")
             print(f"🗺️  Auxiliary variables: 4")
-            print(f"💾 Results saved to outputs/ directory")
+            print(f"STORAGE: Results saved to outputs/ directory")
             
             return True
         else:
-            print(f"\n❌ Insufficient data for analysis")
+            print(f"\nERROR: Insufficient data for analysis")
             return False
     
     def save_full_results(self, combined_df, atmospheric_results):
@@ -408,7 +408,7 @@ class FullScaleAtmosphericAnalyzer:
                 'land_cover': 'MODIS/061/MCD12Q1',
                 'elevation': 'USGS/SRTMGL1_003'
             },
-            'coverage_area': 'Uzbekistan (55.9°E-73.2°E, 37.2°N-45.6°N)',
+            'coverage_area': 'Uzbekistan (55.9degE-73.2degE, 37.2degN-45.6degN)',
             'data_quality': 'Real satellite measurements only'
         }
         
@@ -416,7 +416,7 @@ class FullScaleAtmosphericAnalyzer:
         with open(summary_file, 'w') as f:
             json.dump(summary, f, indent=2)
         
-        print(f"💾 Saved comprehensive results:")
+        print(f"STORAGE: Saved comprehensive results:")
         print(f"   Main dataset: {main_file}")
         print(f"   Individual gases: {len(atmospheric_results)} files")
         print(f"   Summary: {summary_file}")
@@ -428,7 +428,7 @@ def main():
     success = analyzer.run_full_analysis()
     
     if not success:
-        print("\n❌ Full-scale analysis failed")
+        print("\nERROR: Full-scale analysis failed")
         return False
     
     return True
@@ -439,6 +439,6 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n\n⏹️  Analysis interrupted by user")
     except Exception as e:
-        print(f"\n❌ Unexpected error: {e}")
+        print(f"\nERROR: Unexpected error: {e}")
         import traceback
         traceback.print_exc()

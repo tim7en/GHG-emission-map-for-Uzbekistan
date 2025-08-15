@@ -33,7 +33,7 @@ try:
     GEE_AVAILABLE = True
 except ImportError:
     GEE_AVAILABLE = False
-    print("❌ Google Earth Engine not available")
+    print("ERROR: Google Earth Engine not available")
     sys.exit(1)
 
 class RealAtmosphericDataAnalyzer:
@@ -50,7 +50,7 @@ class RealAtmosphericDataAnalyzer:
         """Initialize Google Earth Engine with project"""
         try:
             ee.Initialize(project=self.project_id)
-            print(f"✅ Google Earth Engine initialized with project: {self.project_id}")
+            print(f"SUCCESS: Google Earth Engine initialized with project: {self.project_id}")
             
             # Now create geometry after initialization
             self.uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
@@ -58,14 +58,14 @@ class RealAtmosphericDataAnalyzer:
             self.gee_initialized = True
             return True
         except Exception as e:
-            print(f"❌ GEE initialization failed: {e}")
+            print(f"ERROR: GEE initialization failed: {e}")
             return False
     
     def load_real_atmospheric_data(self, year=2023):
         """Load real Sentinel-5P atmospheric concentration data"""
         
         if not self.gee_initialized:
-            print("❌ GEE not initialized")
+            print("ERROR: GEE not initialized")
             return False
         
         print(f"\n🛰️  Loading Real Atmospheric Data for {year}")
@@ -140,13 +140,13 @@ class RealAtmosphericDataAnalyzer:
                     df = df.dropna(subset=[f'{gas}_concentration'])
                     
                     self.atmospheric_data[gas] = df
-                    print(f"✅ Loaded {len(df)} valid {gas} concentration measurements")
+                    print(f"SUCCESS: Loaded {len(df)} valid {gas} concentration measurements")
                     
                 else:
-                    print(f"⚠️  No {gas} data available for {year}")
+                    print(f"WARNING:  No {gas} data available for {year}")
                     
             except Exception as e:
-                print(f"❌ Error loading {gas} data: {e}")
+                print(f"ERROR: Error loading {gas} data: {e}")
         
         return len(self.atmospheric_data) > 0
     
@@ -243,12 +243,12 @@ class RealAtmosphericDataAnalyzer:
             aux_df = aux_df.dropna()
             
             self.auxiliary_data = aux_df
-            print(f"✅ Loaded {len(aux_df)} auxiliary data points")
+            print(f"SUCCESS: Loaded {len(aux_df)} auxiliary data points")
             
             return True
             
         except Exception as e:
-            print(f"❌ Error loading auxiliary data: {e}")
+            print(f"ERROR: Error loading auxiliary data: {e}")
             return False
     
     def combine_datasets(self):
@@ -258,7 +258,7 @@ class RealAtmosphericDataAnalyzer:
         print("=" * 30)
         
         if not self.atmospheric_data or len(self.auxiliary_data) == 0:
-            print("❌ No data to combine")
+            print("ERROR: No data to combine")
             return None
         
         # Start with auxiliary data
@@ -278,7 +278,7 @@ class RealAtmosphericDataAnalyzer:
         concentration_cols = [f'{gas}_concentration' for gas in self.atmospheric_data.keys()]
         combined_df = combined_df.dropna(subset=concentration_cols)
         
-        print(f"✅ Combined dataset: {len(combined_df)} points")
+        print(f"SUCCESS: Combined dataset: {len(combined_df)} points")
         print(f"   Variables: {list(combined_df.columns)}")
         
         return combined_df
@@ -286,11 +286,11 @@ class RealAtmosphericDataAnalyzer:
     def analyze_patterns(self, combined_df):
         """Analyze atmospheric concentration patterns"""
         
-        print(f"\n📊 Analyzing Atmospheric Patterns")
+        print(f"\nCHART: Analyzing Atmospheric Patterns")
         print("=" * 35)
         
         # Basic statistics
-        print("\n📈 Concentration Statistics:")
+        print("\nTRENDING: Concentration Statistics:")
         concentration_cols = [col for col in combined_df.columns if '_concentration' in col]
         
         for col in concentration_cols:
@@ -315,8 +315,8 @@ class RealAtmosphericDataAnalyzer:
         if 'temperature' in combined_df.columns:
             temp_stats = combined_df['temperature'].describe()
             print(f"\n🌡️  Temperature Statistics:")
-            print(f"  Mean: {temp_stats['mean']:.1f}°C")
-            print(f"  Range: {temp_stats['min']:.1f}°C to {temp_stats['max']:.1f}°C")
+            print(f"  Mean: {temp_stats['mean']:.1f}degC")
+            print(f"  Range: {temp_stats['min']:.1f}degC to {temp_stats['max']:.1f}degC")
         
         return combined_df
     
@@ -329,7 +329,7 @@ class RealAtmosphericDataAnalyzer:
         # Save main dataset
         data_file = output_path / 'real_atmospheric_data_uzbekistan.csv'
         combined_df.to_csv(data_file, index=False)
-        print(f"💾 Saved data to: {data_file}")
+        print(f"STORAGE: Saved data to: {data_file}")
         
         # Save summary report
         report_file = output_path / 'atmospheric_analysis_summary.txt'
@@ -361,12 +361,12 @@ class RealAtmosphericDataAnalyzer:
 def main():
     """Main analysis function"""
     
-    print("🌍 REAL ATMOSPHERIC DATA ANALYSIS - UZBEKISTAN")
+    print("EARTH: REAL ATMOSPHERIC DATA ANALYSIS - UZBEKISTAN")
     print("=" * 55)
     print("Using only real satellite measurements:")
-    print("• Sentinel-5P atmospheric concentrations")
-    print("• MODIS land surface data")
-    print("• No simulated or mock data")
+    print("* Sentinel-5P atmospheric concentrations")
+    print("* MODIS land surface data")
+    print("* No simulated or mock data")
     print("=" * 55)
     
     # Initialize analyzer
@@ -374,23 +374,23 @@ def main():
     
     # Initialize Google Earth Engine
     if not analyzer.initialize_gee():
-        print("❌ Cannot proceed without GEE authentication")
+        print("ERROR: Cannot proceed without GEE authentication")
         return False
     
     # Load real atmospheric data for 2023
     if not analyzer.load_real_atmospheric_data(year=2023):
-        print("❌ Failed to load atmospheric data")
+        print("ERROR: Failed to load atmospheric data")
         return False
     
     # Load auxiliary data
     if not analyzer.load_auxiliary_real_data(year=2023):
-        print("❌ Failed to load auxiliary data")
+        print("ERROR: Failed to load auxiliary data")
         return False
     
     # Combine datasets
     combined_data = analyzer.combine_datasets()
     if combined_data is None:
-        print("❌ Failed to combine datasets")
+        print("ERROR: Failed to combine datasets")
         return False
     
     # Analyze patterns
@@ -400,17 +400,17 @@ def main():
     output_file = analyzer.save_results(analyzed_data)
     
     print(f"\n🎉 ANALYSIS COMPLETE!")
-    print(f"✅ Real atmospheric data analysis finished")
-    print(f"📊 {len(analyzed_data)} data points processed")
-    print(f"💾 Results saved to: {output_file}")
+    print(f"SUCCESS: Real atmospheric data analysis finished")
+    print(f"CHART: {len(analyzed_data)} data points processed")
+    print(f"STORAGE: Results saved to: {output_file}")
     print(f"\n📁 Check the 'outputs' directory for:")
-    print(f"   • real_atmospheric_data_uzbekistan.csv")
-    print(f"   • atmospheric_analysis_summary.txt")
+    print(f"   * real_atmospheric_data_uzbekistan.csv")
+    print(f"   * atmospheric_analysis_summary.txt")
     
     return True
 
 if __name__ == "__main__":
     success = main()
     if not success:
-        print("\n❌ Analysis failed")
+        print("\nERROR: Analysis failed")
         sys.exit(1)

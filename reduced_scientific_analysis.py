@@ -29,21 +29,21 @@ sns.set_palette("viridis")
 def reduced_scientific_analysis():
     """Reduced scientific analysis for testing"""
     
-    print("🔬 REDUCED SCIENTIFIC EMISSION ANALYSIS - TESTING VERSION")
+    print("MICROSCOPE: REDUCED SCIENTIFIC EMISSION ANALYSIS - TESTING VERSION")
     print("=" * 65)
-    print("🎯 Reduced parameters for testing:")
-    print("   • 3 key gases only (NO₂, CO, CH₄)")
-    print("   • 3 regions (National, Tashkent, Fergana)")
-    print("   • 2022-2024 period only")
-    print("   • Quarterly temporal resolution")
-    print("   • 5km spatial resolution")
+    print("TARGET: Reduced parameters for testing:")
+    print("   * 3 key gases only (NO₂, CO, CH₄)")
+    print("   * 3 regions (National, Tashkent, Fergana)")
+    print("   * 2022-2024 period only")
+    print("   * Quarterly temporal resolution")
+    print("   * 5km spatial resolution")
     print("=" * 65)
     
     try:
         # Initialize GEE
-        print("\n🔧 Initializing Google Earth Engine...")
+        print("\nSETTINGS: Initializing Google Earth Engine...")
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Google Earth Engine initialized")
+        print("SUCCESS: Google Earth Engine initialized")
         
         # Load simplified emissions inventory
         emissions_2022 = load_simplified_emissions_inventory()
@@ -63,11 +63,11 @@ def reduced_scientific_analysis():
         correlation_results = perform_quick_correlation(satellite_data, emissions_2022)
         
         # Basic uncertainty analysis
-        print("\n📊 Computing basic uncertainties...")
+        print("\nCHART: Computing basic uncertainties...")
         uncertainty_results = compute_basic_uncertainties(satellite_data, emissions_2022)
         
         # Simple trend analysis
-        print("\n📈 Performing trend analysis...")
+        print("\nTRENDING: Performing trend analysis...")
         trend_results = perform_simple_trends(satellite_data)
         
         # Generate reduced outputs
@@ -80,19 +80,19 @@ def reduced_scientific_analysis():
         )
         
         print(f"\n🎉 REDUCED SCIENTIFIC ANALYSIS COMPLETE!")
-        print(f"📊 Results saved to: {output_dir}")
+        print(f"CHART: Results saved to: {output_dir}")
         
         return True
         
     except Exception as e:
-        print(f"\n❌ Analysis failed: {e}")
+        print(f"\nERROR: Analysis failed: {e}")
         import traceback
         traceback.print_exc()
         return False
 
 def load_simplified_emissions_inventory():
     """Load simplified 2022 emissions inventory"""
-    print("   📋 Loading simplified emissions inventory...")
+    print("   CLIPBOARD: Loading simplified emissions inventory...")
     
     # Aggregate major sectors from the provided table
     simplified_data = {
@@ -129,8 +129,8 @@ def load_simplified_emissions_inventory():
     
     df = pd.DataFrame(simplified_data)
     
-    print(f"   ✅ Simplified to {len(df)} major sector categories")
-    print(f"   📊 Total CO2 equivalent: {df['total_co2_eq'].sum():.1f} Gg")
+    print(f"   SUCCESS: Simplified to {len(df)} major sector categories")
+    print(f"   CHART: Total CO2 equivalent: {df['total_co2_eq'].sum():.1f} Gg")
     
     return df
 
@@ -143,14 +143,14 @@ def get_reduced_datasets():
             'band': 'tropospheric_NO2_column_number_density',
             'scale': 5000,  # 5km resolution for faster processing
             'description': 'Nitrogen Dioxide',
-            'unit': 'mol/m²'
+            'unit': 'mol/m^2'
         },
         'CO': {
             'collection': 'COPERNICUS/S5P/OFFL/L3_CO',
             'band': 'CO_column_number_density',
             'scale': 5000,
             'description': 'Carbon Monoxide', 
-            'unit': 'mol/m²'
+            'unit': 'mol/m^2'
         },
         'CH4': {
             'collection': 'COPERNICUS/S5P/OFFL/L3_CH4',
@@ -231,7 +231,7 @@ def collect_reduced_satellite_data(datasets, regions):
                     for region_name, region_info in regions.items():
                         task_count += 1
                         progress = task_count / total_tasks * 100
-                        print(f"      📊 {period} - {region_name} ({progress:.1f}%)")
+                        print(f"      CHART: {period} - {region_name} ({progress:.1f}%)")
                         
                         # Regional statistics
                         stats = quarterly_mean.reduceRegion(
@@ -265,9 +265,9 @@ def collect_reduced_satellite_data(datasets, regions):
                             })
                 
         except Exception as e:
-            print(f"      ⚠️ Warning processing {dataset_name}: {str(e)[:50]}...")
+            print(f"      WARNING: Warning processing {dataset_name}: {str(e)[:50]}...")
     
-    print(f"   ✅ Collected {len(all_data)} satellite measurements")
+    print(f"   SUCCESS: Collected {len(all_data)} satellite measurements")
     return pd.DataFrame(all_data)
 
 def perform_quick_correlation(satellite_data, emissions_2022):
@@ -314,7 +314,7 @@ def perform_quick_correlation(satellite_data, emissions_2022):
                 'correlation_ratio': sat_value / related_emissions if related_emissions > 0 else 0
             }
     
-    print(f"   📊 Computed correlations for {len(correlations)} gases")
+    print(f"   CHART: Computed correlations for {len(correlations)} gases")
     return correlations
 
 def compute_basic_uncertainties(satellite_data, emissions_2022):
@@ -345,7 +345,7 @@ def compute_basic_uncertainties(satellite_data, emissions_2022):
             'emissions_gg': row['total_co2_eq']
         }
     
-    print(f"   📈 Quantified uncertainties for {len(uncertainties)} components")
+    print(f"   TRENDING: Quantified uncertainties for {len(uncertainties)} components")
     return uncertainties
 
 def perform_simple_trends(satellite_data):
@@ -386,14 +386,14 @@ def perform_simple_trends(satellite_data):
                 'trend_direction': 'increasing' if slope > 0 else 'decreasing'
             }
     
-    print(f"   📈 Computed trends for {len(trends)} gases")
+    print(f"   TRENDING: Computed trends for {len(trends)} gases")
     return trends
 
 def generate_reduced_outputs(satellite_data, emissions_2022, correlation_results,
                            uncertainty_results, trend_results, output_dir):
     """Generate reduced scientific outputs"""
     
-    print("   📊 Generating reduced outputs...")
+    print("   CHART: Generating reduced outputs...")
     
     # 1. Save data
     satellite_data.to_csv(output_dir / 'satellite_data_reduced.csv', index=False)
@@ -412,7 +412,7 @@ def generate_reduced_outputs(satellite_data, emissions_2022, correlation_results
     generate_summary_report(satellite_data, emissions_2022, correlation_results,
                           uncertainty_results, trend_results, output_dir)
     
-    print(f"   ✅ Generated reduced scientific outputs")
+    print(f"   SUCCESS: Generated reduced scientific outputs")
 
 def create_summary_plot(satellite_data, emissions_2022, correlation_results, trend_results, output_dir):
     """Create summary visualization"""
@@ -536,7 +536,7 @@ def create_trend_plot(satellite_data, trend_results, output_dir):
             y_trend = slope * x_trend + intercept
             
             ax.plot(x_trend, y_trend, '--', color='red', 
-                   label=f'Trend (R²={trend_data["r_squared"]:.3f})', alpha=0.7)
+                   label=f'Trend (R^2={trend_data["r_squared"]:.3f})', alpha=0.7)
             
             ax.set_title(f'{dataset} Trend Analysis')
             ax.set_xlabel('Year')
@@ -581,7 +581,7 @@ def generate_summary_report(satellite_data, emissions_2022, correlation_results,
             f.write("EMISSION TRENDS\n")
             f.write("-" * 20 + "\n")
             for gas, trend in trend_results.items():
-                f.write(f"{gas}: {trend['trend_direction']} trend (R² = {trend['r_squared']:.3f})\n")
+                f.write(f"{gas}: {trend['trend_direction']} trend (R^2 = {trend['r_squared']:.3f})\n")
                 f.write(f"  Annual change: {trend['annual_trend']:.2e} units/year\n")
             f.write("\n")
         
@@ -597,13 +597,13 @@ def generate_summary_report(satellite_data, emissions_2022, correlation_results,
         
         f.write("CONCLUSIONS\n")
         f.write("-" * 20 + "\n")
-        f.write("• Satellite data shows measurable trends over 2022-2024 period\n")
-        f.write("• Regional variations detected between urban and agricultural areas\n")
-        f.write("• Correlations established between satellite and inventory data\n")
-        f.write("• Reduced analysis suitable for rapid assessment\n")
+        f.write("* Satellite data shows measurable trends over 2022-2024 period\n")
+        f.write("* Regional variations detected between urban and agricultural areas\n")
+        f.write("* Correlations established between satellite and inventory data\n")
+        f.write("* Reduced analysis suitable for rapid assessment\n")
 
 if __name__ == "__main__":
-    print("🚀 Starting reduced scientific emission analysis...")
+    print("STARTING: Starting reduced scientific emission analysis...")
     start_time = time.time()
     
     success = reduced_scientific_analysis()
@@ -611,15 +611,15 @@ if __name__ == "__main__":
     end_time = time.time()
     duration = end_time - start_time
     
-    print(f"\n⏱️  Analysis completed in {duration:.1f} seconds")
+    print(f"\nSTOPWATCH:️  Analysis completed in {duration:.1f} seconds")
     
     if success:
-        print("✅ Reduced scientific analysis successful!")
-        print("\n📈 Generated outputs:")
-        print("   • Satellite vs inventory correlation")
-        print("   • Uncertainty quantification")
-        print("   • Trend analysis (2022-2024)")
-        print("   • Regional comparison")
-        print("   • Summary visualizations")
+        print("SUCCESS: Reduced scientific analysis successful!")
+        print("\nTRENDING: Generated outputs:")
+        print("   * Satellite vs inventory correlation")
+        print("   * Uncertainty quantification")
+        print("   * Trend analysis (2022-2024)")
+        print("   * Regional comparison")
+        print("   * Summary visualizations")
     else:
-        print("❌ Analysis failed")
+        print("ERROR: Analysis failed")

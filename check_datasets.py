@@ -16,7 +16,7 @@ def check_available_datasets():
     
     try:
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Connected to GEE project: ee-sabitovty")
+        print("SUCCESS: Connected to GEE project: ee-sabitovty")
         
         # Test different ODIAC versions
         odiac_versions = [
@@ -35,11 +35,11 @@ def check_available_datasets():
                     # Get date range
                     first_image = collection.first()
                     image_id = first_image.get('system:id').getInfo()
-                    print(f"✅ {version} - Available! Sample ID: {image_id}")
+                    print(f"SUCCESS: {version} - Available! Sample ID: {image_id}")
                 else:
-                    print(f"⚠️  {version} - Empty collection")
+                    print(f"WARNING:  {version} - Empty collection")
             except Exception as e:
-                print(f"❌ {version} - Not accessible: {str(e)[:100]}...")
+                print(f"ERROR: {version} - Not accessible: {str(e)[:100]}...")
         
         # Test other emissions datasets
         other_datasets = [
@@ -50,7 +50,7 @@ def check_available_datasets():
             'COPERNICUS/Sentinel-5P/NRTI/L3_CH4'
         ]
         
-        print("\n🌍 Testing Other Emissions Datasets:")
+        print("\nEARTH: Testing Other Emissions Datasets:")
         for dataset in other_datasets:
             try:
                 collection = ee.ImageCollection(dataset)
@@ -58,11 +58,11 @@ def check_available_datasets():
                 if size > 0:
                     first_image = collection.first()
                     image_id = first_image.get('system:id').getInfo()
-                    print(f"✅ {dataset} - Available!")
+                    print(f"SUCCESS: {dataset} - Available!")
                 else:
-                    print(f"⚠️  {dataset} - Empty collection")
+                    print(f"WARNING:  {dataset} - Empty collection")
             except Exception as e:
-                print(f"❌ {dataset} - Not accessible: {str(e)[:80]}...")
+                print(f"ERROR: {dataset} - Not accessible: {str(e)[:80]}...")
         
         # Test land cover and auxiliary datasets
         print("\n🗺️  Testing Auxiliary Datasets:")
@@ -80,19 +80,19 @@ def check_available_datasets():
                     collection = ee.ImageCollection(dataset)
                     size = collection.limit(1).size().getInfo()
                     if size > 0:
-                        print(f"✅ {dataset} - Available!")
+                        print(f"SUCCESS: {dataset} - Available!")
                     else:
-                        print(f"⚠️  {dataset} - Empty collection")
+                        print(f"WARNING:  {dataset} - Empty collection")
                 else:
                     # Single image dataset
                     image = ee.Image(dataset)
                     bands = image.bandNames().getInfo()
-                    print(f"✅ {dataset} - Available! Bands: {len(bands)}")
+                    print(f"SUCCESS: {dataset} - Available! Bands: {len(bands)}")
             except Exception as e:
-                print(f"❌ {dataset} - Not accessible: {str(e)[:80]}...")
+                print(f"ERROR: {dataset} - Not accessible: {str(e)[:80]}...")
         
     except Exception as e:
-        print(f"❌ Dataset check failed: {e}")
+        print(f"ERROR: Dataset check failed: {e}")
 
 if __name__ == "__main__":
     check_available_datasets()

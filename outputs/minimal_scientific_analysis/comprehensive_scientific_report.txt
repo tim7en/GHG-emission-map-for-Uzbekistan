@@ -2,7 +2,7 @@ COMPREHENSIVE SCIENTIFIC EMISSION ANALYSIS REPORT
 Satellite Validation of 2022 Emissions Inventory
 ============================================================
 
-Analysis Date: 2025-08-15 11:59:12
+Analysis Date: 2025-08-15 13:43:56
 Report Version: 1.0
 
 EXECUTIVE SUMMARY
@@ -14,43 +14,43 @@ independent validation of reported emissions and quantifying uncertainties.
 DATA OVERVIEW
 ------------------------------
 Emissions Inventory (2022):
-  • Total sectors: 23
-  • Total emissions: 200147.0 Gg CO2-eq
-  • Gas types: CH4, CO2, N2O
-  • Uncertainty range: 0.5%-14.5%
+  * Total sectors: 23
+  * Total emissions: 200147.0 Gg CO2-eq
+  * Gas types: CH4, CO2, N2O
+  * Uncertainty range: 0.5%-14.5%
 
 Satellite Observations:
-  • Total measurements: 1,870
-  • Time period: 2018-06 to 2024-08
-  • Cities covered: 10
-  • Gases measured: NO2, CO, CH4
+  * Total measurements: 1,870
+  * Time period: 2018-06 to 2024-08
+  * Cities covered: 10
+  * Gases measured: NO2, CO, CH4
 
 KEY FINDINGS
 ------------------------------
 Sectoral Emission Analysis:
-  • Transport CO2: 16015.6 Gg
-  • Energy CO2: 98153.9 Gg
-  • Agricultural CH4: 25299.1 Gg CO2-eq
-  • Total CO2: 130075.4 Gg
-  • Total CH4: 59080.3 Gg CO2-eq
+  * Transport CO2: 16015.6 Gg
+  * Energy CO2: 98153.9 Gg
+  * Agricultural CH4: 25299.1 Gg CO2-eq
+  * Total CO2: 130075.4 Gg
+  * Total CH4: 59080.3 Gg CO2-eq
 
 Satellite Trend Analysis:
-  • NO2: increasing trend (+4.13%/year, not significant)
-    Data quality: R² = 0.033, 75 data points
-  • CO: increasing trend (+0.16%/year, not significant)
-    Data quality: R² = 0.001, 74 data points
-  • CH4: increasing trend (+0.48%/year, significant)
-    Data quality: R² = 0.623, 63 data points
+  * NO2: increasing trend (+4.13%/year, not significant)
+    Data quality: R^2 = 0.033, 75 data points
+  * CO: increasing trend (+0.16%/year, not significant)
+    Data quality: R^2 = 0.001, 74 data points
+  * CH4: increasing trend (+0.48%/year, significant)
+    Data quality: R^2 = 0.623, 63 data points
 
 Uncertainty Assessment:
   Satellite measurement uncertainties:
-    • NO2: 44.6% temporal, 75.4% spatial
-    • CO: 9.3% temporal, 4.9% spatial
-    • CH4: 1.0% temporal, 0.3% spatial
+    * NO2: 44.6% temporal, 75.4% spatial
+    * CO: 9.3% temporal, 4.9% spatial
+    * CH4: 1.0% temporal, 0.3% spatial
   Inventory uncertainties:
-    • CH4: 8.4% weighted average
-    • CO2: 8.8% weighted average
-    • N2O: 1.8% weighted average
+    * CH4: 8.4% weighted average
+    * CO2: 8.8% weighted average
+    * N2O: 1.8% weighted average
 
 VALIDATION ASSESSMENT
 ------------------------------
@@ -70,11 +70,11 @@ RECOMMENDATIONS
 
 LIMITATIONS
 ------------------------------
-• Satellite measurements are column averages, not surface concentrations
-• Weather and cloud conditions affect data availability
-• Some gases (N2O) not directly observable by current satellites
-• Temporal mismatch between inventory year and satellite time series
-• Scale differences between point sources and satellite pixels
+* Satellite measurements are column averages, not surface concentrations
+* Weather and cloud conditions affect data availability
+* Some gases (N2O) not directly observable by current satellites
+* Temporal mismatch between inventory year and satellite time series
+* Scale differences between point sources and satellite pixels
 
 CONCLUSION
 ------------------------------

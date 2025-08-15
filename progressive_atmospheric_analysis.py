@@ -35,10 +35,10 @@ class ProgressiveAnalyzer:
             ee.Initialize(project=self.project_id)
             self.uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
             self.gee_initialized = True
-            print(f"✅ GEE initialized with project: {self.project_id}")
+            print(f"SUCCESS: GEE initialized with project: {self.project_id}")
             return True
         except Exception as e:
-            print(f"❌ GEE initialization failed: {e}")
+            print(f"ERROR: GEE initialization failed: {e}")
             return False
     
     def create_region_grid(self):
@@ -69,7 +69,7 @@ class ProgressiveAnalyzer:
                 regions.append(region)
                 region_id += 1
         
-        print(f"✅ Created {len(regions)} analysis regions")
+        print(f"SUCCESS: Created {len(regions)} analysis regions")
         return regions
     
     def load_progress(self):
@@ -78,7 +78,7 @@ class ProgressiveAnalyzer:
             try:
                 with open(self.progress_file, 'r') as f:
                     progress = json.load(f)
-                print(f"📋 Loaded existing progress: {progress['completed_regions']}/{progress['total_regions']} regions completed")
+                print(f"CLIPBOARD: Loaded existing progress: {progress['completed_regions']}/{progress['total_regions']} regions completed")
                 return progress
             except:
                 pass
@@ -96,8 +96,8 @@ class ProgressiveAnalyzer:
         region_name = region['name']
         bounds = region['bounds']
         
-        print(f"\n🎯 Processing {region_name}")
-        print(f"   Bounds: {bounds[0]:.2f}°E to {bounds[2]:.2f}°E, {bounds[1]:.2f}°N to {bounds[3]:.2f}°N")
+        print(f"\nTARGET: Processing {region_name}")
+        print(f"   Bounds: {bounds[0]:.2f}degE to {bounds[2]:.2f}degE, {bounds[1]:.2f}degN to {bounds[3]:.2f}degN")
         
         # Create region geometry
         region_geom = ee.Geometry.Rectangle(bounds)
@@ -179,14 +179,14 @@ class ProgressiveAnalyzer:
                     
                     if all_results:
                         region_results[gas] = pd.DataFrame(all_results)
-                        print(f" ✅ {len(all_results)} points")
+                        print(f" SUCCESS: {len(all_results)} points")
                     else:
-                        print(f" ⚠️  No data")
+                        print(f" WARNING:  No data")
                 else:
-                    print(f" ⚠️  No images")
+                    print(f" WARNING:  No images")
                     
             except Exception as e:
-                print(f" ❌ Error: {str(e)[:50]}")
+                print(f" ERROR: Error: {str(e)[:50]}")
         
         # Save region results
         if region_results:
@@ -200,10 +200,10 @@ class ProgressiveAnalyzer:
             with open(region_file, 'w') as f:
                 json.dump(json_results, f, indent=2)
             
-            print(f"   💾 Saved to {region_file}")
+            print(f"   STORAGE: Saved to {region_file}")
             return True
         else:
-            print(f"   ⚠️  No data saved for {region_name}")
+            print(f"   WARNING:  No data saved for {region_name}")
             return False
     
     def combine_region_results(self):
@@ -214,7 +214,7 @@ class ProgressiveAnalyzer:
         result_files = list(self.results_dir.glob('Region_*_atmospheric_data.json'))
         
         if not result_files:
-            print("❌ No region results found")
+            print("ERROR: No region results found")
             return False
         
         print(f"📂 Found {len(result_files)} region files")
@@ -244,7 +244,7 @@ class ProgressiveAnalyzer:
                 # Save individual gas file
                 gas_file = Path('outputs') / f'{gas.lower()}_concentrations_uzbekistan_full.csv'
                 df.to_csv(gas_file, index=False)
-                print(f"   💾 {gas}: {len(df)} points → {gas_file}")
+                print(f"   STORAGE: {gas}: {len(df)} points -> {gas_file}")
         
         # Create master combined dataset
         if final_results:
@@ -267,9 +267,9 @@ class ProgressiveAnalyzer:
             master_df.to_csv(master_file, index=False)
             
             print(f"\n🎉 FINAL RESULTS:")
-            print(f"   📊 Total data points: {len(master_df)}")
-            print(f"   💨 Gases analyzed: {len(gas_names)}")
-            print(f"   💾 Master dataset: {master_file}")
+            print(f"   CHART: Total data points: {len(master_df)}")
+            print(f"   EMISSION: Gases analyzed: {len(gas_names)}")
+            print(f"   STORAGE: Master dataset: {master_file}")
             
             # Create final summary
             summary = {
@@ -293,9 +293,9 @@ class ProgressiveAnalyzer:
     def run_progressive_analysis(self):
         """Run progressive analysis with resume capability"""
         
-        print("🚀 PROGRESSIVE ATMOSPHERIC ANALYSIS - UZBEKISTAN")
+        print("STARTING: PROGRESSIVE ATMOSPHERIC ANALYSIS - UZBEKISTAN")
         print("=" * 60)
-        print("📊 High-resolution real data analysis")
+        print("CHART: High-resolution real data analysis")
         print("🔄 Automatic progress saving and resume")
         print("🛰️  Sentinel-5P atmospheric measurements")
         print("=" * 60)
@@ -318,7 +318,7 @@ class ProgressiveAnalyzer:
             ('CH4', 'COPERNICUS/S5P/OFFL/L3_CH4', 'CH4_column_volume_mixing_ratio_dry_air')
         ]
         
-        print(f"\n🎯 Processing Plan:")
+        print(f"\nTARGET: Processing Plan:")
         print(f"   Total regions: {len(regions)}")
         print(f"   Atmospheric gases: {len(gas_datasets)}")
         print(f"   Already completed: {progress['completed_regions']}")
@@ -331,7 +331,7 @@ class ProgressiveAnalyzer:
             if region['id'] in progress['completed_region_ids']:
                 continue  # Skip already completed regions
             
-            print(f"\n📈 Progress: {progress['completed_regions']}/{len(regions)} regions completed")
+            print(f"\nTRENDING: Progress: {progress['completed_regions']}/{len(regions)} regions completed")
             
             try:
                 success = self.process_single_region(region, gas_datasets)
@@ -342,7 +342,7 @@ class ProgressiveAnalyzer:
                     completed_this_session += 1
                     self.save_progress(progress)
                     
-                    print(f"✅ {region['name']} completed ({completed_this_session} this session)")
+                    print(f"SUCCESS: {region['name']} completed ({completed_this_session} this session)")
                 
             except KeyboardInterrupt:
                 print(f"\n⏹️  Analysis paused. Progress saved.")
@@ -350,7 +350,7 @@ class ProgressiveAnalyzer:
                 print(f"   To resume, run the script again.")
                 return False
             except Exception as e:
-                print(f"❌ Error processing {region['name']}: {e}")
+                print(f"ERROR: Error processing {region['name']}: {e}")
                 continue
         
         # Combine all results
@@ -363,8 +363,8 @@ class ProgressiveAnalyzer:
                 self.progress_file.unlink()
             
             print(f"\n🎉 PROGRESSIVE ANALYSIS COMPLETE!")
-            print(f"✅ {len(regions)} regions processed")
-            print(f"💾 Results saved to outputs/")
+            print(f"SUCCESS: {len(regions)} regions processed")
+            print(f"STORAGE: Results saved to outputs/")
             
         return success
 

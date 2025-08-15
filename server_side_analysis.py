@@ -29,14 +29,14 @@ class ServerSideAtmosphericAnalyzer:
         """Initialize GEE and define study area"""
         try:
             ee.Initialize(project=self.project_id)
-            print(f"✅ Google Earth Engine initialized with project: {self.project_id}")
+            print(f"SUCCESS: Google Earth Engine initialized with project: {self.project_id}")
             
             # Define Uzbekistan boundaries
             self.uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
             
             return True
         except Exception as e:
-            print(f"❌ GEE initialization failed: {e}")
+            print(f"ERROR: GEE initialization failed: {e}")
             return False
     
     def create_analysis_grid(self, resolution_km=10):
@@ -59,7 +59,7 @@ class ServerSideAtmosphericAnalyzer:
             scale=resolution_km * 1000  # Convert km to meters
         )
         
-        print(f"✅ Grid created on server with ~{resolution_km}km resolution")
+        print(f"SUCCESS: Grid created on server with ~{resolution_km}km resolution")
         return grid_masked
     
     def analyze_atmospheric_data_server_side(self, year=2024):
@@ -120,7 +120,7 @@ class ServerSideAtmosphericAnalyzer:
                 # Check data availability
                 collection_size = collection.size()
                 size_info = collection_size.getInfo()
-                print(f"   📊 Found {size_info} images in collection")
+                print(f"   CHART: Found {size_info} images in collection")
                 
                 if size_info > 0:
                     # Server-side temporal aggregation
@@ -133,7 +133,7 @@ class ServerSideAtmosphericAnalyzer:
                     std_concentration = collection.reduce(ee.Reducer.stdDev())
                     
                     # Server-side spatial statistics for Uzbekistan
-                    print("   📈 Computing spatial statistics on server...")
+                    print("   TRENDING: Computing spatial statistics on server...")
                     
                     # Reduce region to get country-level statistics
                     stats = mean_concentration.reduceRegion(
@@ -151,10 +151,10 @@ class ServerSideAtmosphericAnalyzer:
                     
                     # Get statistics from server
                     stats_dict = stats.getInfo()
-                    print(f"   ✅ Extracted country-level statistics")
+                    print(f"   SUCCESS: Extracted country-level statistics")
                     
                     # Server-side regional analysis
-                    print("   🌍 Computing regional analysis on server...")
+                    print("   EARTH: Computing regional analysis on server...")
                     
                     # Define major regions within Uzbekistan
                     regions = {
@@ -187,17 +187,17 @@ class ServerSideAtmosphericAnalyzer:
                         'temporal_coverage': f"{start_date} to {end_date}"
                     }
                     
-                    print(f"   ✅ {gas} analysis complete")
+                    print(f"   SUCCESS: {gas} analysis complete")
                     
                 else:
-                    print(f"   ⚠️  No {gas} data available for {year}")
+                    print(f"   WARNING:  No {gas} data available for {year}")
                 
                 completed += 1
                 progress_pct = (completed / total_gases) * 100
-                print(f"   📊 Overall progress: {progress_pct:.1f}%")
+                print(f"   CHART: Overall progress: {progress_pct:.1f}%")
                 
             except Exception as e:
-                print(f"   ❌ Error processing {gas}: {str(e)[:100]}...")
+                print(f"   ERROR: Error processing {gas}: {str(e)[:100]}...")
                 completed += 1
         
         self.results = analysis_results
@@ -242,7 +242,7 @@ class ServerSideAtmosphericAnalyzer:
         for gas, result_data in self.results.items():
             if 'collection_size' in result_data and result_data['collection_size'] > 0:
                 try:
-                    print(f"   📊 Extracting {gas} for cities...")
+                    print(f"   CHART: Extracting {gas} for cities...")
                     
                     # Recreate the mean concentration image on server
                     collection = ee.ImageCollection(
@@ -279,10 +279,10 @@ class ServerSideAtmosphericAnalyzer:
                             }
                     
                     city_results[gas] = gas_city_data
-                    print(f"   ✅ Extracted {gas} for {len(gas_city_data)} cities")
+                    print(f"   SUCCESS: Extracted {gas} for {len(gas_city_data)} cities")
                     
                 except Exception as e:
-                    print(f"   ❌ Error extracting {gas} for cities: {str(e)[:80]}...")
+                    print(f"   ERROR: Error extracting {gas} for cities: {str(e)[:80]}...")
         
         return city_results
     
@@ -349,12 +349,12 @@ class ServerSideAtmosphericAnalyzer:
             city_file = output_dir / 'server_side_city_concentrations.csv'
             city_df.to_csv(city_file, index=False)
             
-            print(f"💾 Results saved:")
+            print(f"STORAGE: Results saved:")
             print(f"   Detailed: {results_file}")
             print(f"   City Data: {city_file}")
             
             # Print summary
-            print(f"\n📊 ANALYSIS SUMMARY:")
+            print(f"\nCHART: ANALYSIS SUMMARY:")
             print(f"   Cities analyzed: {len(city_df)}")
             print(f"   Gases detected: {len(all_gases)}")
             print(f"   Data processing: 100% server-side")
@@ -366,7 +366,7 @@ class ServerSideAtmosphericAnalyzer:
 def main():
     """Main server-side analysis function"""
     
-    print("🚀 SERVER-SIDE ATMOSPHERIC ANALYSIS - UZBEKISTAN")
+    print("STARTING: SERVER-SIDE ATMOSPHERIC ANALYSIS - UZBEKISTAN")
     print("=" * 60)
     print("🖥️  All processing runs on Google Earth Engine servers")
     print("📡 Only final results are downloaded")
@@ -377,15 +377,15 @@ def main():
     analyzer = ServerSideAtmosphericAnalyzer()
     
     if not analyzer.initialize():
-        print("❌ Failed to initialize")
+        print("ERROR: Failed to initialize")
         return False
     
     # Run server-side atmospheric analysis
-    print(f"\n⏱️  Starting server-side analysis...")
+    print(f"\nSTOPWATCH:️  Starting server-side analysis...")
     start_time = time.time()
     
     if not analyzer.analyze_atmospheric_data_server_side(year=2024):
-        print("❌ Server-side analysis failed")
+        print("ERROR: Server-side analysis failed")
         return False
     
     # Extract city-level data
@@ -399,16 +399,16 @@ def main():
     processing_time = end_time - start_time
     
     print(f"\n🎉 SERVER-SIDE ANALYSIS COMPLETE!")
-    print(f"⏱️  Total processing time: {processing_time:.1f} seconds")
+    print(f"STOPWATCH:️  Total processing time: {processing_time:.1f} seconds")
     print(f"🖥️  All heavy computation done on GEE servers")
-    print(f"📊 Results processed for entire Uzbekistan")
-    print(f"💾 Final data downloaded: <1MB")
+    print(f"CHART: Results processed for entire Uzbekistan")
+    print(f"STORAGE: Final data downloaded: <1MB")
     
     return True
 
 if __name__ == "__main__":
     success = main()
     if not success:
-        print("\n❌ Server-side analysis failed")
+        print("\nERROR: Server-side analysis failed")
     else:
-        print("\n✅ Check the 'outputs' directory for comprehensive results!")
+        print("\nSUCCESS: Check the 'outputs' directory for comprehensive results!")

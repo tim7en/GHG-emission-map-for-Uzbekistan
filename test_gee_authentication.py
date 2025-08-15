@@ -18,11 +18,11 @@ from pathlib import Path
 def test_gee_authentication():
     """Test Google Earth Engine authentication and functionality"""
     
-    print("🔬 GOOGLE EARTH ENGINE AUTHENTICATION TEST")
+    print("MICROSCOPE: GOOGLE EARTH ENGINE AUTHENTICATION TEST")
     print("=" * 50)
     print(f"🕐 Test started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"🐍 Python version: {sys.version.split()[0]}")
-    print(f"🌍 Target project: ee-sabitovty")
+    print(f"EARTH: Target project: ee-sabitovty")
     print("=" * 50)
     
     test_results = {
@@ -53,7 +53,7 @@ def test_gee_authentication():
                 ee.Initialize(project='ee-sabitovty')
                 auth_method = 'user_token'
             
-            print(f"   ✅ Authentication successful ({auth_method})")
+            print(f"   SUCCESS: Authentication successful ({auth_method})")
             test_results['tests']['authentication'] = {
                 'status': 'passed',
                 'method': auth_method,
@@ -61,7 +61,7 @@ def test_gee_authentication():
             }
             
         except Exception as e:
-            print(f"   ❌ Authentication failed: {e}")
+            print(f"   ERROR: Authentication failed: {e}")
             test_results['tests']['authentication'] = {
                 'status': 'failed',
                 'error': str(e)
@@ -94,10 +94,10 @@ def test_gee_authentication():
                 'geometry_test': 'passed',
                 'date_test': date_string
             }
-            print("   ✅ Basic API functionality working")
+            print("   SUCCESS: Basic API functionality working")
             
         except Exception as e:
-            print(f"   ❌ Basic API test failed: {e}")
+            print(f"   ERROR: Basic API test failed: {e}")
             test_results['tests']['basic_api'] = {
                 'status': 'failed', 
                 'error': str(e)
@@ -127,7 +127,7 @@ def test_gee_authentication():
                     .limit(10)
                 
                 size = collection.size().getInfo()
-                print(f"   📊 {dataset_name}: {size} images available")
+                print(f"   CHART: {dataset_name}: {size} images available")
                 
                 if size > 0:
                     first_image = collection.first()
@@ -146,14 +146,14 @@ def test_gee_authentication():
                     }
                     
             except Exception as e:
-                print(f"   ❌ {dataset_name} access failed: {e}")
+                print(f"   ERROR: {dataset_name} access failed: {e}")
                 data_access_results[dataset_name] = {
                     'status': 'error',
                     'error': str(e)[:100]
                 }
         
         test_results['tests']['data_access'] = data_access_results
-        print("   ✅ Satellite data access test completed")
+        print("   SUCCESS: Satellite data access test completed")
         
         # Test 4: Computational Test
         print("\n⚡ Test 4: Computational Capabilities")
@@ -186,8 +186,8 @@ def test_gee_authentication():
                 computation_time = time.time() - start_time
                 
                 print(f"   ⚡ Computation time: {computation_time:.2f} seconds")
-                print(f"   📊 Images processed: {collection_size}")
-                print(f"   🎯 Sample features: {len(sample['features'])}")
+                print(f"   CHART: Images processed: {collection_size}")
+                print(f"   TARGET: Sample features: {len(sample['features'])}")
                 
                 test_results['tests']['computation'] = {
                     'status': 'passed',
@@ -196,17 +196,17 @@ def test_gee_authentication():
                     'sample_features': len(sample['features'])
                 }
                 
-                print("   ✅ Computational test passed")
+                print("   SUCCESS: Computational test passed")
                 
             else:
-                print("   ⚠️  No data available for computation test")
+                print("   WARNING:  No data available for computation test")
                 test_results['tests']['computation'] = {
                     'status': 'no_data',
                     'message': 'No images available for computation test'
                 }
                 
         except Exception as e:
-            print(f"   ❌ Computational test failed: {e}")
+            print(f"   ERROR: Computational test failed: {e}")
             test_results['tests']['computation'] = {
                 'status': 'failed',
                 'error': str(e)
@@ -237,7 +237,7 @@ def test_gee_authentication():
                     .filterBounds(uzbekistan)
                 
                 large_size = large_collection.size().getInfo()
-                print(f"   📊 Large collection access: {large_size} images")
+                print(f"   CHART: Large collection access: {large_size} images")
                 
                 test_results['tests']['project_resources'] = {
                     'status': 'passed',
@@ -246,24 +246,24 @@ def test_gee_authentication():
                 }
                 
             except Exception as e:
-                print(f"   ⚠️  Large collection test: {e}")
+                print(f"   WARNING:  Large collection test: {e}")
                 test_results['tests']['project_resources'] = {
                     'status': 'limited',
                     'asset_access': asset_access,
                     'limitation': str(e)[:100]
                 }
             
-            print("   ✅ Project resources test completed")
+            print("   SUCCESS: Project resources test completed")
             
         except Exception as e:
-            print(f"   ❌ Project resources test failed: {e}")
+            print(f"   ERROR: Project resources test failed: {e}")
             test_results['tests']['project_resources'] = {
                 'status': 'failed',
                 'error': str(e)
             }
             
         # Overall Assessment
-        print("\n🎯 Overall Assessment")
+        print("\nTARGET: Overall Assessment")
         print("-" * 30)
         
         passed_tests = sum(1 for test in test_results['tests'].values() 
@@ -272,19 +272,19 @@ def test_gee_authentication():
         
         success_rate = passed_tests / total_tests * 100
         
-        print(f"   📊 Tests passed: {passed_tests}/{total_tests} ({success_rate:.1f}%)")
+        print(f"   CHART: Tests passed: {passed_tests}/{total_tests} ({success_rate:.1f}%)")
         
         if success_rate >= 80:
             print("   🎉 Authentication and functionality: EXCELLENT")
             overall_status = 'excellent'
         elif success_rate >= 60:
-            print("   ✅ Authentication and functionality: GOOD")
+            print("   SUCCESS: Authentication and functionality: GOOD")
             overall_status = 'good'
         elif success_rate >= 40:
-            print("   ⚠️  Authentication and functionality: LIMITED")
+            print("   WARNING:  Authentication and functionality: LIMITED")
             overall_status = 'limited'
         else:
-            print("   ❌ Authentication and functionality: POOR")
+            print("   ERROR: Authentication and functionality: POOR")
             overall_status = 'poor'
             
         test_results['overall'] = {
@@ -303,12 +303,12 @@ def test_gee_authentication():
         with open(results_file, 'w') as f:
             json.dump(test_results, f, indent=2)
         
-        print(f"\n💾 Results saved to: {results_file}")
+        print(f"\nSTORAGE: Results saved to: {results_file}")
         
         return test_results
         
     except Exception as e:
-        print(f"\n❌ Critical error during testing: {e}")
+        print(f"\nERROR: Critical error during testing: {e}")
         test_results['critical_error'] = str(e)
         return test_results
 
@@ -319,15 +319,15 @@ def main():
     
     # Exit with appropriate code
     if 'critical_error' in results:
-        print("\n❌ CRITICAL ERROR - Authentication completely failed")
+        print("\nERROR: CRITICAL ERROR - Authentication completely failed")
         sys.exit(1)
     elif results.get('overall', {}).get('success_rate', 0) >= 60:
-        print("\n✅ AUTHENTICATION TEST PASSED")
-        print("🚀 Google Earth Engine is ready for atmospheric analysis!")
+        print("\nSUCCESS: AUTHENTICATION TEST PASSED")
+        print("STARTING: Google Earth Engine is ready for atmospheric analysis!")
         sys.exit(0)
     else:
-        print("\n⚠️  AUTHENTICATION TEST PARTIALLY FAILED")
-        print("🔧 Please check authentication setup and permissions")
+        print("\nWARNING:  AUTHENTICATION TEST PARTIALLY FAILED")
+        print("SETTINGS: Please check authentication setup and permissions")
         sys.exit(1)
 
 if __name__ == "__main__":

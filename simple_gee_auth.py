@@ -25,7 +25,7 @@ def authenticate_gee():
     
     try:
         import ee
-        print("✅ Earth Engine API imported successfully")
+        print("SUCCESS: Earth Engine API imported successfully")
         
         # Create local credentials directory
         local_creds_dir = Path.cwd() / ".earthengine"
@@ -35,7 +35,7 @@ def authenticate_gee():
         # Set environment variable
         os.environ['EARTHENGINE_CREDENTIALS_DIR'] = str(local_creds_dir)
         
-        print("\n🌐 Please follow these steps:")
+        print("\nGLOBE: Please follow these steps:")
         print("1. Open the URL below in your web browser")
         print("2. Sign in with your Google account")
         print("3. Copy the authorization code")
@@ -54,20 +54,20 @@ def authenticate_gee():
         print("\n" + "="*80)
         
         # Get authorization code from user
-        auth_code = input("\n📝 Enter the authorization code from the browser: ").strip()
+        auth_code = input("\nMEMO: Enter the authorization code from the browser: ").strip()
         
         if not auth_code:
-            print("❌ No authorization code provided")
+            print("ERROR: No authorization code provided")
             return False
         
         try:
             # Try to authenticate with the code
             ee.Authenticate(authorization_code=auth_code)
-            print("✅ Authentication successful!")
+            print("SUCCESS: Authentication successful!")
             
             # Test initialization
             ee.Initialize()
-            print("✅ Earth Engine initialized successfully!")
+            print("SUCCESS: Earth Engine initialized successfully!")
             
             # Test with a simple query
             test_connection()
@@ -75,16 +75,16 @@ def authenticate_gee():
             return True
             
         except Exception as e:
-            print(f"❌ Authentication failed: {e}")
+            print(f"ERROR: Authentication failed: {e}")
             print("Trying alternative authentication method...")
             return try_alternative_auth()
             
     except ImportError:
-        print("❌ Earth Engine API not available")
+        print("ERROR: Earth Engine API not available")
         print("Please install with: pip install earthengine-api")
         return False
     except Exception as e:
-        print(f"❌ Authentication error: {e}")
+        print(f"ERROR: Authentication error: {e}")
         return try_alternative_auth()
 
 def try_alternative_auth():
@@ -99,7 +99,7 @@ def try_alternative_auth():
         print("1. Trying default initialization...")
         try:
             ee.Initialize()
-            print("✅ Default initialization successful!")
+            print("SUCCESS: Default initialization successful!")
             return test_connection()
         except:
             pass
@@ -107,7 +107,7 @@ def try_alternative_auth():
         print("2. Trying project-based initialization...")
         try:
             ee.Initialize(project='earthengine-legacy')
-            print("✅ Project-based initialization successful!")
+            print("SUCCESS: Project-based initialization successful!")
             return test_connection()
         except:
             pass
@@ -115,17 +115,17 @@ def try_alternative_auth():
         print("3. Trying cloud platform initialization...")
         try:
             ee.Initialize(opt_url='https://earthengine.googleapis.com')
-            print("✅ Cloud platform initialization successful!")
+            print("SUCCESS: Cloud platform initialization successful!")
             return test_connection()
         except:
             pass
         
-        print("⚠️ All authentication methods failed")
+        print("WARNING: All authentication methods failed")
         print("Running in simulation mode...")
         return False
         
     except Exception as e:
-        print(f"❌ Alternative authentication failed: {e}")
+        print(f"ERROR: Alternative authentication failed: {e}")
         return False
 
 def test_connection():
@@ -145,7 +145,7 @@ def test_connection():
             .filterBounds(uzbekistan)
         
         count = modis_collection.size().getInfo()
-        print(f"✅ Connection test successful!")
+        print(f"SUCCESS: Connection test successful!")
         print(f"   Found {count} MODIS LST images for January 2023")
         
         # Test image access
@@ -156,7 +156,7 @@ def test_connection():
         return True
         
     except Exception as e:
-        print(f"❌ Connection test failed: {e}")
+        print(f"ERROR: Connection test failed: {e}")
         return False
 
 def save_auth_status(authenticated=False):
@@ -173,7 +173,7 @@ def save_auth_status(authenticated=False):
     with open(status_file, 'w') as f:
         json.dump(status, f, indent=2)
     
-    print(f"💾 Authentication status saved to {status_file}")
+    print(f"STORAGE: Authentication status saved to {status_file}")
 
 def main():
     """Main authentication function"""
@@ -183,14 +183,14 @@ def main():
     
     if success:
         print("\n🎉 Google Earth Engine setup complete!")
-        print("✅ You can now run the urban heat analysis:")
+        print("SUCCESS: You can now run the urban heat analysis:")
         print("   python urban_heat_gee_standalone.py")
     else:
-        print("\n⚠️ GEE authentication not complete")
-        print("📝 The analysis will run in simulation mode")
+        print("\nWARNING: GEE authentication not complete")
+        print("MEMO: The analysis will run in simulation mode")
         print("   This will demonstrate the workflow with synthetic data")
     
-    print(f"\n📊 Next steps:")
+    print(f"\nCHART: Next steps:")
     print(f"   1. Run: python urban_heat_gee_standalone.py")
     print(f"   2. Check output in: gee_urban_heat_analysis/")
     

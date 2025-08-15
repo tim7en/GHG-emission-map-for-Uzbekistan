@@ -18,22 +18,22 @@ from datetime import datetime
 def high_resolution_atmospheric_analysis():
     """High-resolution server-side atmospheric analysis"""
     
-    print("🔬 HIGH-RESOLUTION ATMOSPHERIC ANALYSIS - UZBEKISTAN")
+    print("MICROSCOPE: HIGH-RESOLUTION ATMOSPHERIC ANALYSIS - UZBEKISTAN")
     print("=" * 65)
-    print("🎯 Enhanced parameters:")
-    print("   • 1km spatial resolution (vs 10km in test)")
-    print("   • 10 major cities")
-    print("   • 3 gases (NO₂, CO, CH₄)")
-    print("   • 3-month period (Jul-Sep 2024)")
-    print("   • Regional grid analysis")
-    print("   • Progress tracking")
+    print("TARGET: Enhanced parameters:")
+    print("   * 1km spatial resolution (vs 10km in test)")
+    print("   * 10 major cities")
+    print("   * 3 gases (NO₂, CO, CH₄)")
+    print("   * 3-month period (Jul-Sep 2024)")
+    print("   * Regional grid analysis")
+    print("   * Progress tracking")
     print("=" * 65)
     
     try:
         # Initialize GEE
-        print("\n🔧 Initializing Google Earth Engine...")
+        print("\nSETTINGS: Initializing Google Earth Engine...")
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Google Earth Engine initialized")
+        print("SUCCESS: Google Earth Engine initialized")
         
         # Define study area
         uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
@@ -79,7 +79,7 @@ def high_resolution_atmospheric_analysis():
                 city_features.append(surrounding_point)
         
         city_collection = ee.FeatureCollection(city_features)
-        print(f"✅ Created {len(city_features)} sampling points (city centers + suburban areas)")
+        print(f"SUCCESS: Created {len(city_features)} sampling points (city centers + suburban areas)")
         
         # High-resolution gas analysis
         datasets = {
@@ -108,7 +108,7 @@ def high_resolution_atmospheric_analysis():
         end_date = '2024-09-30'  # 3 months (Jul-Sep 2024)
         
         print(f"\n📅 Analysis period: {start_date} to {end_date} (3 months)")
-        print(f"🎯 Target resolution: 1km")
+        print(f"TARGET: Target resolution: 1km")
         
         results = {}
         total_gases = len(datasets)
@@ -127,7 +127,7 @@ def high_resolution_atmospheric_analysis():
                 
                 # Check data availability
                 size = collection.size().getInfo()
-                print(f"   📊 Found {size} satellite images")
+                print(f"   CHART: Found {size} satellite images")
                 
                 if size > 0:
                     # High-resolution temporal aggregation
@@ -181,7 +181,7 @@ def high_resolution_atmospheric_analysis():
                             }
                     
                     # Regional statistics for high-resolution analysis
-                    print("   🌍 Computing regional statistics at 1km resolution...")
+                    print("   EARTH: Computing regional statistics at 1km resolution...")
                     
                     # Define administrative regions
                     regions = {
@@ -219,17 +219,17 @@ def high_resolution_atmospheric_analysis():
                         'description': config['description']
                     }
                     
-                    print(f"   ✅ {gas} analysis complete - {len(gas_data)} high-res points processed")
+                    print(f"   SUCCESS: {gas} analysis complete - {len(gas_data)} high-res points processed")
                     
                 else:
-                    print(f"   ⚠️  No {gas} data available for specified period")
+                    print(f"   WARNING:  No {gas} data available for specified period")
                     
             except Exception as e:
-                print(f"   ❌ Error processing {gas}: {str(e)[:100]}...")
+                print(f"   ERROR: Error processing {gas}: {str(e)[:100]}...")
         
         # Process and display high-resolution results
         if results:
-            print(f"\n📊 HIGH-RESOLUTION RESULTS ANALYSIS")
+            print(f"\nCHART: HIGH-RESOLUTION RESULTS ANALYSIS")
             print("=" * 45)
             
             # Aggregate city-level results (average suburban measurements)
@@ -263,7 +263,7 @@ def high_resolution_atmospheric_analysis():
             # Display enhanced results
             for city, data in city_aggregated.items():
                 print(f"\n🏙️  {city} (High-Resolution Analysis):")
-                print(f"   📍 Location: {data['latitude']:.3f}°N, {data['longitude']:.3f}°E")
+                print(f"   📍 Location: {data['latitude']:.3f}degN, {data['longitude']:.3f}degE")
                 
                 for gas in results.keys():
                     if f'{gas}_mean' in data:
@@ -274,14 +274,14 @@ def high_resolution_atmospheric_analysis():
                         count = data[f'{gas}_count']
                         
                         if gas == 'CH4':
-                            print(f"   {gas}: {mean_val:.1f} ± {spatial_std:.1f} ppb (range: {min_val:.1f}-{max_val:.1f}, n={count})")
+                            print(f"   {gas}: {mean_val:.1f} +/- {spatial_std:.1f} ppb (range: {min_val:.1f}-{max_val:.1f}, n={count})")
                         else:
-                            print(f"   {gas}: {mean_val:.2e} ± {spatial_std:.2e} mol/m² (range: {min_val:.2e}-{max_val:.2e}, n={count})")
+                            print(f"   {gas}: {mean_val:.2e} +/- {spatial_std:.2e} mol/m^2 (range: {min_val:.2e}-{max_val:.2e}, n={count})")
                     else:
                         print(f"   {gas}: No high-resolution data")
             
             # Save high-resolution results
-            print(f"\n💾 Saving high-resolution results...")
+            print(f"\nSTORAGE: Saving high-resolution results...")
             output_dir = Path('outputs')
             output_dir.mkdir(exist_ok=True)
             
@@ -326,23 +326,23 @@ def high_resolution_atmospheric_analysis():
             print(f"   📄 Metadata: {metadata_file}")
             
             print(f"\n🎉 HIGH-RESOLUTION ANALYSIS COMPLETE!")
-            print(f"✅ {len(cities)} cities analyzed at 1km resolution")
-            print(f"📊 {len(city_features)} total sampling points processed")
-            print(f"💨 {len(results)} gases analyzed with spatial statistics")
-            print(f"🎯 Enhanced spatial variability analysis included")
+            print(f"SUCCESS: {len(cities)} cities analyzed at 1km resolution")
+            print(f"CHART: {len(city_features)} total sampling points processed")
+            print(f"EMISSION: {len(results)} gases analyzed with spatial statistics")
+            print(f"TARGET: Enhanced spatial variability analysis included")
             
             return True
             
         else:
-            print("\n❌ No high-resolution data extracted")
+            print("\nERROR: No high-resolution data extracted")
             return False
             
     except Exception as e:
-        print(f"\n❌ High-resolution analysis failed: {e}")
+        print(f"\nERROR: High-resolution analysis failed: {e}")
         return False
 
 if __name__ == "__main__":
-    print("🚀 Starting high-resolution atmospheric analysis...")
+    print("STARTING: Starting high-resolution atmospheric analysis...")
     start_time = time.time()
     
     success = high_resolution_atmospheric_analysis()
@@ -350,15 +350,15 @@ if __name__ == "__main__":
     end_time = time.time()
     duration = end_time - start_time
     
-    print(f"\n⏱️  High-resolution analysis completed in {duration:.1f} seconds")
+    print(f"\nSTOPWATCH:️  High-resolution analysis completed in {duration:.1f} seconds")
     
     if success:
-        print("✅ High-resolution analysis successful!")
-        print("\n📈 Enhanced features delivered:")
-        print("   • 1km spatial resolution (10x improvement)")
-        print("   • Spatial variability within cities")
-        print("   • Extended temporal coverage (3 months)")
-        print("   • Regional statistical analysis")
-        print("   • Comprehensive uncertainty quantification")
+        print("SUCCESS: High-resolution analysis successful!")
+        print("\nTRENDING: Enhanced features delivered:")
+        print("   * 1km spatial resolution (10x improvement)")
+        print("   * Spatial variability within cities")
+        print("   * Extended temporal coverage (3 months)")
+        print("   * Regional statistical analysis")
+        print("   * Comprehensive uncertainty quantification")
     else:
-        print("❌ High-resolution analysis failed")
+        print("ERROR: High-resolution analysis failed")

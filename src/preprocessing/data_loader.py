@@ -83,16 +83,16 @@ class RealDataLoader:
         """Initialize Google Earth Engine"""
         try:
             ee.Initialize(project='ee-sabitovty')
-            print("✅ Google Earth Engine initialized successfully")
+            print("SUCCESS: Google Earth Engine initialized successfully")
             return True
         except Exception as e:
-            print(f"⚠️  Could not initialize Google Earth Engine: {e}")
+            print(f"WARNING: Could not initialize Google Earth Engine: {e}")
             print("   Analysis will use only local IPCC data")
             return False
     
     def load_ipcc_2022_data(self) -> pd.DataFrame:
         """Load IPCC 2022 emissions data for Uzbekistan"""
-        print("\n📊 Loading IPCC 2022 Emissions Data")
+        print("\nLOADING: IPCC 2022 Emissions Data")
         print("-" * 40)
         
         # Try CSV first, then Excel
@@ -103,19 +103,19 @@ class RealDataLoader:
             try:
                 # Read CSV with proper separator
                 self.ipcc_data = pd.read_csv(csv_path, sep=';', encoding='utf-8')
-                print(f"✅ Loaded IPCC CSV data: {len(self.ipcc_data)} emission categories")
+                print(f"SUCCESS: Loaded IPCC CSV data: {len(self.ipcc_data)} emission categories")
             except Exception as e:
-                print(f"❌ Error loading CSV: {e}")
+                print(f"ERROR: Error loading CSV: {e}")
                 return pd.DataFrame()
         elif xlsx_path.exists():
             try:
                 self.ipcc_data = pd.read_excel(xlsx_path)
-                print(f"✅ Loaded IPCC Excel data: {len(self.ipcc_data)} emission categories")
+                print(f"SUCCESS: Loaded IPCC Excel data: {len(self.ipcc_data)} emission categories")
             except Exception as e:
-                print(f"❌ Error loading Excel: {e}")
+                print(f"ERROR: Error loading Excel: {e}")
                 return pd.DataFrame()
         else:
-            print("❌ No IPCC 2022 data found in data/ipcc_2022_data/")
+            print("ERROR: No IPCC 2022 data found in data/ipcc_2022_data/")
             return pd.DataFrame()
         
         # Clean and process the data
@@ -154,7 +154,7 @@ class RealDataLoader:
         if self.ipcc_data is None or len(self.ipcc_data) == 0:
             return
         
-        print("\n📈 IPCC 2022 Data Summary:")
+        print("\nSUMMARY: IPCC 2022 Data Summary:")
         print(f"   Total emission categories: {len(self.ipcc_data)}")
         
         if 'gas_type' in self.ipcc_data.columns:
@@ -168,11 +168,11 @@ class RealDataLoader:
     
     def load_gee_data(self) -> Dict[str, pd.DataFrame]:
         """Load emissions data from Google Earth Engine"""
-        print("\n🛰️  Loading Google Earth Engine Data")
+        print("\nSATELLITE: Loading Google Earth Engine Data")
         print("-" * 40)
         
         if not self.gee_initialized:
-            print("❌ Google Earth Engine not available")
+            print("ERROR: Google Earth Engine not available")
             return {}
         
         gee_datasets = {}
@@ -182,7 +182,7 @@ class RealDataLoader:
             uzbekistan = self._get_uzbekistan_geometry()
             
             if uzbekistan is None:
-                print("❌ Could not define Uzbekistan boundaries")
+                print("ERROR: Could not define Uzbekistan boundaries")
                 return {}
             
             # Load available datasets
@@ -193,7 +193,7 @@ class RealDataLoader:
                 gee_datasets["EDGAR"] = self._load_edgar_gee(uzbekistan)
         
         except Exception as e:
-            print(f"❌ Error loading GEE data: {e}")
+            print(f"ERROR: Error loading GEE data: {e}")
             return {}
         
         self.gee_data = gee_datasets
@@ -209,13 +209,13 @@ class RealDataLoader:
             
             return ee.Geometry.Polygon(uzbekistan_bounds)
         except Exception as e:
-            print(f"❌ Error creating Uzbekistan geometry: {e}")
+            print(f"ERROR: Error creating Uzbekistan geometry: {e}")
             return None
     
     def _load_odiac_gee(self, geometry) -> pd.DataFrame:
         """Load ODIAC data from Google Earth Engine"""
         try:
-            print("📡 Loading ODIAC CO2 emissions...")
+            print("RADAR: Loading ODIAC CO2 emissions...")
             
             # ODIAC fossil fuel CO2 emissions
             odiac = ee.ImageCollection('projects/earthengine-legacy/assets/users/projectgee/ODIAC_2019') \
@@ -223,7 +223,7 @@ class RealDataLoader:
                       .filterDate('2019-01-01', '2019-12-31')
             
             if odiac.size().getInfo() == 0:
-                print("⚠️  No ODIAC data available for Uzbekistan")
+                print("WARNING: No ODIAC data available for Uzbekistan")
                 return pd.DataFrame()
             
             # Sample the data
@@ -253,29 +253,29 @@ class RealDataLoader:
                 })
             
             df = pd.DataFrame(rows)
-            print(f"✅ Loaded {len(df)} ODIAC data points")
+            print(f"SUCCESS: Loaded {len(df)} ODIAC data points")
             return df
             
         except Exception as e:
-            print(f"❌ Error loading ODIAC data: {e}")
+            print(f"ERROR: Error loading ODIAC data: {e}")
             return pd.DataFrame()
     
     def _load_edgar_gee(self, geometry) -> pd.DataFrame:
         """Load EDGAR data from Google Earth Engine"""
         try:
-            print("📡 Loading EDGAR emissions...")
+            print("RADAR: Loading EDGAR emissions...")
             
             # EDGAR is more complex, may need specific collection access
-            print("⚠️  EDGAR GEE access requires specific permissions")
+            print("WARNING: EDGAR GEE access requires specific permissions")
             return pd.DataFrame()
             
         except Exception as e:
-            print(f"❌ Error loading EDGAR data: {e}")
+            print(f"ERROR: Error loading EDGAR data: {e}")
             return pd.DataFrame()
     
     def get_all_available_data(self) -> Dict[str, pd.DataFrame]:
         """Get all available real data sources"""
-        print("\n🔍 Loading All Available Real Data Sources")
+        print("\nSEARCH: Loading All Available Real Data Sources")
         print("=" * 50)
         
         all_data = {}
@@ -290,13 +290,13 @@ class RealDataLoader:
         all_data.update(gee_data)
         
         # Print summary
-        print(f"\n📋 Data Loading Summary:")
+        print(f"\nCLIPBOARD: Data Loading Summary:")
         print(f"   Available datasets: {len(all_data)}")
         for name, data in all_data.items():
             print(f"   {name}: {len(data)} records")
         
         if len(all_data) == 0:
-            print("❌ No real data sources available")
+            print("ERROR: No real data sources available")
             print("   Please check data files and GEE authentication")
         
         return all_data

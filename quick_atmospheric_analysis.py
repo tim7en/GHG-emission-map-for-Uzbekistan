@@ -17,13 +17,13 @@ import json
 def quick_atmospheric_analysis():
     """Quick analysis of real atmospheric data"""
     
-    print("🚀 Quick Real Atmospheric Data Analysis - Uzbekistan")
+    print("STARTING: Quick Real Atmospheric Data Analysis - Uzbekistan")
     print("=" * 60)
     
     try:
         # Initialize GEE
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Google Earth Engine initialized")
+        print("SUCCESS: Google Earth Engine initialized")
         
         # Define Uzbekistan region (simplified)
         uzbekistan = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
@@ -108,12 +108,12 @@ def quick_atmospheric_analysis():
                     
                     if city_data:
                         results[gas] = pd.DataFrame(city_data)
-                        print(f"   ✅ Extracted data for {len(city_data)} cities")
+                        print(f"   SUCCESS: Extracted data for {len(city_data)} cities")
                     else:
-                        print(f"   ⚠️  No valid data extracted")
+                        print(f"   WARNING:  No valid data extracted")
                 
             except Exception as e:
-                print(f"   ❌ Error: {str(e)[:100]}...")
+                print(f"   ERROR: Error: {str(e)[:100]}...")
         
         # Combine results
         if results:
@@ -132,14 +132,14 @@ def quick_atmospheric_analysis():
                     how='outer'
                 )
             
-            print(f"✅ Combined dataset: {len(combined_df)} cities")
+            print(f"SUCCESS: Combined dataset: {len(combined_df)} cities")
             
             # Display results
-            print(f"\n📊 ATMOSPHERIC CONCENTRATIONS BY CITY:")
+            print(f"\nCHART: ATMOSPHERIC CONCENTRATIONS BY CITY:")
             print("=" * 50)
             
             for _, row in combined_df.iterrows():
-                print(f"\n🏙️  {row['city']} ({row['latitude']:.2f}°N, {row['longitude']:.2f}°E)")
+                print(f"\n🏙️  {row['city']} ({row['latitude']:.2f}degN, {row['longitude']:.2f}degE)")
                 
                 for gas in gas_names:
                     conc_col = f'{gas}_concentration'
@@ -147,7 +147,7 @@ def quick_atmospheric_analysis():
                         if gas == 'CH4':
                             print(f"   {gas}: {row[conc_col]:.1f} ppb")
                         else:
-                            print(f"   {gas}: {row[conc_col]:.2e} mol/m²")
+                            print(f"   {gas}: {row[conc_col]:.2e} mol/m^2")
                     else:
                         print(f"   {gas}: No data")
             
@@ -172,33 +172,33 @@ def quick_atmospheric_analysis():
             with open(summary_file, 'w') as f:
                 json.dump(summary, f, indent=2)
             
-            print(f"\n💾 Results saved:")
+            print(f"\nSTORAGE: Results saved:")
             print(f"   Data: {output_file}")
             print(f"   Summary: {summary_file}")
             
             print(f"\n🎉 QUICK ANALYSIS COMPLETE!")
-            print(f"✅ Real atmospheric data successfully extracted")
-            print(f"📊 {len(combined_df)} cities analyzed")
-            print(f"💨 {len(gas_names)} gases detected")
+            print(f"SUCCESS: Real atmospheric data successfully extracted")
+            print(f"CHART: {len(combined_df)} cities analyzed")
+            print(f"EMISSION: {len(gas_names)} gases detected")
             
             return True
             
         else:
-            print("\n❌ No atmospheric data could be extracted")
+            print("\nERROR: No atmospheric data could be extracted")
             print("This may be due to:")
-            print("  • Data access restrictions")
-            print("  • Temporary data unavailability")
-            print("  • Network connectivity issues")
+            print("  * Data access restrictions")
+            print("  * Temporary data unavailability")
+            print("  * Network connectivity issues")
             return False
             
     except Exception as e:
-        print(f"\n❌ Analysis failed: {e}")
+        print(f"\nERROR: Analysis failed: {e}")
         return False
 
 if __name__ == "__main__":
     success = quick_atmospheric_analysis()
     if not success:
         print("\n💡 Consider trying:")
-        print("  • Different date ranges")
-        print("  • Alternative atmospheric datasets") 
-        print("  • Checking data access permissions")
+        print("  * Different date ranges")
+        print("  * Alternative atmospheric datasets") 
+        print("  * Checking data access permissions")

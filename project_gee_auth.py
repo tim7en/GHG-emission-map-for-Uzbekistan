@@ -21,42 +21,42 @@ def authenticate_with_project():
     
     # Your project ID
     project_id = "ee-sabitovty"
-    print(f"🎯 Using project: {project_id}")
+    print(f"TARGET: Using project: {project_id}")
     
     try:
         import ee
-        print("✅ Earth Engine API imported successfully")
+        print("SUCCESS: Earth Engine API imported successfully")
         
         # Try to initialize with your project
         print(f"\n🔄 Initializing Earth Engine with project: {project_id}")
         
         try:
             ee.Initialize(project=project_id)
-            print("✅ Earth Engine initialized successfully with your project!")
+            print("SUCCESS: Earth Engine initialized successfully with your project!")
             
             # Test connection
             return test_connection_with_project(project_id)
             
         except Exception as e:
-            print(f"❌ Project initialization failed: {e}")
+            print(f"ERROR: Project initialization failed: {e}")
             print("🔄 Trying authentication first...")
             
             # Try authentication then initialization
             try:
                 ee.Authenticate()
-                print("✅ Authentication completed!")
+                print("SUCCESS: Authentication completed!")
                 
                 ee.Initialize(project=project_id)
-                print("✅ Earth Engine initialized with your project!")
+                print("SUCCESS: Earth Engine initialized with your project!")
                 
                 return test_connection_with_project(project_id)
                 
             except Exception as e2:
-                print(f"❌ Authentication + initialization failed: {e2}")
+                print(f"ERROR: Authentication + initialization failed: {e2}")
                 return try_alternative_project_methods(project_id)
         
     except ImportError:
-        print("❌ Earth Engine API not available")
+        print("ERROR: Earth Engine API not available")
         print("Please install with: pip install earthengine-api")
         return False
 
@@ -73,7 +73,7 @@ def try_alternative_project_methods(project_id):
         os.environ['GOOGLE_CLOUD_PROJECT'] = project_id
         try:
             ee.Initialize()
-            print("✅ Environment variable method successful!")
+            print("SUCCESS: Environment variable method successful!")
             return test_connection_with_project(project_id)
         except Exception as e:
             print(f"   Failed: {e}")
@@ -82,7 +82,7 @@ def try_alternative_project_methods(project_id):
         print("2. Trying with cloud platform URL...")
         try:
             ee.Initialize(project=project_id, opt_url='https://earthengine.googleapis.com')
-            print("✅ Cloud platform URL method successful!")
+            print("SUCCESS: Cloud platform URL method successful!")
             return test_connection_with_project(project_id)
         except Exception as e:
             print(f"   Failed: {e}")
@@ -93,16 +93,16 @@ def try_alternative_project_methods(project_id):
         if home_creds.exists():
             try:
                 ee.Initialize(project=project_id)
-                print("✅ Manual credentials method successful!")
+                print("SUCCESS: Manual credentials method successful!")
                 return test_connection_with_project(project_id)
             except Exception as e:
                 print(f"   Failed: {e}")
         
-        print("⚠️ All project methods failed")
+        print("WARNING: All project methods failed")
         return False
         
     except Exception as e:
-        print(f"❌ Alternative project methods failed: {e}")
+        print(f"ERROR: Alternative project methods failed: {e}")
         return False
 
 def test_connection_with_project(project_id):
@@ -115,17 +115,17 @@ def test_connection_with_project(project_id):
         
         # Test basic computation
         test_number = ee.Number(2025).getInfo()
-        print(f"✅ Basic computation test: {test_number}")
+        print(f"SUCCESS: Basic computation test: {test_number}")
         
         # Test image access
         image = ee.Image('USGS/SRTMGL1_003')
         scale = image.projection().nominalScale().getInfo()
-        print(f"✅ Image access test successful! SRTM scale: {scale}m")
+        print(f"SUCCESS: Image access test successful! SRTM scale: {scale}m")
         
         # Test collections access
         collection = ee.ImageCollection('MODIS/061/MOD11A1')
         size = collection.limit(1).size().getInfo()
-        print(f"✅ Collection access test: {size} images accessible")
+        print(f"SUCCESS: Collection access test: {size} images accessible")
         
         # Test Uzbekistan-specific data
         print("🇺🇿 Testing Uzbekistan-specific data access...")
@@ -136,23 +136,23 @@ def test_connection_with_project(project_id):
             .filterBounds(uzbekistan)
         
         count = modis_collection.size().getInfo()
-        print(f"✅ Uzbekistan data test: Found {count} MODIS images for January 2023")
+        print(f"SUCCESS: Uzbekistan data test: Found {count} MODIS images for January 2023")
         
         # Test emissions-specific datasets if available
         try:
             # Test CO2 emissions data
             emissions_test = ee.ImageCollection('ODIAC/FOSSILFUEL_CO2').limit(1)
             if emissions_test.size().getInfo() > 0:
-                print("✅ CO2 emissions dataset accessible!")
+                print("SUCCESS: CO2 emissions dataset accessible!")
             else:
-                print("⚠️  CO2 emissions dataset may have limited access")
+                print("WARNING:  CO2 emissions dataset may have limited access")
         except Exception as e:
-            print(f"⚠️  CO2 emissions dataset test: {e}")
+            print(f"WARNING:  CO2 emissions dataset test: {e}")
         
         return True
         
     except Exception as e:
-        print(f"❌ Connection test failed: {e}")
+        print(f"ERROR: Connection test failed: {e}")
         return False
 
 def save_project_auth_status(authenticated=False, project_id="ee-sabitovty"):
@@ -170,12 +170,12 @@ def save_project_auth_status(authenticated=False, project_id="ee-sabitovty"):
     with open(status_file, 'w') as f:
         json.dump(status, f, indent=2)
     
-    print(f"💾 Authentication status saved to: {status_file}")
+    print(f"STORAGE: Authentication status saved to: {status_file}")
 
 def provide_project_troubleshooting(project_id):
     """Provide project-specific troubleshooting"""
     
-    print(f"\n🔧 Troubleshooting for project: {project_id}")
+    print(f"\nSETTINGS: Troubleshooting for project: {project_id}")
     print("=" * 50)
     
     print("\n**Check Project Access:**")
@@ -204,14 +204,14 @@ def main():
     
     if success:
         print(f"\n🎉 Google Earth Engine authentication successful!")
-        print(f"✅ Connected to project: {project_id}")
-        print("\n🚀 You can now run your analysis scripts with real data:")
+        print(f"SUCCESS: Connected to project: {project_id}")
+        print("\nSTARTING: You can now run your analysis scripts with real data:")
         print("   python ghg_emissions_uzb/ghg_downscaling_uzb.py")
         print("   python urban_heat_gee_standalone.py")
     else:
-        print(f"\n⚠️  Google Earth Engine authentication not complete for project: {project_id}")
+        print(f"\nWARNING:  Google Earth Engine authentication not complete for project: {project_id}")
         provide_project_troubleshooting(project_id)
-        print("\n📝 Your analysis scripts will run in simulation mode")
+        print("\nMEMO: Your analysis scripts will run in simulation mode")
     
     return success
 

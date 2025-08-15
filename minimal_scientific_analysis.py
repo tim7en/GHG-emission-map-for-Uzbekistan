@@ -27,23 +27,23 @@ plt.style.use('seaborn-v0_8-whitegrid')
 def minimal_scientific_analysis():
     """Minimal scientific analysis using existing data"""
     
-    print("🔬 MINIMAL SCIENTIFIC ANALYSIS - USING EXISTING DATA")
+    print("MICROSCOPE: MINIMAL SCIENTIFIC ANALYSIS - USING EXISTING DATA")
     print("=" * 55)
-    print("🎯 Analysis approach:")
-    print("   • Use existing satellite time series (2018-2024)")
-    print("   • Load 2022 sectoral emissions inventory")
-    print("   • Perform correlation analysis")
-    print("   • Quantify uncertainties")
-    print("   • Validate satellite measurements")
+    print("TARGET: Analysis approach:")
+    print("   * Use existing satellite time series (2018-2024)")
+    print("   * Load 2022 sectoral emissions inventory")
+    print("   * Perform correlation analysis")
+    print("   * Quantify uncertainties")
+    print("   * Validate satellite measurements")
     print("=" * 55)
     
     try:
         # Load existing satellite data
-        print("\n📊 Loading existing satellite data...")
+        print("\nCHART: Loading existing satellite data...")
         satellite_data = load_existing_satellite_data()
         
         # Load 2022 emissions inventory
-        print("📋 Loading 2022 emissions inventory...")
+        print("CLIPBOARD: Loading 2022 emissions inventory...")
         emissions_2022 = load_emissions_inventory_2022()
         
         # Perform correlation analysis
@@ -51,11 +51,11 @@ def minimal_scientific_analysis():
         correlation_results = analyze_correlations(satellite_data, emissions_2022)
         
         # Uncertainty analysis
-        print("📈 Analyzing uncertainties...")
+        print("TRENDING: Analyzing uncertainties...")
         uncertainty_results = analyze_uncertainties(satellite_data, emissions_2022)
         
         # Trend validation
-        print("📊 Validating trends...")
+        print("CHART: Validating trends...")
         trend_results = validate_trends(satellite_data, emissions_2022)
         
         # Generate scientific outputs
@@ -68,12 +68,12 @@ def minimal_scientific_analysis():
         )
         
         print(f"\n🎉 MINIMAL SCIENTIFIC ANALYSIS COMPLETE!")
-        print(f"📊 Results saved to: {output_dir}")
+        print(f"CHART: Results saved to: {output_dir}")
         
         return True
         
     except Exception as e:
-        print(f"\n❌ Analysis failed: {e}")
+        print(f"\nERROR: Analysis failed: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -86,13 +86,13 @@ def load_existing_satellite_data():
     if data_file.exists():
         df = pd.read_csv(data_file)
         df['date'] = pd.to_datetime(df['date'])
-        print(f"   ✅ Loaded {len(df):,} satellite observations")
+        print(f"   SUCCESS: Loaded {len(df):,} satellite observations")
         print(f"   📅 Period: {df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}")
         print(f"   🏙️ Cities: {df['city'].nunique()}")
-        print(f"   💨 Gases: {df['gas'].nunique()}")
+        print(f"   EMISSION: Gases: {df['gas'].nunique()}")
         return df
     else:
-        print("   ❌ No existing satellite data found")
+        print("   ERROR: No existing satellite data found")
         return pd.DataFrame()
 
 def load_emissions_inventory_2022():
@@ -154,9 +154,9 @@ def load_emissions_inventory_2022():
         'uncertainty_percent': 'mean'
     }).reset_index()
     
-    print(f"   ✅ Loaded {len(df)} emission sectors")
-    print(f"   📊 Total CO2 equivalent: {df['emissions_2022_co2_eq'].sum():.1f} Gg")
-    print(f"   💨 Gas types: {', '.join(gas_totals['gas'].tolist())}")
+    print(f"   SUCCESS: Loaded {len(df)} emission sectors")
+    print(f"   CHART: Total CO2 equivalent: {df['emissions_2022_co2_eq'].sum():.1f} Gg")
+    print(f"   EMISSION: Gas types: {', '.join(gas_totals['gas'].tolist())}")
     
     return {
         'detailed': df,
@@ -215,7 +215,7 @@ def analyze_correlations(satellite_data, emissions_2022):
                             'satellite_cv_percent': (sat_std / sat_value * 100) if sat_value > 0 else 0,
                             'measurement_count': sat_count,
                             'emission_total_gg': total_emissions,
-                            'emission_intensity': total_emissions / 447400,  # Per km² (Uzbekistan area)
+                            'emission_intensity': total_emissions / 447400,  # Per km^2 (Uzbekistan area)
                             'sat_emission_ratio': sat_value / total_emissions if total_emissions > 0 else 0
                         }
         
@@ -245,7 +245,7 @@ def analyze_correlations(satellite_data, emissions_2022):
             ]['emissions_2022_co2_eq'].iloc[0] if len(emissions_2022['by_gas'][emissions_2022['by_gas']['gas'] == 'CH4']) > 0 else 0
         }
     
-    print(f"   📊 Computed {len([k for k in correlations.keys() if k != 'sectoral_analysis'])} gas correlations")
+    print(f"   CHART: Computed {len([k for k in correlations.keys() if k != 'sectoral_analysis'])} gas correlations")
     return correlations
 
 def analyze_uncertainties(satellite_data, emissions_2022):
@@ -314,8 +314,8 @@ def analyze_uncertainties(satellite_data, emissions_2022):
     
     uncertainties['inventory'] = inventory_uncertainties
     
-    print(f"   📈 Analyzed uncertainties for {len(uncertainties.get('satellite', {}))} satellite gases")
-    print(f"   📋 Analyzed uncertainties for {len(inventory_uncertainties)} inventory gases")
+    print(f"   TRENDING: Analyzed uncertainties for {len(uncertainties.get('satellite', {}))} satellite gases")
+    print(f"   CLIPBOARD: Analyzed uncertainties for {len(inventory_uncertainties)} inventory gases")
     
     return uncertainties
 
@@ -383,14 +383,14 @@ def validate_trends(satellite_data, emissions_2022):
                     ]['emissions_2022_co2_eq'].sum()
                     trends[gas]['related_inventory_emissions'] = related_emissions
     
-    print(f"   📊 Validated trends for {len(trends)} gases")
+    print(f"   CHART: Validated trends for {len(trends)} gases")
     return trends
 
 def generate_scientific_outputs(satellite_data, emissions_2022, correlation_results,
                                uncertainty_results, trend_results, output_dir):
     """Generate scientific analysis outputs"""
     
-    print("   📊 Generating scientific outputs...")
+    print("   CHART: Generating scientific outputs...")
     
     # 1. Save processed data
     if len(satellite_data) > 0:
@@ -420,7 +420,7 @@ def generate_scientific_outputs(satellite_data, emissions_2022, correlation_resu
     generate_comprehensive_report(satellite_data, emissions_2022, correlation_results,
                                 uncertainty_results, trend_results, output_dir)
     
-    print(f"   ✅ Generated comprehensive scientific outputs")
+    print(f"   SUCCESS: Generated comprehensive scientific outputs")
 
 def create_correlation_plots(correlation_results, emissions_2022, output_dir):
     """Create correlation analysis plots"""
@@ -627,7 +627,7 @@ def create_trend_plots(satellite_data, trend_results, output_dir):
             trend_line = slope * X + intercept
             
             ax.plot(X, trend_line, '--', color='red', linewidth=2,
-                   label=f'Trend (R²={trend_data["r_squared"]:.3f})')
+                   label=f'Trend (R^2={trend_data["r_squared"]:.3f})')
         
         # Formatting
         ax.set_title(f'{gas} - {trend_data["trend_direction"].title()} Trend')
@@ -726,17 +726,17 @@ def generate_comprehensive_report(satellite_data, emissions_2022, correlation_re
         f.write("DATA OVERVIEW\n")
         f.write("-" * 30 + "\n")
         f.write(f"Emissions Inventory (2022):\n")
-        f.write(f"  • Total sectors: {len(emissions_2022['detailed'])}\n")
-        f.write(f"  • Total emissions: {emissions_2022['detailed']['emissions_2022_co2_eq'].sum():.1f} Gg CO2-eq\n")
-        f.write(f"  • Gas types: {', '.join(emissions_2022['by_gas']['gas'].tolist())}\n")
-        f.write(f"  • Uncertainty range: {emissions_2022['detailed']['uncertainty_percent'].min():.1f}%-{emissions_2022['detailed']['uncertainty_percent'].max():.1f}%\n\n")
+        f.write(f"  * Total sectors: {len(emissions_2022['detailed'])}\n")
+        f.write(f"  * Total emissions: {emissions_2022['detailed']['emissions_2022_co2_eq'].sum():.1f} Gg CO2-eq\n")
+        f.write(f"  * Gas types: {', '.join(emissions_2022['by_gas']['gas'].tolist())}\n")
+        f.write(f"  * Uncertainty range: {emissions_2022['detailed']['uncertainty_percent'].min():.1f}%-{emissions_2022['detailed']['uncertainty_percent'].max():.1f}%\n\n")
         
         if len(satellite_data) > 0:
             f.write(f"Satellite Observations:\n")
-            f.write(f"  • Total measurements: {len(satellite_data):,}\n")
-            f.write(f"  • Time period: {satellite_data['date'].min().strftime('%Y-%m')} to {satellite_data['date'].max().strftime('%Y-%m')}\n")
-            f.write(f"  • Cities covered: {satellite_data['city'].nunique()}\n")
-            f.write(f"  • Gases measured: {', '.join(satellite_data['gas'].unique())}\n\n")
+            f.write(f"  * Total measurements: {len(satellite_data):,}\n")
+            f.write(f"  * Time period: {satellite_data['date'].min().strftime('%Y-%m')} to {satellite_data['date'].max().strftime('%Y-%m')}\n")
+            f.write(f"  * Cities covered: {satellite_data['city'].nunique()}\n")
+            f.write(f"  * Gases measured: {', '.join(satellite_data['gas'].unique())}\n\n")
         
         # Key Findings
         f.write("KEY FINDINGS\n")
@@ -746,19 +746,19 @@ def generate_comprehensive_report(satellite_data, emissions_2022, correlation_re
         if 'sectoral_analysis' in correlation_results:
             sectoral = correlation_results['sectoral_analysis']
             f.write("Sectoral Emission Analysis:\n")
-            f.write(f"  • Transport CO2: {sectoral['transport_co2_gg']:.1f} Gg\n")
-            f.write(f"  • Energy CO2: {sectoral['energy_co2_gg']:.1f} Gg\n")
-            f.write(f"  • Agricultural CH4: {sectoral['agriculture_ch4_gg']:.1f} Gg CO2-eq\n")
-            f.write(f"  • Total CO2: {sectoral['total_co2_gg']:.1f} Gg\n")
-            f.write(f"  • Total CH4: {sectoral['total_ch4_gg']:.1f} Gg CO2-eq\n\n")
+            f.write(f"  * Transport CO2: {sectoral['transport_co2_gg']:.1f} Gg\n")
+            f.write(f"  * Energy CO2: {sectoral['energy_co2_gg']:.1f} Gg\n")
+            f.write(f"  * Agricultural CH4: {sectoral['agriculture_ch4_gg']:.1f} Gg CO2-eq\n")
+            f.write(f"  * Total CO2: {sectoral['total_co2_gg']:.1f} Gg\n")
+            f.write(f"  * Total CH4: {sectoral['total_ch4_gg']:.1f} Gg CO2-eq\n\n")
         
         # Trend findings
         if trend_results:
             f.write("Satellite Trend Analysis:\n")
             for gas, trend in trend_results.items():
                 significance = "significant" if trend['is_significant'] else "not significant"
-                f.write(f"  • {gas}: {trend['trend_direction']} trend ({trend['relative_trend_percent_per_year']:+.2f}%/year, {significance})\n")
-                f.write(f"    Data quality: R² = {trend['r_squared']:.3f}, {trend['data_points']} data points\n")
+                f.write(f"  * {gas}: {trend['trend_direction']} trend ({trend['relative_trend_percent_per_year']:+.2f}%/year, {significance})\n")
+                f.write(f"    Data quality: R^2 = {trend['r_squared']:.3f}, {trend['data_points']} data points\n")
             f.write("\n")
         
         # Uncertainty findings
@@ -767,12 +767,12 @@ def generate_comprehensive_report(satellite_data, emissions_2022, correlation_re
             if 'satellite' in uncertainty_results:
                 f.write("  Satellite measurement uncertainties:\n")
                 for gas, unc in uncertainty_results['satellite'].items():
-                    f.write(f"    • {gas}: {unc['temporal_cv_percent']:.1f}% temporal, {unc['spatial_cv_percent']:.1f}% spatial\n")
+                    f.write(f"    * {gas}: {unc['temporal_cv_percent']:.1f}% temporal, {unc['spatial_cv_percent']:.1f}% spatial\n")
             
             if 'inventory' in uncertainty_results:
                 f.write("  Inventory uncertainties:\n")
                 for gas, unc in uncertainty_results['inventory'].items():
-                    f.write(f"    • {gas}: {unc['weighted_uncertainty_percent']:.1f}% weighted average\n")
+                    f.write(f"    * {gas}: {unc['weighted_uncertainty_percent']:.1f}% weighted average\n")
             f.write("\n")
         
         # Validation Assessment
@@ -796,11 +796,11 @@ def generate_comprehensive_report(satellite_data, emissions_2022, correlation_re
         # Limitations
         f.write("LIMITATIONS\n")
         f.write("-" * 30 + "\n")
-        f.write("• Satellite measurements are column averages, not surface concentrations\n")
-        f.write("• Weather and cloud conditions affect data availability\n")
-        f.write("• Some gases (N2O) not directly observable by current satellites\n")
-        f.write("• Temporal mismatch between inventory year and satellite time series\n")
-        f.write("• Scale differences between point sources and satellite pixels\n\n")
+        f.write("* Satellite measurements are column averages, not surface concentrations\n")
+        f.write("* Weather and cloud conditions affect data availability\n")
+        f.write("* Some gases (N2O) not directly observable by current satellites\n")
+        f.write("* Temporal mismatch between inventory year and satellite time series\n")
+        f.write("* Scale differences between point sources and satellite pixels\n\n")
         
         f.write("CONCLUSION\n")
         f.write("-" * 30 + "\n")
@@ -810,7 +810,7 @@ def generate_comprehensive_report(satellite_data, emissions_2022, correlation_re
         f.write("datasets while identifying areas for improvement in future assessments.\n")
 
 if __name__ == "__main__":
-    print("🚀 Starting minimal scientific emission analysis...")
+    print("STARTING: Starting minimal scientific emission analysis...")
     start_time = time.time()
     
     success = minimal_scientific_analysis()
@@ -818,16 +818,16 @@ if __name__ == "__main__":
     end_time = time.time()
     duration = end_time - start_time
     
-    print(f"\n⏱️  Analysis completed in {duration:.1f} seconds")
+    print(f"\nSTOPWATCH:️  Analysis completed in {duration:.1f} seconds")
     
     if success:
-        print("✅ Minimal scientific analysis successful!")
-        print("\n📈 Generated scientific outputs:")
-        print("   • Satellite-inventory correlation analysis")
-        print("   • Comprehensive uncertainty quantification")
-        print("   • Statistical trend validation")
-        print("   • Sectoral emission analysis")
-        print("   • Data quality assessment")
-        print("   • Scientific validation report")
+        print("SUCCESS: Minimal scientific analysis successful!")
+        print("\nTRENDING: Generated scientific outputs:")
+        print("   * Satellite-inventory correlation analysis")
+        print("   * Comprehensive uncertainty quantification")
+        print("   * Statistical trend validation")
+        print("   * Sectoral emission analysis")
+        print("   * Data quality assessment")
+        print("   * Scientific validation report")
     else:
-        print("❌ Analysis failed")
+        print("ERROR: Analysis failed")

@@ -1,7 +1,33 @@
 COMPREHENSIVE ATMOSPHERIC ANALYSIS REPORT - UZBEKISTAN (2017-2024)
 ======================================================================
 
-Analysis Date: 2025-08-15 11:40:50
+Analysis Date: 2025-08-15 13:28:37
 Total Data Records: 1,870
 Cities Analyzed: 10
 Gases Analyzed: 3
+Time Period: 2018-06 to 2024-08
+
+Nitrogen Dioxide (NO2):
+  * Records: 750
+  * Mean: 8.49e-05 mol/m^2
+  * Range: 1.67e-05 - 6.12e-04 mol/m^2
+  * Highest: Tashkent (2.55e-04 mol/m^2)
+  * Lowest: Nukus (2.78e-05 mol/m^2)
+  * Trend: Increasing (2.84e-06/year)
+
+Carbon Monoxide (CO):
+  * Records: 740
+  * Mean: 3.36e-02 mol/m^2
+  * Range: 2.58e-02 - 5.13e-02 mol/m^2
+  * Highest: Andijan (3.56e-02 mol/m^2)
+  * Lowest: Samarkand (3.07e-02 mol/m^2)
+  * Trend: Increasing (1.99e-04/year)
+
+Methane (CH4):
+  * Records: 380
+  * Mean: 1.91e+03 ppb
+  * Range: 1.86e+03 - 1.97e+03 ppb
+  * Highest: Andijan (1.92e+03 ppb)
+  * Lowest: Urgench (1.90e+03 ppb)
+  * Trend: Increasing (6.57e+00/year)
+

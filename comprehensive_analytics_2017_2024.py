@@ -29,23 +29,23 @@ sns.set_palette("husl")
 def comprehensive_analytics_2017_2024():
     """Comprehensive 8-year atmospheric analysis with visualization"""
     
-    print("📊 COMPREHENSIVE ATMOSPHERIC ANALYTICS - UZBEKISTAN (2017-2024)")
+    print("CHART: COMPREHENSIVE ATMOSPHERIC ANALYTICS - UZBEKISTAN (2017-2024)")
     print("=" * 70)
-    print("🎯 Analysis parameters:")
-    print("   • Time period: 2017-2024 (8 years)")
-    print("   • 10 major cities")
-    print("   • 3 gases (NO₂, CO, CH₄)")
-    print("   • Monthly temporal resolution")
-    print("   • Trend analysis & forecasting")
-    print("   • Interactive maps & visualizations")
-    print("   • Seasonal decomposition")
+    print("TARGET: Analysis parameters:")
+    print("   * Time period: 2017-2024 (8 years)")
+    print("   * 10 major cities")
+    print("   * 3 gases (NO₂, CO, CH₄)")
+    print("   * Monthly temporal resolution")
+    print("   * Trend analysis & forecasting")
+    print("   * Interactive maps & visualizations")
+    print("   * Seasonal decomposition")
     print("=" * 70)
     
     try:
         # Initialize GEE
-        print("\n🔧 Initializing Google Earth Engine...")
+        print("\nSETTINGS: Initializing Google Earth Engine...")
         ee.Initialize(project='ee-sabitovty')
-        print("✅ Google Earth Engine initialized")
+        print("SUCCESS: Google Earth Engine initialized")
         
         # Define study area
         uzbekistan_bounds = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
@@ -142,7 +142,7 @@ def comprehensive_analytics_2017_2024():
                 'band': 'tropospheric_NO2_column_number_density',
                 'scale': 5000,
                 'description': 'Nitrogen Dioxide',
-                'unit': 'mol/m²',
+                'unit': 'mol/m^2',
                 'color': 'red'
             },
             'CO': {
@@ -150,7 +150,7 @@ def comprehensive_analytics_2017_2024():
                 'band': 'CO_column_number_density',
                 'scale': 5000,
                 'description': 'Carbon Monoxide',
-                'unit': 'mol/m²',
+                'unit': 'mol/m^2',
                 'color': 'orange'
             },
             'CH4': {
@@ -177,7 +177,7 @@ def comprehensive_analytics_2017_2024():
                 
                 month_count += 1
                 progress = month_count / total_months * 100
-                print(f"   📊 Processing {year}-{month:02d} ({progress:.1f}%)")
+                print(f"   CHART: Processing {year}-{month:02d} ({progress:.1f}%)")
                 
                 # Define monthly period
                 start_date = f"{year}-{month:02d}-01"
@@ -231,23 +231,23 @@ def comprehensive_analytics_2017_2024():
                                     })
                     
                     except Exception as e:
-                        print(f"      ⚠️ Warning: {gas} data for {year}-{month:02d}: {str(e)[:50]}...")
+                        print(f"      WARNING: Warning: {gas} data for {year}-{month:02d}: {str(e)[:50]}...")
         
-        print(f"✅ Collected {len(all_data)} data points across 8 years")
+        print(f"SUCCESS: Collected {len(all_data)} data points across 8 years")
         
         # Create comprehensive DataFrame
         df = pd.DataFrame(all_data)
         df['date'] = pd.to_datetime(df['date'])
         
         if len(df) == 0:
-            print("❌ No data collected!")
+            print("ERROR: No data collected!")
             return False
         
-        print(f"\n📊 Data summary:")
-        print(f"   • Total records: {len(df):,}")
-        print(f"   • Time range: {df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}")
-        print(f"   • Cities: {df['city'].nunique()}")
-        print(f"   • Gases: {df['gas'].nunique()}")
+        print(f"\nCHART: Data summary:")
+        print(f"   * Total records: {len(df):,}")
+        print(f"   * Time range: {df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}")
+        print(f"   * Cities: {df['city'].nunique()}")
+        print(f"   * Gases: {df['gas'].nunique()}")
         
         # Create output directory
         output_dir = Path('outputs/comprehensive_analytics')
@@ -255,7 +255,7 @@ def comprehensive_analytics_2017_2024():
         
         # Save raw data
         df.to_csv(output_dir / 'time_series_data_2017_2024.csv', index=False)
-        print(f"💾 Raw data saved to: {output_dir / 'time_series_data_2017_2024.csv'}")
+        print(f"STORAGE: Raw data saved to: {output_dir / 'time_series_data_2017_2024.csv'}")
         
         # Generate visualizations
         print(f"\n🎨 Generating comprehensive visualizations...")
@@ -282,19 +282,19 @@ def comprehensive_analytics_2017_2024():
         create_statistical_summary(df, datasets, cities, output_dir)
         
         print(f"\n🎉 COMPREHENSIVE ANALYTICS COMPLETE!")
-        print(f"📊 Generated visualizations and maps in: {output_dir}")
+        print(f"CHART: Generated visualizations and maps in: {output_dir}")
         
         return True
         
     except Exception as e:
-        print(f"\n❌ Comprehensive analytics failed: {e}")
+        print(f"\nERROR: Comprehensive analytics failed: {e}")
         import traceback
         traceback.print_exc()
         return False
 
 def create_time_series_plots(df, datasets, output_dir):
     """Create time series plots for each gas"""
-    print("   📈 Creating time series plots...")
+    print("   TRENDING: Creating time series plots...")
     
     fig, axes = plt.subplots(3, 1, figsize=(15, 12))
     
@@ -311,7 +311,7 @@ def create_time_series_plots(df, datasets, output_dir):
             ax.fill_between(monthly_stats['date'], 
                            monthly_stats['mean'] - monthly_stats['std'],
                            monthly_stats['mean'] + monthly_stats['std'],
-                           alpha=0.3, color=config['color'], label=f'{gas} ±1σ')
+                           alpha=0.3, color=config['color'], label=f'{gas} +/-1σ')
             
             ax.set_title(f'{config["description"]} Time Series (2017-2024)', fontsize=14, fontweight='bold')
             ax.set_ylabel(f'Concentration ({config["unit"]})')
@@ -364,7 +364,7 @@ def create_city_comparison_plots(df, datasets, cities, output_dir):
 
 def create_trend_analysis(df, datasets, output_dir):
     """Create trend analysis plots"""
-    print("   📊 Creating trend analysis...")
+    print("   CHART: Creating trend analysis...")
     
     fig, axes = plt.subplots(2, 2, figsize=(16, 12))
     
@@ -506,7 +506,7 @@ def create_seasonal_analysis(df, datasets, output_dir):
 
 def create_regional_analysis(df, datasets, output_dir):
     """Create regional analysis plots"""
-    print("   🌍 Creating regional analysis...")
+    print("   EARTH: Creating regional analysis...")
     
     fig, axes = plt.subplots(3, 1, figsize=(15, 12))
     
@@ -535,7 +535,7 @@ def create_regional_analysis(df, datasets, output_dir):
 
 def create_statistical_summary(df, datasets, cities, output_dir):
     """Create statistical summary report"""
-    print("   📋 Creating statistical summary...")
+    print("   CLIPBOARD: Creating statistical summary...")
     
     summary_data = []
     
@@ -593,15 +593,15 @@ def create_statistical_summary(df, datasets, cities, output_dir):
         
         for _, row in summary_df.iterrows():
             f.write(f"{row['description']} ({row['gas']}):\n")
-            f.write(f"  • Records: {row['total_records']:,}\n")
-            f.write(f"  • Mean: {row['mean_concentration']:.2e} {row['unit']}\n")
-            f.write(f"  • Range: {row['min_concentration']:.2e} - {row['max_concentration']:.2e} {row['unit']}\n")
-            f.write(f"  • Highest: {row['highest_city']} ({row['highest_concentration']:.2e} {row['unit']})\n")
-            f.write(f"  • Lowest: {row['lowest_city']} ({row['lowest_concentration']:.2e} {row['unit']})\n")
-            f.write(f"  • Trend: {row['trend_direction']} ({row['annual_trend']:.2e}/year)\n\n")
+            f.write(f"  * Records: {row['total_records']:,}\n")
+            f.write(f"  * Mean: {row['mean_concentration']:.2e} {row['unit']}\n")
+            f.write(f"  * Range: {row['min_concentration']:.2e} - {row['max_concentration']:.2e} {row['unit']}\n")
+            f.write(f"  * Highest: {row['highest_city']} ({row['highest_concentration']:.2e} {row['unit']})\n")
+            f.write(f"  * Lowest: {row['lowest_city']} ({row['lowest_concentration']:.2e} {row['unit']})\n")
+            f.write(f"  * Trend: {row['trend_direction']} ({row['annual_trend']:.2e}/year)\n\n")
 
 if __name__ == "__main__":
-    print("🚀 Starting comprehensive atmospheric analytics (2017-2024)...")
+    print("STARTING: Starting comprehensive atmospheric analytics (2017-2024)...")
     start_time = time.time()
     
     success = comprehensive_analytics_2017_2024()
@@ -609,18 +609,18 @@ if __name__ == "__main__":
     end_time = time.time()
     duration = end_time - start_time
     
-    print(f"\n⏱️  Analysis completed in {duration:.1f} seconds")
+    print(f"\nSTOPWATCH:️  Analysis completed in {duration:.1f} seconds")
     
     if success:
-        print("✅ Comprehensive analytics successful!")
-        print("\n📈 Generated outputs:")
-        print("   • Multi-year time series plots")
-        print("   • City comparison charts")
-        print("   • Trend analysis graphs")
-        print("   • Interactive concentration maps")
-        print("   • Seasonal pattern analysis")
-        print("   • Regional comparison plots")
-        print("   • Statistical summary reports")
-        print("   • Raw time series data (CSV)")
+        print("SUCCESS: Comprehensive analytics successful!")
+        print("\nTRENDING: Generated outputs:")
+        print("   * Multi-year time series plots")
+        print("   * City comparison charts")
+        print("   * Trend analysis graphs")
+        print("   * Interactive concentration maps")
+        print("   * Seasonal pattern analysis")
+        print("   * Regional comparison plots")
+        print("   * Statistical summary reports")
+        print("   * Raw time series data (CSV)")
     else:
-        print("❌ Comprehensive analytics failed")
+        print("ERROR: Comprehensive analytics failed")

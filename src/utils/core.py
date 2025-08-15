@@ -146,7 +146,7 @@ def load_uzbekistan_auxiliary_data() -> pd.DataFrame:
     Returns:
         DataFrame with auxiliary variables for emissions downscaling
     """
-    print("🌍 Loading auxiliary geospatial data for Uzbekistan...")
+    print("EARTH: Loading auxiliary geospatial data for Uzbekistan...")
     
     coords = get_uzbekistan_coordinates()
     bounds = coords['bounds']
@@ -172,7 +172,7 @@ def load_uzbekistan_auxiliary_data() -> pd.DataFrame:
     # Add administrative regions based on coordinates
     df['region'] = df.apply(lambda row: assign_region_from_coords(row['longitude'], row['latitude']), axis=1)
     
-    # Population density (people per km²)
+    # Population density (people per km^2)
     df['population_density'] = calculate_population_density(df)
     
     # Urban/rural classification
@@ -207,7 +207,7 @@ def load_uzbekistan_auxiliary_data() -> pd.DataFrame:
     df['agricultural_area'] = calculate_agricultural_area(df)
     df['irrigation_density'] = calculate_irrigation_density(df)
     
-    print(f"✅ Loaded auxiliary data for {len(df)} grid points")
+    print(f"SUCCESS: Loaded auxiliary data for {len(df)} grid points")
     print(f"   Regions covered: {df['region'].unique()}")
     
     return df
@@ -577,7 +577,7 @@ def save_plot(fig, filename: str, figs_dir: str = "figs"):
     ensure_dir(figs_dir)
     filepath = Path(figs_dir) / filename
     fig.savefig(filepath, dpi=300, bbox_inches='tight', facecolor='white')
-    print(f"📊 Plot saved: {filepath}")
+    print(f"CHART: Plot saved: {filepath}")
 
 def create_summary_table(data: dict, title: str, output_dir: str = "outputs"):
     """Create and save summary table"""
@@ -587,7 +587,7 @@ def create_summary_table(data: dict, title: str, output_dir: str = "outputs"):
     
     filepath = Path(output_dir) / f"{title.lower().replace(' ', '_')}.csv"
     df.to_csv(filepath)
-    print(f"📋 Summary table saved: {filepath}")
+    print(f"CLIPBOARD: Summary table saved: {filepath}")
     
     return df
 
@@ -615,17 +615,17 @@ def validate_data_quality(df: pd.DataFrame, required_columns: List[str]) -> bool
                 issues.append(f"No variation in column: {col}")
     
     if issues:
-        print("⚠️  Data quality issues found:")
+        print("WARNING:  Data quality issues found:")
         for issue in issues:
             print(f"   - {issue}")
         return False
     else:
-        print("✅ Data quality validation passed")
+        print("SUCCESS: Data quality validation passed")
         return True
 
 def print_analysis_summary(title: str, stats: dict):
     """Print formatted analysis summary"""
-    print(f"\n📊 {title}")
+    print(f"\nCHART: {title}")
     print("=" * len(title))
     
     for key, value in stats.items():

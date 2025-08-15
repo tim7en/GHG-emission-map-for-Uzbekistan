@@ -22,18 +22,18 @@ def authenticate_gee_modern():
     
     try:
         import ee
-        print("✅ Earth Engine API imported successfully")
+        print("SUCCESS: Earth Engine API imported successfully")
         
         # Check if already authenticated
         try:
             ee.Initialize()
-            print("✅ Already authenticated and ready!")
+            print("SUCCESS: Already authenticated and ready!")
             test_connection()
             return True
         except:
             print("🔄 Need to authenticate...")
         
-        print("\n🌐 Starting authentication process...")
+        print("\nGLOBE: Starting authentication process...")
         print("This will open a browser window for authentication.")
         print("Please follow the instructions in the browser.")
         
@@ -41,21 +41,21 @@ def authenticate_gee_modern():
         try:
             # This should open browser and handle the OAuth flow automatically
             ee.Authenticate()
-            print("✅ Authentication completed!")
+            print("SUCCESS: Authentication completed!")
             
             # Test initialization
             ee.Initialize()
-            print("✅ Earth Engine initialized successfully!")
+            print("SUCCESS: Earth Engine initialized successfully!")
             
             # Test connection
             return test_connection()
             
         except Exception as e:
-            print(f"❌ Modern authentication failed: {e}")
+            print(f"ERROR: Modern authentication failed: {e}")
             return try_alternative_methods()
             
     except ImportError:
-        print("❌ Earth Engine API not available")
+        print("ERROR: Earth Engine API not available")
         print("Please install with: pip install earthengine-api")
         return False
 
@@ -71,7 +71,7 @@ def try_alternative_methods():
         print("1. Trying with project specification...")
         try:
             ee.Initialize(project='earthengine-legacy')
-            print("✅ Project-based initialization successful!")
+            print("SUCCESS: Project-based initialization successful!")
             return test_connection()
         except Exception as e:
             print(f"   Failed: {e}")
@@ -82,7 +82,7 @@ def try_alternative_methods():
         if service_account_path and Path(service_account_path).exists():
             try:
                 ee.Initialize()
-                print("✅ Service account authentication successful!")
+                print("SUCCESS: Service account authentication successful!")
                 return test_connection()
             except Exception as e:
                 print(f"   Failed: {e}")
@@ -92,16 +92,16 @@ def try_alternative_methods():
         try:
             # This uses any existing credentials in the system
             ee.Initialize()
-            print("✅ Manual authentication successful!")
+            print("SUCCESS: Manual authentication successful!")
             return test_connection()
         except Exception as e:
             print(f"   Failed: {e}")
         
-        print("⚠️ All authentication methods failed")
+        print("WARNING: All authentication methods failed")
         return False
         
     except Exception as e:
-        print(f"❌ Alternative methods failed: {e}")
+        print(f"ERROR: Alternative methods failed: {e}")
         return False
 
 def test_connection():
@@ -114,12 +114,12 @@ def test_connection():
         
         # Test basic computation
         test_number = ee.Number(2025).getInfo()
-        print(f"✅ Basic computation test: {test_number}")
+        print(f"SUCCESS: Basic computation test: {test_number}")
         
         # Test image access
         image = ee.Image('USGS/SRTMGL1_003')
         scale = image.projection().nominalScale().getInfo()
-        print(f"✅ Image access test successful! SRTM scale: {scale}m")
+        print(f"SUCCESS: Image access test successful! SRTM scale: {scale}m")
         
         # Test Uzbekistan-specific data
         uzbekistan = ee.Geometry.Rectangle([55.9, 37.2, 73.2, 45.6])
@@ -128,18 +128,18 @@ def test_connection():
             .filterBounds(uzbekistan)
         
         count = modis_collection.size().getInfo()
-        print(f"✅ Uzbekistan data test: Found {count} MODIS images")
+        print(f"SUCCESS: Uzbekistan data test: Found {count} MODIS images")
         
         return True
         
     except Exception as e:
-        print(f"❌ Connection test failed: {e}")
+        print(f"ERROR: Connection test failed: {e}")
         return False
 
 def provide_manual_instructions():
     """Provide manual authentication instructions"""
     
-    print("\n📋 Manual Authentication Instructions")
+    print("\nCLIPBOARD: Manual Authentication Instructions")
     print("=" * 40)
     
     print("\n**Option 1: Command Line Authentication (if earthengine CLI is available)**")
@@ -180,7 +180,7 @@ def save_auth_status(authenticated=False):
     with open(status_file, 'w') as f:
         json.dump(status, f, indent=2)
     
-    print(f"💾 Authentication status saved to: {status_file}")
+    print(f"STORAGE: Authentication status saved to: {status_file}")
 
 def main():
     """Main authentication function"""
@@ -190,14 +190,14 @@ def main():
     
     if success:
         print("\n🎉 Google Earth Engine authentication successful!")
-        print("✅ You can now run your analysis scripts with real data")
-        print("\n🚀 Try running:")
+        print("SUCCESS: You can now run your analysis scripts with real data")
+        print("\nSTARTING: Try running:")
         print("   python ghg_emissions_uzb/ghg_downscaling_uzb.py")
         print("   python urban_heat_gee_standalone.py")
     else:
-        print("\n⚠️  Google Earth Engine authentication not complete")
+        print("\nWARNING:  Google Earth Engine authentication not complete")
         provide_manual_instructions()
-        print("\n📝 Your analysis scripts will run in simulation mode")
+        print("\nMEMO: Your analysis scripts will run in simulation mode")
         print("   This will demonstrate the workflow with synthetic data")
     
     return success

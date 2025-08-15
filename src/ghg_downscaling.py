@@ -40,7 +40,7 @@ try:
     GEE_AVAILABLE = True
 except ImportError:
     GEE_AVAILABLE = False
-    print("⚠️  Google Earth Engine not available. Using simulation mode.")
+    print("WARNING:  Google Earth Engine not available. Using simulation mode.")
 
 from utils.core import (
     load_config, ensure_dir, setup_plotting, get_uzbekistan_coordinates,
@@ -82,36 +82,36 @@ class GHGEmissionsDownscaler:
         
         print("🏭 GHG Emissions Downscaling System Initialized (Real Data Only)")
         print("=" * 65)
-        print(f"🌍 Country: {self.config['country']}")
+        print(f"EARTH: Country: {self.config['country']}")
         print(f"📅 Analysis Period: {self.config['analysis_period']['start_year']}-{self.config['analysis_period']['end_year']}")
-        print(f"📊 Target Resolution: {self.config['target_resolution']}m")
+        print(f"CHART: Target Resolution: {self.config['target_resolution']}m")
         print(f"🏭 Sectors: {', '.join(self.config['emission_sectors'])}")
-        print(f"💨 Gases: {', '.join(self.config['gases'])}")
+        print(f"EMISSION: Gases: {', '.join(self.config['gases'])}")
         
         # Validate data availability
         data_status = self.data_loader.validate_data_availability()
-        print(f"📊 Data Sources Available:")
+        print(f"CHART: Data Sources Available:")
         for source, available in data_status.items():
-            status = "✅" if available else "❌"
+            status = "SUCCESS:" if available else "ERROR:"
             print(f"   {status} {source}")
         
         if not any(data_status.values()):
-            print("\n⚠️  Warning: No real data sources are currently available!")
+            print("\nWARNING:  Warning: No real data sources are currently available!")
             print("   Please check data files and authentication.")
     
     def initialize_gee(self) -> bool:
         """Initialize Google Earth Engine"""
         if not GEE_AVAILABLE:
-            print("⚠️  Google Earth Engine not available, using simulation mode")
+            print("WARNING:  Google Earth Engine not available, using simulation mode")
             return False
         
         try:
             ee.Initialize(project='ee-sabitovty')
-            print("✅ Google Earth Engine initialized successfully with project ee-sabitovty")
+            print("SUCCESS: Google Earth Engine initialized successfully with project ee-sabitovty")
             self.gee_initialized = True
             return True
         except Exception as e:
-            print(f"❌ Could not initialize Google Earth Engine: {e}")
+            print(f"ERROR: Could not initialize Google Earth Engine: {e}")
             print("   Using simulation mode with synthetic data")
             self.gee_initialized = False
             return False
@@ -135,7 +135,7 @@ class GHGEmissionsDownscaler:
             
             return uzbekistan
         except Exception as e:
-            print(f"❌ Error creating study area: {e}")
+            print(f"ERROR: Error creating study area: {e}")
             return None
     
     def load_emissions_data(self) -> Dict[str, pd.DataFrame]:
@@ -153,7 +153,7 @@ class GHGEmissionsDownscaler:
         
         # Validate data
         if len(self.emissions_data) == 0:
-            print("❌ No real emissions data could be loaded!")
+            print("ERROR: No real emissions data could be loaded!")
             print("   Please check:")
             print("   - IPCC 2022 data files in data/ipcc_2022_data/")
             print("   - Google Earth Engine authentication")
@@ -162,7 +162,7 @@ class GHGEmissionsDownscaler:
         
         # Print data summary
         for source, data in self.emissions_data.items():
-            print(f"📊 {source}: {len(data)} data points")
+            print(f"CHART: {source}: {len(data)} data points")
             if len(data) > 0:
                 # Identify time columns
                 time_cols = [col for col in data.columns if 'year' in col.lower()]
@@ -183,7 +183,7 @@ class GHGEmissionsDownscaler:
         study_area = self.get_uzbekistan_boundaries()
         
         if study_area is None:
-            print("❌ Could not get Uzbekistan boundaries for GEE analysis")
+            print("ERROR: Could not get Uzbekistan boundaries for GEE analysis")
             return {}
         
         try:
@@ -205,7 +205,7 @@ class GHGEmissionsDownscaler:
             return emissions_datasets
             
         except Exception as e:
-            print(f"⚠️  Error loading GEE emissions data: {e}")
+            print(f"WARNING:  Error loading GEE emissions data: {e}")
             print("   No fallback to mock data - using only real sources")
             return {}
     
@@ -239,7 +239,7 @@ class GHGEmissionsDownscaler:
             return pd.DataFrame(data)
             
         except Exception as e:
-            print(f"❌ Error loading ODIAC data: {e}")
+            print(f"ERROR: Error loading ODIAC data: {e}")
             return pd.DataFrame()
     
     def _load_edgar_data(self, study_area) -> pd.DataFrame:
@@ -251,7 +251,7 @@ class GHGEmissionsDownscaler:
             return pd.DataFrame()
             
         except Exception as e:
-            print(f"❌ Error loading EDGAR data: {e}")
+            print(f"ERROR: Error loading EDGAR data: {e}")
             return pd.DataFrame()
     
     def _load_gfei_data(self, study_area) -> pd.DataFrame:
@@ -263,7 +263,7 @@ class GHGEmissionsDownscaler:
             return pd.DataFrame()
             
         except Exception as e:
-            print(f"❌ Error loading GFEI data: {e}")
+            print(f"ERROR: Error loading GFEI data: {e}")
             return pd.DataFrame()
     
     def _create_sampling_grid(self, study_area, n_points: int):
@@ -287,7 +287,7 @@ class GHGEmissionsDownscaler:
     
     def _load_simulated_emissions_data(self) -> Dict[str, pd.DataFrame]:
         """Load simulated emissions data for development/testing"""
-        print("🔧 Generating simulated emissions data...")
+        print("SETTINGS: Generating simulated emissions data...")
         
         coords = get_uzbekistan_coordinates()
         bounds = coords['bounds']
@@ -477,7 +477,7 @@ class GHGEmissionsDownscaler:
                           'urban_fraction', 'dist_to_major_city', 'land_use_type']
         
         if validate_data_quality(self.auxiliary_data, required_columns):
-            print(f"✅ Auxiliary data loaded: {len(self.auxiliary_data)} grid points")
+            print(f"SUCCESS: Auxiliary data loaded: {len(self.auxiliary_data)} grid points")
             print(f"   Variables: {len(self.auxiliary_data.columns)} columns")
             
             # Print summary statistics
@@ -522,12 +522,12 @@ class GHGEmissionsDownscaler:
         
         emissions_df = pd.concat(combined_emissions, ignore_index=True)
         
-        print(f"📊 Combined emissions data: {len(emissions_df)} records")
+        print(f"CHART: Combined emissions data: {len(emissions_df)} records")
         print(f"   Sources: {emissions_df['emissions_source'].unique()}")
         print(f"   Years: {emissions_df['year'].min()}-{emissions_df['year'].max()}")
         
         # Spatial matching: find nearest auxiliary data point for each emissions point
-        print("🎯 Performing spatial matching...")
+        print("TARGET: Performing spatial matching...")
         
         matched_data = []
         
@@ -550,13 +550,13 @@ class GHGEmissionsDownscaler:
         
         integrated_df = pd.DataFrame(matched_data)
         
-        print(f"✅ Spatial matching completed: {len(integrated_df)} integrated records")
-        print(f"   Mean matching distance: {integrated_df['spatial_match_distance'].mean():.4f}°")
+        print(f"SUCCESS: Spatial matching completed: {len(integrated_df)} integrated records")
+        print(f"   Mean matching distance: {integrated_df['spatial_match_distance'].mean():.4f}deg")
         
         # Save integrated dataset
         output_path = Path(self.config['paths']['data']) / "integrated_emissions_dataset.csv"
         integrated_df.to_csv(output_path, index=False)
-        print(f"💾 Integrated dataset saved: {output_path}")
+        print(f"STORAGE: Integrated dataset saved: {output_path}")
         
         return integrated_df
     
@@ -592,14 +592,14 @@ class GHGEmissionsDownscaler:
         performance_metrics = {}
         
         for target in target_vars:
-            print(f"\n🎯 Training model for {target}...")
+            print(f"\nTARGET: Training model for {target}...")
             
             # Prepare data
             valid_mask = integrated_data[target].notna() & (integrated_data[target] > 0)
             model_data = integrated_data[valid_mask].copy()
             
             if len(model_data) < 50:
-                print(f"   ⚠️ Insufficient data for {target} ({len(model_data)} records)")
+                print(f"   WARNING: Insufficient data for {target} ({len(model_data)} records)")
                 continue
             
             X = model_data[predictor_vars].fillna(0)
@@ -644,7 +644,7 @@ class GHGEmissionsDownscaler:
                                           cv=5, scoring='r2')
                 mean_cv_score = cv_scores.mean()
                 
-                print(f"   {model_name} CV R²: {mean_cv_score:.3f} ± {cv_scores.std():.3f}")
+                print(f"   {model_name} CV R^2: {mean_cv_score:.3f} +/- {cv_scores.std():.3f}")
                 
                 if mean_cv_score > best_score:
                     best_score = mean_cv_score
@@ -674,8 +674,8 @@ class GHGEmissionsDownscaler:
             
             performance_metrics[target] = metrics
             
-            print(f"   ✅ Best model: {best_model_name}")
-            print(f"   Test R²: {metrics['test_r2']:.3f}")
+            print(f"   SUCCESS: Best model: {best_model_name}")
+            print(f"   Test R^2: {metrics['test_r2']:.3f}")
             print(f"   Test RMSE: {metrics['test_rmse']:.3f}")
         
         self.models = models
@@ -684,7 +684,7 @@ class GHGEmissionsDownscaler:
         performance_df = pd.DataFrame.from_dict(performance_metrics, orient='index')
         performance_path = Path(self.config['paths']['outputs']) / "model_performance.csv"
         performance_df.to_csv(performance_path)
-        print(f"\n💾 Model performance saved: {performance_path}")
+        print(f"\nSTORAGE: Model performance saved: {performance_path}")
         
         return models
     
@@ -709,7 +709,7 @@ class GHGEmissionsDownscaler:
         
         # Create high-resolution prediction grid
         prediction_grid = self._create_prediction_grid(target_resolution)
-        print(f"📊 Prediction grid: {len(prediction_grid)} points")
+        print(f"CHART: Prediction grid: {len(prediction_grid)} points")
         
         downscaled_results = {}
         
@@ -736,7 +736,7 @@ class GHGEmissionsDownscaler:
             
             downscaled_results[gas_type] = results_df
             
-            print(f"   ✅ {gas_type} predictions completed")
+            print(f"   SUCCESS: {gas_type} predictions completed")
             print(f"   Range: {y_pred.min():.3f} - {y_pred.max():.3f}")
             print(f"   Mean: {y_pred.mean():.3f}")
         
@@ -746,7 +746,7 @@ class GHGEmissionsDownscaler:
         for gas_type, results in downscaled_results.items():
             output_path = Path(self.config['paths']['outputs']) / f"downscaled_{gas_type.lower()}_emissions.csv"
             results.to_csv(output_path, index=False)
-            print(f"💾 {gas_type} results saved: {output_path}")
+            print(f"STORAGE: {gas_type} results saved: {output_path}")
         
         return downscaled_results
     
@@ -813,7 +813,7 @@ class GHGEmissionsDownscaler:
                 interpolated = (values * weights_norm).sum(axis=1)
                 grid[var] = interpolated
         
-        print(f"✅ Auxiliary data interpolated to {len(grid)} grid points")
+        print(f"SUCCESS: Auxiliary data interpolated to {len(grid)} grid points")
         
         return grid
     
@@ -929,7 +929,7 @@ class GHGEmissionsDownscaler:
         
         plt.close(fig)
         
-        print(f"🔥 Identified {len(hotspots)} emission hotspots")
+        print(f"FIRE: Identified {len(hotspots)} emission hotspots")
     
     def generate_analysis_report(self) -> str:
         """Generate comprehensive analysis report"""
@@ -984,8 +984,8 @@ class GHGEmissionsDownscaler:
                     report_lines.extend([
                         f"**{gas_type} Model:**",
                         f"- Model Type: {metrics.get('model_type', 'Unknown')}",
-                        f"- Cross-validation R²: {metrics.get('cv_r2_mean', 0):.3f}",
-                        f"- Test R²: {metrics.get('test_r2', 0):.3f}",
+                        f"- Cross-validation R^2: {metrics.get('cv_r2_mean', 0):.3f}",
+                        f"- Test R^2: {metrics.get('test_r2', 0):.3f}",
                         f"- Test RMSE: {metrics.get('test_rmse', 0):.3f}",
                         ""
                     ])
@@ -1055,7 +1055,7 @@ class GHGEmissionsDownscaler:
     
     def run_complete_analysis(self) -> None:
         """Run the complete GHG emissions downscaling analysis"""
-        print("🚀 Starting Complete GHG Emissions Downscaling Analysis")
+        print("STARTING: Starting Complete GHG Emissions Downscaling Analysis")
         print("=" * 65)
         
         try:
@@ -1086,12 +1086,12 @@ class GHGEmissionsDownscaler:
             
             print("\n🎉 Analysis Complete!")
             print("=" * 25)
-            print(f"📊 Check outputs in: {self.config['paths']['outputs']}")
+            print(f"CHART: Check outputs in: {self.config['paths']['outputs']}")
             print(f"🗺️ Check maps in: {self.config['paths']['figs']}")
             print(f"📄 Check reports in: {self.config['paths']['reports']}")
             
         except Exception as e:
-            print(f"❌ Analysis failed: {e}")
+            print(f"ERROR: Analysis failed: {e}")
             raise
 
 
@@ -1099,7 +1099,7 @@ def main():
     """Main function to run GHG emissions downscaling analysis"""
     print("🏭 GHG Emissions Downscaling for Uzbekistan")
     print("=" * 50)
-    print("🌍 High-Resolution Emissions Mapping Using Machine Learning")
+    print("EARTH: High-Resolution Emissions Mapping Using Machine Learning")
     print()
     
     try:
@@ -1110,7 +1110,7 @@ def main():
         downscaler.run_complete_analysis()
         
     except Exception as e:
-        print(f"❌ Error in analysis: {e}")
+        print(f"ERROR: Error in analysis: {e}")
         import traceback
         traceback.print_exc()
 
