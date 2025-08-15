@@ -21,11 +21,12 @@ from typing import Dict, List, Tuple, Any, Optional
 import warnings
 warnings.filterwarnings('ignore')
 
-def load_config(path: str = "config_ghg.json"):
+def load_config(path: str = "configs/config_ghg.json"):
     """Load configuration file for GHG emissions analysis"""
     possible_paths = [
         path,
-        f"ghg_emissions_uzb/{path}",
+        "configs/config_ghg.json",
+        "config_ghg.json",
         f"../{path}",
         f"../../{path}"
     ]
@@ -67,14 +68,20 @@ def load_config(path: str = "config_ghg.json"):
         "gases": ["CO2", "CH4", "N2O"],
         "paths": {
             "data": "data",
+            "ipcc_2022_data": "data/ipcc_2022_data",
+            "raw": "data/raw",
+            "processed": "data/processed",
+            "validation": "data/validation",
             "outputs": "outputs", 
             "figs": "figs",
             "reports": "reports"
         }
     }
     
-    # Save default config
-    with open("config_ghg.json", 'w') as f:
+    # Save default config to configs directory
+    from pathlib import Path
+    Path("configs").mkdir(exist_ok=True)
+    with open("configs/config_ghg.json", 'w') as f:
         json.dump(default_config, f, indent=2)
     
     return default_config
