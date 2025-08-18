@@ -1,0 +1,10 @@
+{
+  "gas_type": "COMBINED",
+  "filename": "UZB_POLYGON_GHG_COMBINED_Enhanced_2022.tif",
+  "total_emissions": 191092.47299999997,
+  "task_id": "TSICSSI3VWXQCG2JS2WHNGZ6",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive_polygon_masked",
+  "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+  "export_date": "2025-08-18T21:29:49.966624"
+}

@@ -1,0 +1,10 @@
+{
+  "gas_type": "N2O",
+  "filename": "UZB_POLYGON_GHG_N2O_Enhanced_2022.tif",
+  "total_emissions": 11021.259,
+  "task_id": "2X2UIXYVDO2BSGVELPV77FLW",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive_polygon_masked",
+  "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+  "export_date": "2025-08-18T21:29:49.544634"
+}

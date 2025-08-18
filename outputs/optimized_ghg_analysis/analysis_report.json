@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "Optimized GHG Emissions Analysis - Uzbekistan 2022",
+    "date": "2025-08-18T17:58:45.244769",
+    "methodology": "IPCC inventory with ESRI LULC spatial allocation",
+    "resolution": {
+      "land_cover": "10 meters (ESRI)",
+      "emissions": "0.02 degrees (~2.2 km)"
+    }
+  },
+  "data_sources": {
+    "emissions": "IPCC 2022 National Inventory",
+    "land_cover": "ESRI Global Land Use/Land Cover 10m (2022)",
+    "auxiliary": [
+      "VIIRS Nighttime Lights (2022)",
+      "WorldPop Population Density"
+    ]
+  },
+  "land_cover_classes": {
+    "1": "Water",
+    "2": "Trees",
+    "4": "Flooded Vegetation",
+    "5": "Crops",
+    "7": "Built Area",
+    "8": "Bare Ground",
+    "9": "Snow/Ice",
+    "10": "Clouds",
+    "11": "Rangeland"
+  },
+  "emissions_summary": {
+    "total_gg_co2eq": 191092.473,
+    "by_gas": {
+      "CO2": 120990.86499999999,
+      "N2O": 11021.259
+    },
+    "by_sector": {
+      "Energy Industries": 41260.401,
+      "Residential": 76315.836,
+      "Agriculture": 34630.947,
+      "Manufacturing": 18171.744,
+      "Transport": 16015.623,
+      "Waste": 9708.289,
+      "LULUCF": -5010.367
+    }
+  },
+  "outputs": [
+    {
+      "filename": "UZB_GHG_CO2_2022_ESRI_20250818_175839.tif",
+      "gas_type": "CO2",
+      "format": "GeoTIFF",
+      "crs": "EPSG:4326"
+    },
+    {
+      "filename": "UZB_GHG_N2O_2022_ESRI_20250818_175839.tif",
+      "gas_type": "N2O",
+      "format": "GeoTIFF",
+      "crs": "EPSG:4326"
+    },
+    {
+      "filename": "UZB_GHG_Total_2022_ESRI_20250818_175839.tif",
+      "gas_type": "TOTAL",
+      "format": "GeoTIFF",
+      "crs": "EPSG:4326"
+    }
+  ]
+}

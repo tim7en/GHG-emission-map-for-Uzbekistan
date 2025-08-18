@@ -1,0 +1,162 @@
+{
+  "validation_info": {
+    "analysis_date": "2025-08-18T19:24:06.903632",
+    "study_area": "Uzbekistan",
+    "target_resolution": "1000m",
+    "validation_method": "Multi-source cross-validation"
+  },
+  "datasets_analyzed": {
+    "ESA": {
+      "source": "ESA WorldCover v200",
+      "native_resolution": "10m",
+      "temporal_coverage": "2021",
+      "description": "Global land cover map with 11 classes",
+      "classes_available": [
+        "urban",
+        "cropland",
+        "forest",
+        "grassland",
+        "water",
+        "bare"
+      ]
+    },
+    "MODIS": {
+      "source": "MODIS MCD12Q1 v006",
+      "native_resolution": "500m (~1km)",
+      "temporal_coverage": "2022",
+      "description": "IGBP land cover classification scheme",
+      "classes_available": [
+        "urban",
+        "cropland",
+        "forest",
+        "grassland",
+        "water",
+        "bare"
+      ]
+    },
+    "Copernicus": {
+      "source": "Copernicus Global Land Cover",
+      "native_resolution": "100m",
+      "temporal_coverage": "2019",
+      "description": "Global land cover with UN-LCCS nomenclature",
+      "classes_available": [
+        "urban",
+        "cropland",
+        "forest",
+        "grassland",
+        "water",
+        "bare"
+      ]
+    },
+    "DynamicWorld": {
+      "source": "Google Dynamic World v1",
+      "native_resolution": "10m",
+      "temporal_coverage": "2022",
+      "description": "Near real-time land use with probability values",
+      "classes_available": [
+        "urban",
+        "cropland",
+        "forest",
+        "grassland",
+        "water",
+        "bare"
+      ]
+    }
+  },
+  "validation_results": {
+    "urban": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    },
+    "cropland": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    },
+    "forest": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    },
+    "grassland": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    },
+    "water": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    },
+    "bare": {
+      "available_sources": 4,
+      "sources": [
+        "ESA WorldCover v200",
+        "MODIS MCD12Q1 v006",
+        "Copernicus Global Land Cover",
+        "Google Dynamic World v1"
+      ],
+      "sample_size": 1000
+    }
+  },
+  "recommendations": {
+    "optimal_composite_weights": {
+      "ESA_WorldCover": 0.35,
+      "MODIS": 0.25,
+      "Copernicus": 0.2,
+      "DynamicWorld": 0.2
+    },
+    "use_case_specific": {
+      "urban_mapping": "ESA WorldCover + Dynamic World for highest accuracy",
+      "agricultural_areas": "ESA WorldCover + MODIS for crop identification",
+      "forest_monitoring": "ESA WorldCover + Copernicus for forest dynamics",
+      "bare_land_detection": "MODIS + ESA WorldCover for arid regions"
+    },
+    "quality_assessment": {
+      "high_confidence_classes": [
+        "urban",
+        "water",
+        "forest"
+      ],
+      "moderate_confidence_classes": [
+        "cropland",
+        "grassland"
+      ],
+      "challenging_classes": [
+        "bare",
+        "mixed_vegetation"
+      ]
+    },
+    "temporal_considerations": {
+      "most_current": "Dynamic World (2022)",
+      "best_baseline": "ESA WorldCover (2021)",
+      "temporal_consistency": "Use 2021-2022 data preferentially"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "layer_name": "urban",
+  "description": "Urban Areas",
+  "filename": "UZB_urban_2022.tif",
+  "task_id": "JRIRWG6BRQQUEWMLGN5RT46K",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:03.255954"
+}

@@ -1,0 +1,7 @@
+{
+  "layer_name": "edgar_co2",
+  "description": "EDGAR v6.0 (edgar_co2) (0.1\u00b0, polygon-masked)",
+  "status": "export_failed",
+  "error": "ImageCollection.load: ImageCollection asset 'JRC/EDGAR/ghg/v60' not found (does not exist or caller does not have access).",
+  "export_date": "2025-08-18T21:24:45.150032"
+}

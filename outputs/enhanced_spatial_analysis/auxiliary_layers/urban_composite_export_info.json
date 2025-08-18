@@ -1,0 +1,9 @@
+{
+  "layer_name": "urban_composite",
+  "description": "Urban Composite Indicator",
+  "filename": "UZB_urban_composite_2022.tif",
+  "task_id": "63NW6CXXOUFC5L3YGBXTPTJW",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:07.885109"
+}

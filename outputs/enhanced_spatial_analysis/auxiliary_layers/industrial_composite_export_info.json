@@ -1,0 +1,9 @@
+{
+  "layer_name": "industrial_composite",
+  "description": "Industrial Composite Indicator",
+  "filename": "UZB_industrial_composite_2022.tif",
+  "task_id": "OSQW7F7CKVQ5Y24CSQZ45PJV",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:09.443795"
+}

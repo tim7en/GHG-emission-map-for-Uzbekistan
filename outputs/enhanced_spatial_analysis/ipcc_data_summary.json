@@ -1,0 +1,169 @@
+{
+  "analysis_date": "2025-08-18T19:46:00.039251",
+  "total_categories": 25,
+  "total_emissions": 191092.473,
+  "gas_breakdown": {
+    "CO2": 15,
+    "CH4": 6,
+    "N2O": 4
+  },
+  "sector_breakdown": {
+    "Residential": 13,
+    "Manufacturing": 5,
+    "Agriculture": 3,
+    "Energy Industries": 2,
+    "Transport": 2
+  },
+  "categories_detail": [
+    {
+      "ipcc_category": "Energy Industries - Gaseous Fuels",
+      "sector_type": "Energy Industries",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 30354.355
+    },
+    {
+      "ipcc_category": "Other Sectors - Gaseous Fuels",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 25736.375
+    },
+    {
+      "ipcc_category": "Enteric Fermentation",
+      "sector_type": "Agriculture",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 23329.654
+    },
+    {
+      "ipcc_category": "Natural Gas",
+      "sector_type": "Residential",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 20873.968
+    },
+    {
+      "ipcc_category": "Glass Production",
+      "sector_type": "Manufacturing",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 19245.845
+    },
+    {
+      "ipcc_category": "Manufacturing Industries and Construction - Gaseous Fuels",
+      "sector_type": "Manufacturing",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 12353.14
+    },
+    {
+      "ipcc_category": "Energy Industries - Solid Fuels",
+      "sector_type": "Energy Industries",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 10906.046
+    },
+    {
+      "ipcc_category": "Road Transportation - Gaseous Fuels",
+      "sector_type": "Transport",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 8786.998
+    },
+    {
+      "ipcc_category": "Road Transportation - Liquid Fuels",
+      "sector_type": "Transport",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 7228.625
+    },
+    {
+      "ipcc_category": "Direct N?O Emissions from managed soils",
+      "sector_type": "Agriculture",
+      "gas_type": "N2O",
+      "emissions_gg_co2eq": 5585.813
+    },
+    {
+      "ipcc_category": "Solid Waste Disposal",
+      "sector_type": "Residential",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 5457.822
+    },
+    {
+      "ipcc_category": "Forest land Remaining Forest land",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": -5010.367
+    },
+    {
+      "ipcc_category": "Other Sectors - Liquid Fuels",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 4673.163
+    },
+    {
+      "ipcc_category": "Wastewater Treatment and Discharge",
+      "sector_type": "Residential",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 4250.467
+    },
+    {
+      "ipcc_category": "Cropland Remaining Cropland",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": -4074.153
+    },
+    {
+      "ipcc_category": "Cement production",
+      "sector_type": "Manufacturing",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 3405.049
+    },
+    {
+      "ipcc_category": "Oil",
+      "sector_type": "Residential",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 3198.975
+    },
+    {
+      "ipcc_category": "Ammonia Production",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 2561.173
+    },
+    {
+      "ipcc_category": "Other Sectors - Solid Fuels",
+      "sector_type": "Residential",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 2411.061
+    },
+    {
+      "ipcc_category": "Manure Management",
+      "sector_type": "Residential",
+      "gas_type": "CH4",
+      "emissions_gg_co2eq": 1969.463
+    },
+    {
+      "ipcc_category": "Manure Management",
+      "sector_type": "Residential",
+      "gas_type": "N2O",
+      "emissions_gg_co2eq": 1880.342
+    },
+    {
+      "ipcc_category": "Indirect N?O Emissions from managed soils",
+      "sector_type": "Agriculture",
+      "gas_type": "N2O",
+      "emissions_gg_co2eq": 1865.675
+    },
+    {
+      "ipcc_category": "Nitric Acid Production",
+      "sector_type": "Residential",
+      "gas_type": "N2O",
+      "emissions_gg_co2eq": 1689.429
+    },
+    {
+      "ipcc_category": "Manufacturing Industries and Construction - Liquid Fuels",
+      "sector_type": "Manufacturing",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 1275.539
+    },
+    {
+      "ipcc_category": "Iron and Steel Production",
+      "sector_type": "Manufacturing",
+      "gas_type": "CO2",
+      "emissions_gg_co2eq": 1138.016
+    }
+  ]
+}

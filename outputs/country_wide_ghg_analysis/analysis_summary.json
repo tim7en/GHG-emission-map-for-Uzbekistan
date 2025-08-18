@@ -1,25 +1,49 @@
 {
   "analysis_info": {
-    "date": "2025-08-15T14:53:47.234474",
+    "date": "2025-08-18T18:55:57.132037",
     "country": "Uzbekistan",
     "reference_year": 2022,
-    "methodology": "IPCC inventory + spatial allocation",
+    "methodology": "IPCC inventory + ESRI land cover spatial allocation",
     "processing_platform": "Google Earth Engine"
   },
   "data_sources": {
     "emissions_inventory": "IPCC 2022 National Inventory",
-    "spatial_resolution": "0.01 degrees (~1.1 km)",
+    "land_cover": "ESRI Global Land Use/Land Cover 10m Time Series (2022)",
+    "land_cover_native_resolution": "10 meters",
+    "analysis_resolution": "1 kilometer (1000 meters)",
+    "downsampling_method": "Mode reducer for land cover, Sum for population, Mean for nightlights",
     "coordinate_system": "EPSG:4326",
     "auxiliary_data": [
-      "WorldPop Population Density",
-      "MODIS Land Cover",
-      "VIIRS Nighttime Lights"
+      "ESRI Global LULC 10m Time Series (2022)",
+      "WorldPop Population Density (100m -> 1km)",
+      "VIIRS Nighttime Lights (500m -> 1km)"
+    ],
+    "esri_landcover_classes": {
+      "1": "Water (#1A5BAB)",
+      "2": "Trees (#358221)",
+      "4": "Flooded Vegetation (#87D19E)",
+      "5": "Crops (#FFDB5C)",
+      "7": "Built Area (#ED022A)",
+      "8": "Bare Ground (#EDE9E4)",
+      "9": "Snow/Ice (#F2FAFF)",
+      "10": "Clouds (#C8C8C8)",
+      "11": "Rangeland (#C6AD8D)"
+    },
+    "processing_optimizations": [
+      "Land cover downsampled from 10m to 1km using mode",
+      "Population aggregated from 100m to 1km using sum",
+      "Nightlights resampled to 1km using mean",
+      "All layers aligned to 1km grid for consistent analysis"
     ]
   },
   "emissions_summary": {
     "CO2": {
       "total_gg_co2eq": 120990.86499999999,
       "percentage": 63.31534837586198
+    },
+    "CH2": {
+      "total_gg_co2eq": 59080.349,
+      "percentage": 30.91715129983168
     },
     "N2O": {
       "total_gg_co2eq": 11021.259,
@@ -28,25 +52,36 @@
   },
   "output_files": [
     {
-      "filename": "UZB_GHG_CO2_2022_batch_001.tif",
+      "filename": "UZB_GHG_CO2_2022_2km_001.tif",
       "gas_type": "CO2",
       "format": "GeoTIFF",
       "georeferenced": true,
-      "crs": "EPSG:4326"
+      "crs": "EPSG:4326",
+      "land_cover_based": true
     },
     {
-      "filename": "UZB_GHG_N2O_2022_batch_001.tif",
+      "filename": "UZB_GHG_CH2_2022_2km_001.tif",
+      "gas_type": "CH2",
+      "format": "GeoTIFF",
+      "georeferenced": true,
+      "crs": "EPSG:4326",
+      "land_cover_based": true
+    },
+    {
+      "filename": "UZB_GHG_N2O_2022_2km_001.tif",
       "gas_type": "N2O",
       "format": "GeoTIFF",
       "georeferenced": true,
-      "crs": "EPSG:4326"
+      "crs": "EPSG:4326",
+      "land_cover_based": true
     },
     {
-      "filename": "UZB_GHG_Total_2022_20250815.tif",
+      "filename": "UZB_GHG_Total_2022_20250818_2km.tif",
       "gas_type": "TOTAL",
       "format": "GeoTIFF",
       "georeferenced": true,
-      "crs": "EPSG:4326"
+      "crs": "EPSG:4326",
+      "land_cover_based": true
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "layer_name": "cropland",
+  "description": "Agricultural Areas",
+  "filename": "UZB_cropland_2022.tif",
+  "task_id": "GNNM46ACXBKHK3B3V2XAOF53",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:03.642739"
+}

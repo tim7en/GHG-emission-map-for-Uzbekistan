@@ -1,0 +1,114 @@
+{
+  "analysis_info": {
+    "date": "2025-08-18T21:30:20.695713",
+    "country": "Uzbekistan",
+    "reference_year": 2022,
+    "methodology": "Polygon-Masked Spatial GHG Analysis",
+    "processing_platform": "Google Earth Engine Enhanced",
+    "spatial_resolution": "1000m",
+    "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+    "mask_accuracy": "Precise_Country_Boundaries"
+  },
+  "data_sources": {
+    "emissions_inventory": "IPCC 2022 National Inventory",
+    "auxiliary_layers": [
+      "population",
+      "nightlights",
+      "odiac_co2",
+      "urban",
+      "cropland",
+      "forest",
+      "grassland",
+      "barren",
+      "city_proximity",
+      "elevation"
+    ],
+    "landcover_enhancement": "Multi-source integration with polygon masking",
+    "spatial_indicators": "Distance to cities, elevation, composite indicators",
+    "boundary_source": "Google Earth Engine Country Boundaries"
+  },
+  "emissions_summary": {
+    "CO2": {
+      "total_gg_co2eq": 120990.86499999999,
+      "percentage": 63.31534837586198,
+      "allocation_method": "Polygon-masked multi-layer spatial allocation",
+      "spatial_export": "UZB_POLYGON_GHG_CO2_Enhanced_2022.tif",
+      "polygon_masked": true
+    },
+    "CH4": {
+      "total_gg_co2eq": 59080.349,
+      "percentage": 30.91715129983168,
+      "allocation_method": "Polygon-masked multi-layer spatial allocation",
+      "spatial_export": "UZB_POLYGON_GHG_CH4_Enhanced_2022.tif",
+      "polygon_masked": true
+    },
+    "N2O": {
+      "total_gg_co2eq": 11021.259,
+      "percentage": 5.767500324306337,
+      "allocation_method": "Polygon-masked multi-layer spatial allocation",
+      "spatial_export": "UZB_POLYGON_GHG_N2O_Enhanced_2022.tif",
+      "polygon_masked": true
+    }
+  },
+  "spatial_outputs": {
+    "auxiliary_layer_exports": 0,
+    "emission_map_exports": 4,
+    "total_spatial_products": 4,
+    "polygon_masking": "Applied_to_All_Outputs"
+  },
+  "quality_metrics": {
+    "total_categories_processed": 25,
+    "gases_with_spatial_allocation": 3,
+    "auxiliary_layers_successful": 10,
+    "export_tasks_created": 4,
+    "polygon_masking_status": "Successful"
+  },
+  "polygon_advantages": {
+    "accuracy_improvement": "Excludes areas outside country boundaries",
+    "data_efficiency": "Reduces processing overhead for external areas",
+    "policy_relevance": "Results strictly within national jurisdiction",
+    "visualization_quality": "Clean country-only outputs"
+  },
+  "export_tasks": [
+    {
+      "gas_type": "CO2",
+      "filename": "UZB_POLYGON_GHG_CO2_Enhanced_2022.tif",
+      "total_emissions": 120990.86499999999,
+      "task_id": "IXJXP54XK5QUW3C53OVNXXC2",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive_polygon_masked",
+      "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+      "export_date": "2025-08-18T21:29:48.058616"
+    },
+    {
+      "gas_type": "CH4",
+      "filename": "UZB_POLYGON_GHG_CH4_Enhanced_2022.tif",
+      "total_emissions": 59080.349,
+      "task_id": "7BRDMZCV2RHLA76NSD4RPOZ2",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive_polygon_masked",
+      "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+      "export_date": "2025-08-18T21:29:48.520101"
+    },
+    {
+      "gas_type": "N2O",
+      "filename": "UZB_POLYGON_GHG_N2O_Enhanced_2022.tif",
+      "total_emissions": 11021.259,
+      "task_id": "2X2UIXYVDO2BSGVELPV77FLW",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive_polygon_masked",
+      "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+      "export_date": "2025-08-18T21:29:49.544634"
+    },
+    {
+      "gas_type": "COMBINED",
+      "filename": "UZB_POLYGON_GHG_COMBINED_Enhanced_2022.tif",
+      "total_emissions": 191092.47299999997,
+      "task_id": "TSICSSI3VWXQCG2JS2WHNGZ6",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive_polygon_masked",
+      "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+      "export_date": "2025-08-18T21:29:49.966624"
+    }
+  ]
+}

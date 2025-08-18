@@ -1,0 +1,10 @@
+{
+  "layer_name": "urban_composite",
+  "description": "Urban Composite Indicator (Polygon-Masked)",
+  "filename": "UZB_POLYGON_urban_composite_2022.tif",
+  "task_id": "IPSN5BLG3ZWHCC6COGM4VRNF",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive_polygon_masked",
+  "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+  "export_date": "2025-08-18T21:29:46.198298"
+}

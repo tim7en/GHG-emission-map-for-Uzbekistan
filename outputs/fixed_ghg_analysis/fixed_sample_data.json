@@ -1,0 +1,149 @@
+{
+  "analysis_info": {
+    "date": "2025-08-18T19:34:41.794958",
+    "method": "Fixed GHG Analysis with Proper GEE Handling",
+    "spatial_resolution": "1000m"
+  },
+  "emission_totals": {
+    "CO2": 120990.86499999999,
+    "CH4": 59080.349,
+    "N2O": 11021.259
+  },
+  "sample_points": [
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "CO2",
+      "emission_value": 2.777422339402328
+    },
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.3891436796836091
+    },
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.052786515281162176
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "CO2",
+      "emission_value": 3.3124649364881047
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.8526790258098588
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.11542030555442481
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "CO2",
+      "emission_value": 3.603773239998979
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.6253730508445869
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.0847062836727867
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "CO2",
+      "emission_value": 2.358893931573806
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.7473175400251079
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.10118365831992447
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "CO2",
+      "emission_value": 1.6826234859189277
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.5639705043786613
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.07640945312959102
+    }
+  ]
+}

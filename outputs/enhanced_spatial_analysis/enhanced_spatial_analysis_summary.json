@@ -1,0 +1,95 @@
+{
+  "analysis_info": {
+    "date": "2025-08-18T19:46:20.862611",
+    "country": "Uzbekistan",
+    "reference_year": 2022,
+    "methodology": "Enhanced Spatial GHG Analysis with Comprehensive Mapping",
+    "processing_platform": "Google Earth Engine Enhanced",
+    "spatial_resolution": "1000m"
+  },
+  "data_sources": {
+    "emissions_inventory": "IPCC 2022 National Inventory",
+    "auxiliary_layers": [
+      "population",
+      "nightlights",
+      "urban",
+      "cropland",
+      "forest",
+      "grassland",
+      "barren",
+      "distance_to_cities",
+      "elevation"
+    ],
+    "landcover_enhancement": "Multi-source integration with spatial export",
+    "spatial_indicators": "Distance to cities, elevation, composite indicators"
+  },
+  "emissions_summary": {
+    "CO2": {
+      "total_gg_co2eq": 120990.86499999999,
+      "percentage": 63.31534837586198,
+      "allocation_method": "Enhanced multi-layer spatial allocation",
+      "spatial_export": "UZB_GHG_CO2_Enhanced_2022.tif"
+    },
+    "CH4": {
+      "total_gg_co2eq": 59080.349,
+      "percentage": 30.91715129983168,
+      "allocation_method": "Enhanced multi-layer spatial allocation",
+      "spatial_export": "UZB_GHG_CH4_Enhanced_2022.tif"
+    },
+    "N2O": {
+      "total_gg_co2eq": 11021.259,
+      "percentage": 5.767500324306337,
+      "allocation_method": "Enhanced multi-layer spatial allocation",
+      "spatial_export": "UZB_GHG_N2O_Enhanced_2022.tif"
+    }
+  },
+  "spatial_outputs": {
+    "auxiliary_layer_exports": 0,
+    "emission_map_exports": 4,
+    "total_spatial_products": 4
+  },
+  "quality_metrics": {
+    "total_categories_processed": 25,
+    "gases_with_spatial_allocation": 3,
+    "auxiliary_layers_successful": 9,
+    "export_tasks_created": 4
+  },
+  "export_tasks": [
+    {
+      "gas_type": "CO2",
+      "filename": "UZB_GHG_CO2_Enhanced_2022.tif",
+      "total_emissions": 120990.86499999999,
+      "task_id": "XEBDMTQHY2FSTORRO2QE622W",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive",
+      "export_date": "2025-08-18T19:46:09.883144"
+    },
+    {
+      "gas_type": "CH4",
+      "filename": "UZB_GHG_CH4_Enhanced_2022.tif",
+      "total_emissions": 59080.349,
+      "task_id": "CM6SNO5YUPINI6ZPMRWTHRU5",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive",
+      "export_date": "2025-08-18T19:46:10.269453"
+    },
+    {
+      "gas_type": "N2O",
+      "filename": "UZB_GHG_N2O_Enhanced_2022.tif",
+      "total_emissions": 11021.259,
+      "task_id": "2GJMP2CACHBTIVVFPFYCRZZW",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive",
+      "export_date": "2025-08-18T19:46:11.255142"
+    },
+    {
+      "gas_type": "COMBINED",
+      "filename": "UZB_GHG_COMBINED_Enhanced_2022.tif",
+      "total_emissions": 191092.47299999997,
+      "task_id": "X6HIOM3WUUS3YI2PXEEI53PB",
+      "task_status": "STARTED",
+      "export_method": "batch_export_to_drive",
+      "export_date": "2025-08-18T19:46:11.744317"
+    }
+  ]
+}

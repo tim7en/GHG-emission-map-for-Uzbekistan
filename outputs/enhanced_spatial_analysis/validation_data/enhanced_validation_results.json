@@ -1,0 +1,156 @@
+{
+  "analysis_info": {
+    "date": "2025-08-18T19:46:11.745316",
+    "method": "Enhanced Spatial GHG Analysis",
+    "spatial_resolution": "1000m"
+  },
+  "emission_totals": {
+    "CO2": 120990.86499999999,
+    "CH4": 59080.349,
+    "N2O": 11021.259
+  },
+  "sample_points": [
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "CO2",
+      "emission_value": 0.8021421793421818
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "CO2",
+      "emission_value": 1.5272420590628186
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "CO2",
+      "emission_value": 1.183139471047597
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "CO2",
+      "emission_value": 1.328671462878178
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "CO2",
+      "emission_value": 1.0230171860740047
+    },
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.2825444498915268
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.6114891625052251
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.45077591400051553
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.5350085164278393
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "CH4",
+      "emission_value": 0.40394211658726425
+    },
+    {
+      "city": "Tashkent",
+      "coordinates": [
+        69.24,
+        41.3
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.030311204969766494
+    },
+    {
+      "city": "Samarkand",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.06504983131308709
+    },
+    {
+      "city": "Bukhara",
+      "coordinates": [
+        64.42,
+        39.77
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.04803539452432438
+    },
+    {
+      "city": "Andijan",
+      "coordinates": [
+        72.34,
+        40.78
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.05709455644343974
+    },
+    {
+      "city": "Nukus",
+      "coordinates": [
+        59.61,
+        42.45
+      ],
+      "gas_type": "N2O",
+      "emission_value": 0.043320978580299825
+    }
+  ],
+  "validation_metrics": {
+    "total_gases_processed": 3,
+    "total_emission_allocated": 191092.47299999997,
+    "auxiliary_layers_used": 9,
+    "sample_points_successful": 15,
+    "export_tasks_created": 4
+  }
+}

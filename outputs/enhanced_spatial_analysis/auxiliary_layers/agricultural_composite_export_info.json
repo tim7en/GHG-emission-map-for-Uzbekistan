@@ -1,0 +1,9 @@
+{
+  "layer_name": "agricultural_composite",
+  "description": "Agricultural Composite Indicator",
+  "filename": "UZB_agricultural_composite_2022.tif",
+  "task_id": "3SAEFLZ6RAWYMLNX6OC3NGE2",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:09.067414"
+}

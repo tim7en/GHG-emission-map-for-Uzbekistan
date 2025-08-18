@@ -1,0 +1,10 @@
+{
+  "layer_name": "grassland",
+  "description": "Grassland Areas (Polygon-Masked)",
+  "filename": "UZB_POLYGON_grassland_2022.tif",
+  "task_id": "DXRNZROJKE4F7I2FBG3RMHBP",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive_polygon_masked",
+  "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+  "export_date": "2025-08-18T21:29:44.054893"
+}

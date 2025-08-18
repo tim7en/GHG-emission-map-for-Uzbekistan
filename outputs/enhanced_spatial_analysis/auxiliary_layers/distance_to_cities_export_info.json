@@ -1,0 +1,9 @@
+{
+  "layer_name": "distance_to_cities",
+  "description": "Distance to Major Cities",
+  "filename": "UZB_distance_to_cities_2022.tif",
+  "task_id": "V7JTEBKNU7QBVNUBOGJATSSO",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive",
+  "export_date": "2025-08-18T19:46:06.492649"
+}

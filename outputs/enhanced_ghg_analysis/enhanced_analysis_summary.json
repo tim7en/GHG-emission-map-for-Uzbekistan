@@ -1,0 +1,168 @@
+{
+  "analysis_metadata": {
+    "analysis_date": "2025-08-18T19:19:04.581248",
+    "country": "Uzbekistan",
+    "reference_year": 2022,
+    "methodology": "IPCC inventory + enhanced spatial allocation with 1km landcover",
+    "processing_platform": "Google Earth Engine",
+    "spatial_resolution": "0.01 degrees (~1.1 km)",
+    "coordinate_system": "EPSG:4326"
+  },
+  "data_sources": {
+    "emissions_inventory": "IPCC 2022 National Inventory",
+    "auxiliary_data_sources": [
+      "WorldPop Population Density (100m)",
+      "MODIS Land Cover Type (500m)",
+      "VIIRS Nighttime Lights (Monthly 2022)"
+    ],
+    "total_emission_categories": 26,
+    "valid_categories_processed": 25,
+    "total_emissions_gg_co2eq": 191092.473
+  },
+  "sectoral_emissions": {
+    "Energy Industries": {
+      "CO2": 41260.401
+    },
+    "Residential": {
+      "CO2": 26297.252000000004,
+      "CH2": 35750.69500000001,
+      "N2O": 3569.771
+    },
+    "Agriculture": {
+      "CH2": 23329.654,
+      "N2O": 7451.488
+    },
+    "Manufacturing": {
+      "CO2": 37417.589
+    },
+    "Transport": {
+      "CO2": 16015.623
+    }
+  },
+  "spatial_allocation_factors": {
+    "Energy Industries": {
+      "population": 0.3,
+      "urban": 0.4,
+      "nightlights": 0.3
+    },
+    "Residential": {
+      "population": 0.7,
+      "urban": 0.3
+    },
+    "Agriculture": {
+      "population": 0.2,
+      "rural": 0.8
+    },
+    "Manufacturing": {
+      "urban": 0.3,
+      "nightlights": 0.5,
+      "population": 0.2
+    },
+    "Transport": {
+      "population": 0.4,
+      "urban": 0.5,
+      "nightlights": 0.1
+    }
+  },
+  "auxiliary_data_statistics": {
+    "population": {
+      "values": [],
+      "coordinates": [],
+      "mean": 0,
+      "std": 0,
+      "min": 0,
+      "max": 0
+    },
+    "urban": {
+      "values": [],
+      "coordinates": [],
+      "mean": 0,
+      "std": 0,
+      "min": 0,
+      "max": 0
+    },
+    "nightlights": {
+      "values": [],
+      "coordinates": [],
+      "mean": 0,
+      "std": 0,
+      "min": 0,
+      "max": 0
+    }
+  },
+  "gas_type_summary": {
+    "CO2": {
+      "total_gg_co2eq": 120990.86499999999,
+      "percentage_of_total": 63.31534837586198,
+      "number_of_sources": 15
+    },
+    "N2O": {
+      "total_gg_co2eq": 11021.259,
+      "percentage_of_total": 5.767500324306337,
+      "number_of_sources": 4
+    }
+  },
+  "sector_summary": {
+    "Energy Industries": {
+      "total_gg_co2eq": 41260.401,
+      "percentage_of_total": 21.591850454517903,
+      "gas_breakdown": {
+        "CO2": 41260.401
+      },
+      "spatial_allocation_method": {
+        "population": 0.3,
+        "urban": 0.4,
+        "nightlights": 0.3
+      }
+    },
+    "Residential": {
+      "total_gg_co2eq": 65617.71800000001,
+      "percentage_of_total": 34.338201274939806,
+      "gas_breakdown": {
+        "CO2": 26297.252000000004,
+        "CH2": 35750.69500000001,
+        "N2O": 3569.771
+      },
+      "spatial_allocation_method": {
+        "population": 0.7,
+        "urban": 0.3
+      }
+    },
+    "Agriculture": {
+      "total_gg_co2eq": 30781.142,
+      "percentage_of_total": 16.107982442615622,
+      "gas_breakdown": {
+        "CH2": 23329.654,
+        "N2O": 7451.488
+      },
+      "spatial_allocation_method": {
+        "population": 0.2,
+        "rural": 0.8
+      }
+    },
+    "Manufacturing": {
+      "total_gg_co2eq": 37417.589,
+      "percentage_of_total": 19.580880613753948,
+      "gas_breakdown": {
+        "CO2": 37417.589
+      },
+      "spatial_allocation_method": {
+        "urban": 0.3,
+        "nightlights": 0.5,
+        "population": 0.2
+      }
+    },
+    "Transport": {
+      "total_gg_co2eq": 16015.623,
+      "percentage_of_total": 8.381085214172721,
+      "gas_breakdown": {
+        "CO2": 16015.623
+      },
+      "spatial_allocation_method": {
+        "population": 0.4,
+        "urban": 0.5,
+        "nightlights": 0.1
+      }
+    }
+  }
+}

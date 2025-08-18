@@ -1,0 +1,10 @@
+{
+  "layer_name": "forest",
+  "description": "Forest Areas (Polygon-Masked)",
+  "filename": "UZB_POLYGON_forest_2022.tif",
+  "task_id": "6A36PJYHBQAGMP3SME7XI4NU",
+  "task_status": "STARTED",
+  "export_method": "batch_export_to_drive_polygon_masked",
+  "spatial_mask": "Uzbekistan_Polygon_Boundaries",
+  "export_date": "2025-08-18T21:29:43.579470"
+}
