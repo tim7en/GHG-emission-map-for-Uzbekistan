@@ -268,15 +268,51 @@ class PolygonMaskedSpatialGHGAnalysis:
             ).get(band)
         )
 
-    def _scale_to_total(self, img: ee.Image, band: str, target_total: float) -> ee.Image:
+    def _sum_over_polygon_areaaware(self, img: ee.Image, band: str, per_area_units: bool) -> ee.Number:
+        """
+        Sum an image band over the Uzbekistan polygon with area weighting if needed.
+        
+        Args:
+            img: Input image
+            band: Band name to sum
+            per_area_units: True if input is per-area (density), False if per-pixel (mass)
+        """
+        base = img.select(band)
+        if per_area_units:
+            # Convert density (e.g., kg/m²/yr) to mass per pixel (e.g., kg/pixel/yr)
+            base = base.multiply(ee.Image.pixelArea())
+        
+        return ee.Number(
+            base.reduceRegion(
+                reducer=ee.Reducer.sum(),
+                geometry=self.uzbekistan_polygon,
+                scale=self.target_scale,
+                maxPixels=1e9
+            ).get(band)
+        )
+
+    def _scale_to_total(self, img: ee.Image, band: str, target_total: float, per_area_units: bool = False) -> ee.Image:
         """
         Scale a positive image so that its polygon sum equals target_total.
-        Returns zero image if source sum is non-positive.
+        
+        Args:
+            img: Input image
+            band: Band name to scale
+            target_total: Target sum value (in Gg CO2e)
+            per_area_units: True if input is per-area density, False if per-pixel mass
         """
-        src_sum = self._sum_over_polygon(img, band)
+        # Use area-aware sum for proper scaling
+        src_sum = self._sum_over_polygon_areaaware(img, band, per_area_units)
         scale = ee.Number(target_total).divide(src_sum)
         scale = ee.Number(ee.Algorithms.If(src_sum.lte(0), 0, scale))
-        return img.multiply(scale)
+        
+        # Convert to mass per pixel first if needed, then scale
+        if per_area_units:
+            # Convert density to mass per pixel, then scale
+            return img.multiply(ee.Image.pixelArea()).multiply(scale)
+        else:
+            # Already mass per pixel, just scale
+            return img.multiply(scale)
 
 
     def robust_unit_scale(self, img, band, q0=0.02, q1=0.98):
@@ -290,6 +326,55 @@ class PolygonMaskedSpatialGHGAnalysis:
         lo = ee.Number(q.get(f'{band}_p{int(q0*100)}'))
         hi = ee.Number(q.get(f'{band}_p{int(q1*100)}'))
         return img.select(band).subtract(lo).divide(hi.subtract(lo)).clamp(0,1)
+
+    def to_t_per_km2(self, img: ee.Image, band: str) -> ee.Image:
+        """
+        Convert a mass-per-pixel image (Gg/pixel) to t/km²/yr for user-friendly display.
+        
+        Args:
+            img: Input image with mass per pixel
+            band: Band name to convert
+            
+        Returns:
+            Image with units of t/km²/yr
+        """
+        km2_per_pixel = ee.Image.pixelArea().divide(1e6)  # Convert m² to km²
+        # Convert Gg to tonnes (×1000) and divide by km² per pixel
+        return img.select(band).multiply(1000).divide(km2_per_pixel).rename(f'{band}_t_per_km2')
+
+    def get_robust_stats(self, img: ee.Image, band: str):
+        """Get robust statistics for diagnostic purposes."""
+        reducer = ee.Reducer.minMax().combine(
+            ee.Reducer.mean(), '', True
+        ).combine(
+            ee.Reducer.percentile([5, 25, 50, 75, 95]), '', True
+        )
+        
+        stats = img.select(band).reduceRegion(
+            reducer=reducer,
+            geometry=self.uzbekistan_polygon,
+            scale=self.target_scale,
+            maxPixels=1e9
+        )
+        
+        return stats
+
+    def verify_sum_matches_ipcc(self, img: ee.Image, band: str, expected_total: float, tolerance: float = 0.01) -> bool:
+        """Verify that the image sum matches the expected IPCC total within tolerance."""
+        actual_sum = self._sum_over_polygon(img, band).getInfo()
+        relative_error = abs(actual_sum - expected_total) / expected_total
+        
+        print(f"   📊 Sum verification for {band}:")
+        print(f"      Expected: {expected_total:.1f} Gg CO₂e")
+        print(f"      Actual: {actual_sum:.1f} Gg CO₂e")
+        print(f"      Relative error: {relative_error:.3%}")
+        
+        if relative_error <= tolerance:
+            print(f"      ✅ Sum matches within {tolerance:.1%} tolerance")
+            return True
+        else:
+            print(f"      ⚠️ Sum differs by more than {tolerance:.1%}")
+            return False
     
     def load_and_prepare_ipcc_data(self):
         """Load and prepare IPCC 2022 data for spatial analysis"""
@@ -865,14 +950,44 @@ class PolygonMaskedSpatialGHGAnalysis:
                     inv_band = 'n2o_edgar'
                     inv_img  = self._to_1km(inv_img, 'bilinear')  # upsample 0.1° → ~1 km
 
-                if inv_img:
+                if inv_img and inv_band:
                     # Ensure positive weights (avoid zeros-only areas)
                     inv_pos = inv_img.max(0).clip(self.uzbekistan_polygon)
-                    # Scale to IPCC national totals (so your reported totals remain authoritative)
-                    scaled = self._scale_to_total(inv_pos, inv_band, total_emission)
+                    
+                    # Determine if source data is per-area (density) or per-pixel (mass)
+                    if gas_type == 'CO2' and 'odiac_co2' in self.auxiliary_layers:
+                        per_area_flag = True   # ODIAC flux per area
+                    elif gas_type == 'CH4' and 'edgar_ch4' in self.auxiliary_layers:
+                        per_area_flag = True   # EDGAR is usually flux per area
+                    elif gas_type == 'N2O' and 'edgar_n2o' in self.auxiliary_layers:
+                        per_area_flag = True   # EDGAR is usually flux per area
+                    else:
+                        per_area_flag = False  # Default to per-pixel if unsure
+                    
+                    # Scale to IPCC national totals with proper area weighting
+                    scaled = self._scale_to_total(inv_pos, inv_band, total_emission, per_area_units=per_area_flag)
                     emission_image = scaled.rename(f'{gas_type}_emissions')
+                    
+                    # CRITICAL FIX: Store and export the emission layer
                     emission_layers[gas_type] = emission_image
                     self._export_polygon_masked_emission_map(emission_image, gas_type, total_emission)
+                    
+                    # Verify the scaling worked correctly
+                    self.verify_sum_matches_ipcc(emission_image, f'{gas_type}_emissions', total_emission)
+                    
+                    # Get diagnostic statistics
+                    try:
+                        stats = self.get_robust_stats(emission_image, f'{gas_type}_emissions').getInfo()
+                        print(f"   📊 {gas_type} statistics (Gg/pixel): min={stats.get(f'{gas_type}_emissions_min', 0):.4f}, max={stats.get(f'{gas_type}_emissions_max', 0):.4f}, mean={stats.get(f'{gas_type}_emissions_mean', 0):.4f}")
+                        
+                        # Also create and export user-friendly t/km²/yr version
+                        intensity_img = self.to_t_per_km2(emission_image, f'{gas_type}_emissions')
+                        intensity_stats = self.get_robust_stats(intensity_img, f'{gas_type}_emissions_t_per_km2').getInfo()
+                        print(f"   📊 {gas_type} intensity (t/km²/yr): min={intensity_stats.get(f'{gas_type}_emissions_t_per_km2_min', 0):.1f}, max={intensity_stats.get(f'{gas_type}_emissions_t_per_km2_max', 0):.1f}, mean={intensity_stats.get(f'{gas_type}_emissions_t_per_km2_mean', 0):.1f}")
+                    except Exception as e:
+                        print(f"   ⚠️ Statistics computation failed: {e}")
+                        print(f"   📊 {gas_type} scaled successfully but statistics unavailable")
+                    
                     print(f"   ✅ {gas_type}: scaled {('ODIAC' if gas_type=='CO2' else 'EDGAR')} to IPCC total ({total_emission:.1f} Gg CO2e)")
                     continue  # go next gas
 

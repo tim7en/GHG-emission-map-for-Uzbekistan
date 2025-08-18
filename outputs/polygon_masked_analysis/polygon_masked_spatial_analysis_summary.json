@@ -1,6 +1,6 @@
 {
   "analysis_info": {
-    "date": "2025-08-18T21:30:20.695713",
+    "date": "2025-08-18T22:19:58.558339",
     "country": "Uzbekistan",
     "reference_year": 2022,
     "methodology": "Polygon-Masked Spatial GHG Analysis",
@@ -74,41 +74,41 @@
       "gas_type": "CO2",
       "filename": "UZB_POLYGON_GHG_CO2_Enhanced_2022.tif",
       "total_emissions": 120990.86499999999,
-      "task_id": "IXJXP54XK5QUW3C53OVNXXC2",
+      "task_id": "AMWDZSDFCAVNPLY7DGOK2MLQ",
       "task_status": "STARTED",
       "export_method": "batch_export_to_drive_polygon_masked",
       "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-      "export_date": "2025-08-18T21:29:48.058616"
+      "export_date": "2025-08-18T22:19:08.669825"
     },
     {
       "gas_type": "CH4",
       "filename": "UZB_POLYGON_GHG_CH4_Enhanced_2022.tif",
       "total_emissions": 59080.349,
-      "task_id": "7BRDMZCV2RHLA76NSD4RPOZ2",
+      "task_id": "KYBWNBJ6O6BFD5H2OSGOTJ5N",
       "task_status": "STARTED",
       "export_method": "batch_export_to_drive_polygon_masked",
       "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-      "export_date": "2025-08-18T21:29:48.520101"
+      "export_date": "2025-08-18T22:19:17.142230"
     },
     {
       "gas_type": "N2O",
       "filename": "UZB_POLYGON_GHG_N2O_Enhanced_2022.tif",
       "total_emissions": 11021.259,
-      "task_id": "2X2UIXYVDO2BSGVELPV77FLW",
+      "task_id": "M65SQISQWR4DLVXVX5FHGIKX",
       "task_status": "STARTED",
       "export_method": "batch_export_to_drive_polygon_masked",
       "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-      "export_date": "2025-08-18T21:29:49.544634"
+      "export_date": "2025-08-18T22:19:18.222130"
     },
     {
       "gas_type": "COMBINED",
       "filename": "UZB_POLYGON_GHG_COMBINED_Enhanced_2022.tif",
       "total_emissions": 191092.47299999997,
-      "task_id": "TSICSSI3VWXQCG2JS2WHNGZ6",
+      "task_id": "DNY6NGEKTAANPGGQ2UWVQQKZ",
       "task_status": "STARTED",
       "export_method": "batch_export_to_drive_polygon_masked",
       "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-      "export_date": "2025-08-18T21:29:49.966624"
+      "export_date": "2025-08-18T22:19:18.637524"
     }
   ]
 }

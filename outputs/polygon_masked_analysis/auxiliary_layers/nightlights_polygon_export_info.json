@@ -2,9 +2,9 @@
   "layer_name": "nightlights",
   "description": "Nighttime Lights (Polygon-Masked)",
   "filename": "UZB_POLYGON_nightlights_2022.tif",
-  "task_id": "4MI5KBCL3OVZHO46LCHVNEZG",
+  "task_id": "NMQJJTGQIA4UQQID7BTAXMHK",
   "task_status": "STARTED",
   "export_method": "batch_export_to_drive_polygon_masked",
   "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-  "export_date": "2025-08-18T21:29:41.202458"
+  "export_date": "2025-08-18T22:19:00.161713"
 }

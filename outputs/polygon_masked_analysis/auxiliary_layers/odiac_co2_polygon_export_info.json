@@ -2,9 +2,9 @@
   "layer_name": "odiac_co2",
   "description": "ODIAC Fossil CO2 (1km, polygon-masked)",
   "filename": "UZB_POLYGON_odiac_co2_2022.tif",
-  "task_id": "HYT3AOHBHW53YD3BCHJVOL7D",
+  "task_id": "ADSZHZHOI46RUZCZDWBRXLAB",
   "task_status": "STARTED",
   "export_method": "batch_export_to_drive_polygon_masked",
   "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-  "export_date": "2025-08-18T21:29:41.703364"
+  "export_date": "2025-08-18T22:19:00.587340"
 }

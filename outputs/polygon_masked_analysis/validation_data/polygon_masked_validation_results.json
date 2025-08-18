@@ -1,6 +1,6 @@
 {
   "analysis_info": {
-    "date": "2025-08-18T21:29:49.968764",
+    "date": "2025-08-18T22:19:18.641551",
     "method": "Polygon-Masked Spatial GHG Analysis",
     "spatial_resolution": "1000m",
     "spatial_mask": "Uzbekistan_Polygon_Boundaries"
@@ -18,7 +18,7 @@
         41.3
       ],
       "gas_type": "CO2",
-      "emission_value": 33.78507790206889,
+      "emission_value": 33.34001686466823,
       "within_polygon": true
     },
     {
@@ -28,7 +28,7 @@
         39.65
       ],
       "gas_type": "CO2",
-      "emission_value": 13.039393123153644,
+      "emission_value": 13.183347009182603,
       "within_polygon": true
     },
     {
@@ -38,7 +38,7 @@
         39.77
       ],
       "gas_type": "CO2",
-      "emission_value": 9.249327878513752,
+      "emission_value": 9.335874483356198,
       "within_polygon": true
     },
     {
@@ -48,7 +48,7 @@
         40.78
       ],
       "gas_type": "CO2",
-      "emission_value": 11.30858361157177,
+      "emission_value": 11.246955970679558,
       "within_polygon": true
     },
     {
@@ -58,7 +58,7 @@
         42.45
       ],
       "gas_type": "CO2",
-      "emission_value": 6.680453683039693,
+      "emission_value": 6.476618247963629,
       "within_polygon": true
     },
     {

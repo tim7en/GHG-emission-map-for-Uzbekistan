@@ -2,9 +2,9 @@
   "layer_name": "barren",
   "description": "Barren Areas (Polygon-Masked)",
   "filename": "UZB_POLYGON_barren_2022.tif",
-  "task_id": "FWLSRJCS6WIMWJQCVZI2C3IA",
+  "task_id": "2OV7SGNOJKUQ4B4AOINM3TJC",
   "task_status": "STARTED",
   "export_method": "batch_export_to_drive_polygon_masked",
   "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-  "export_date": "2025-08-18T21:29:44.453696"
+  "export_date": "2025-08-18T22:19:03.418156"
 }

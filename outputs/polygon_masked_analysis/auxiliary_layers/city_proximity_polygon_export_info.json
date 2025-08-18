@@ -2,9 +2,9 @@
   "layer_name": "city_proximity",
   "description": "Smooth City Proximity (Polygon-Masked)",
   "filename": "UZB_POLYGON_city_proximity_2022.tif",
-  "task_id": "WFQYIBTGCBLKBJGEM22PO4QV",
+  "task_id": "EQGNSPFX7HKEQC57T3PFDTZS",
   "task_status": "STARTED",
   "export_method": "batch_export_to_drive_polygon_masked",
   "spatial_mask": "Uzbekistan_Polygon_Boundaries",
-  "export_date": "2025-08-18T21:29:44.836852"
+  "export_date": "2025-08-18T22:19:03.905066"
 }
