@@ -1045,11 +1045,11 @@ class PolygonMaskedSpatialGHGAnalysis:
     
     def _create_polygon_masked_combined_emission_map(self, emission_layers):
         # All emission_layers[gas] are already in Gg CO2e per pixel
-        total = ee.Image.constant(0).clip(self.uzbekistan_polygon).rename('total_ghg_co2e')
-        for _, img in emission_layers.items():
-            total = total.add(img)
-        return total
-            
+        try:
+            total = ee.Image.constant(0).clip(self.uzbekistan_polygon).rename('total_ghg_co2e')
+            for _, img in emission_layers.items():
+                total = total.add(img)
+            return total
         except Exception as e:
             print(f"      ⚠️ Combined polygon-masked map creation failed: {e}")
             return None
