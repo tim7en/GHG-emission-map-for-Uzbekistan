@@ -1,0 +1,15 @@
+{
+  "download_summary": {
+    "total_urls": 11578,
+    "successful_downloads": 3747,
+    "failed_downloads": 7831,
+    "features_extracted": 149242,
+    "files_created": 149242,
+    "coordinates_transformed": 5914012
+  },
+  "success_rate": 32.36310243565383,
+  "output_directory": "jizzax_cadastral_data",
+  "timestamp": "2025-08-16T13:54:19.306550",
+  "coordinate_system": "EPSG:4326 (WGS84)",
+  "georeferenced": true
+}

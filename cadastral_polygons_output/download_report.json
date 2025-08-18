@@ -1,0 +1,12 @@
+{
+  "download_summary": {
+    "total_urls": 50,
+    "successful_downloads": 50,
+    "failed_downloads": 0,
+    "features_extracted": 1295,
+    "files_created": 1345
+  },
+  "success_rate": 100.0,
+  "output_directory": "cadastral_polygons_output",
+  "timestamp": "2025-08-16T11:33:19.613394"
+}

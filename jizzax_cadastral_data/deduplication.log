@@ -1,0 +1,1087 @@
+2025-08-16 13:59:50,020 - INFO - Starting Jizzax cadastral data deduplication...
+2025-08-16 13:59:50,023 - INFO - Found 46 layer directories to process
+2025-08-16 13:59:50,023 - INFO - 
+Processing layer 1/46: DKYAT_07022023_zoom_12
+2025-08-16 13:59:50,024 - INFO - 
+============================================================
+2025-08-16 13:59:50,024 - INFO - DEDUPLICATING LAYER: DKYAT_07022023_zoom_12
+2025-08-16 13:59:50,024 - INFO - ============================================================
+2025-08-16 13:59:50,024 - INFO - Processing layer: DKYAT_07022023_zoom_12
+2025-08-16 13:59:50,384 - INFO - Processed 1000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:50,678 - INFO - Processed 2000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:50,970 - INFO - Processed 3000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:51,256 - INFO - Processed 4000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:51,555 - INFO - Processed 5000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:51,837 - INFO - Processed 6000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:52,131 - INFO - Processed 7000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:52,421 - INFO - Processed 8000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:52,713 - INFO - Processed 9000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:53,006 - INFO - Processed 10000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:53,295 - INFO - Processed 11000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:53,573 - INFO - Processed 12000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:53,847 - INFO - Processed 13000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:54,122 - INFO - Processed 14000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:54,416 - INFO - Processed 15000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:54,678 - INFO - Processed 16000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:54,953 - INFO - Processed 17000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:55,217 - INFO - Processed 18000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:55,482 - INFO - Processed 19000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:55,756 - INFO - Processed 20000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:56,020 - INFO - Processed 21000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:56,284 - INFO - Processed 22000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:56,546 - INFO - Processed 23000/23608 files in DKYAT_07022023_zoom_12
+2025-08-16 13:59:56,716 - INFO - Completed DKYAT_07022023_zoom_12: 23608 valid files processed
+2025-08-16 13:59:56,718 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 13:59:56,718 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 13:59:56,736 - INFO - Found 1776 geometry duplicate groups
+2025-08-16 13:59:56,752 - INFO - Found 0 content duplicate groups
+2025-08-16 13:59:56,766 - INFO - Found 1776 unique duplicate groups in DKYAT_07022023_zoom_12
+2025-08-16 13:59:56,828 - INFO - Processed 100/1776 duplicate groups
+2025-08-16 13:59:56,910 - INFO - Processed 200/1776 duplicate groups
+2025-08-16 13:59:56,979 - INFO - Processed 300/1776 duplicate groups
+2025-08-16 13:59:57,038 - INFO - Processed 400/1776 duplicate groups
+2025-08-16 13:59:57,111 - INFO - Processed 500/1776 duplicate groups
+2025-08-16 13:59:57,149 - INFO - Processed 600/1776 duplicate groups
+2025-08-16 13:59:57,238 - INFO - Processed 700/1776 duplicate groups
+2025-08-16 13:59:57,296 - INFO - Processed 800/1776 duplicate groups
+2025-08-16 13:59:57,338 - INFO - Processed 900/1776 duplicate groups
+2025-08-16 13:59:57,367 - INFO - Processed 1000/1776 duplicate groups
+2025-08-16 13:59:57,507 - INFO - Processed 1100/1776 duplicate groups
+2025-08-16 13:59:57,654 - INFO - Processed 1200/1776 duplicate groups
+2025-08-16 13:59:57,696 - INFO - Processed 1300/1776 duplicate groups
+2025-08-16 13:59:57,811 - INFO - Processed 1400/1776 duplicate groups
+2025-08-16 13:59:57,862 - INFO - Processed 1500/1776 duplicate groups
+2025-08-16 13:59:57,947 - INFO - Processed 1600/1776 duplicate groups
+2025-08-16 13:59:58,014 - INFO - Processed 1700/1776 duplicate groups
+2025-08-16 13:59:58,053 - INFO - Removed 1841 duplicate files from DKYAT_07022023_zoom_12
+2025-08-16 13:59:58,158 - INFO - 
+Processing layer 2/46: DKYAT_07022023_zoom_14
+2025-08-16 13:59:58,158 - INFO - 
+============================================================
+2025-08-16 13:59:58,158 - INFO - DEDUPLICATING LAYER: DKYAT_07022023_zoom_14
+2025-08-16 13:59:58,158 - INFO - ============================================================
+2025-08-16 13:59:58,158 - INFO - Processing layer: DKYAT_07022023_zoom_14
+2025-08-16 13:59:58,471 - INFO - Processed 1000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 13:59:58,742 - INFO - Processed 2000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 13:59:59,047 - INFO - Processed 3000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 13:59:59,323 - INFO - Processed 4000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 13:59:59,594 - INFO - Processed 5000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 13:59:59,892 - INFO - Processed 6000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:00,177 - INFO - Processed 7000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:00,443 - INFO - Processed 8000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:00,711 - INFO - Processed 9000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:00,997 - INFO - Processed 10000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:01,260 - INFO - Processed 11000/11629 files in DKYAT_07022023_zoom_14
+2025-08-16 14:00:01,443 - INFO - Completed DKYAT_07022023_zoom_14: 11629 valid files processed
+2025-08-16 14:00:01,443 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:01,443 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:01,460 - INFO - Found 1434 geometry duplicate groups
+2025-08-16 14:00:01,467 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:01,473 - INFO - Found 1434 unique duplicate groups in DKYAT_07022023_zoom_14
+2025-08-16 14:00:01,545 - INFO - Processed 100/1434 duplicate groups
+2025-08-16 14:00:01,595 - INFO - Processed 200/1434 duplicate groups
+2025-08-16 14:00:01,677 - INFO - Processed 300/1434 duplicate groups
+2025-08-16 14:00:01,746 - INFO - Processed 400/1434 duplicate groups
+2025-08-16 14:00:01,842 - INFO - Processed 500/1434 duplicate groups
+2025-08-16 14:00:01,926 - INFO - Processed 600/1434 duplicate groups
+2025-08-16 14:00:01,962 - INFO - Processed 700/1434 duplicate groups
+2025-08-16 14:00:02,044 - INFO - Processed 800/1434 duplicate groups
+2025-08-16 14:00:02,079 - INFO - Processed 900/1434 duplicate groups
+2025-08-16 14:00:02,130 - INFO - Processed 1000/1434 duplicate groups
+2025-08-16 14:00:02,226 - INFO - Processed 1100/1434 duplicate groups
+2025-08-16 14:00:02,279 - INFO - Processed 1200/1434 duplicate groups
+2025-08-16 14:00:02,329 - INFO - Processed 1300/1434 duplicate groups
+2025-08-16 14:00:02,379 - INFO - Processed 1400/1434 duplicate groups
+2025-08-16 14:00:02,379 - INFO - Removed 1537 duplicate files from DKYAT_07022023_zoom_14
+2025-08-16 14:00:02,445 - INFO - 
+Processing layer 3/46: DKYAT_07022023_zoom_16
+2025-08-16 14:00:02,445 - INFO - 
+============================================================
+2025-08-16 14:00:02,446 - INFO - DEDUPLICATING LAYER: DKYAT_07022023_zoom_16
+2025-08-16 14:00:02,446 - INFO - ============================================================
+2025-08-16 14:00:02,446 - INFO - Processing layer: DKYAT_07022023_zoom_16
+2025-08-16 14:00:02,758 - INFO - Processed 1000/3319 files in DKYAT_07022023_zoom_16
+2025-08-16 14:00:03,030 - INFO - Processed 2000/3319 files in DKYAT_07022023_zoom_16
+2025-08-16 14:00:03,316 - INFO - Processed 3000/3319 files in DKYAT_07022023_zoom_16
+2025-08-16 14:00:03,410 - INFO - Completed DKYAT_07022023_zoom_16: 3319 valid files processed
+2025-08-16 14:00:03,410 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:03,410 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:03,426 - INFO - Found 846 geometry duplicate groups
+2025-08-16 14:00:03,426 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:03,434 - INFO - Found 846 unique duplicate groups in DKYAT_07022023_zoom_16
+2025-08-16 14:00:03,570 - INFO - Processed 100/846 duplicate groups
+2025-08-16 14:00:03,643 - INFO - Processed 200/846 duplicate groups
+2025-08-16 14:00:03,823 - INFO - Processed 300/846 duplicate groups
+2025-08-16 14:00:04,030 - INFO - Processed 400/846 duplicate groups
+2025-08-16 14:00:04,226 - INFO - Processed 500/846 duplicate groups
+2025-08-16 14:00:04,343 - INFO - Processed 600/846 duplicate groups
+2025-08-16 14:00:04,574 - INFO - Processed 700/846 duplicate groups
+2025-08-16 14:00:04,690 - INFO - Processed 800/846 duplicate groups
+2025-08-16 14:00:04,730 - INFO - Removed 1262 duplicate files from DKYAT_07022023_zoom_16
+2025-08-16 14:00:04,752 - INFO - 
+Processing layer 4/46: DKYAT_07022023_zoom_18
+2025-08-16 14:00:04,753 - INFO - 
+============================================================
+2025-08-16 14:00:04,753 - INFO - DEDUPLICATING LAYER: DKYAT_07022023_zoom_18
+2025-08-16 14:00:04,753 - INFO - ============================================================
+2025-08-16 14:00:04,754 - INFO - Processing layer: DKYAT_07022023_zoom_18
+2025-08-16 14:00:04,804 - INFO - Completed DKYAT_07022023_zoom_18: 184 valid files processed
+2025-08-16 14:00:04,804 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:04,804 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:04,804 - INFO - Found 48 geometry duplicate groups
+2025-08-16 14:00:04,804 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:04,804 - INFO - Found 48 unique duplicate groups in DKYAT_07022023_zoom_18
+2025-08-16 14:00:04,833 - INFO - Removed 57 duplicate files from DKYAT_07022023_zoom_18
+2025-08-16 14:00:04,838 - INFO - 
+Processing layer 5/46: TUMAN_BORDER_2023_zoom_10
+2025-08-16 14:00:04,838 - INFO - 
+============================================================
+2025-08-16 14:00:04,838 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_10
+2025-08-16 14:00:04,838 - INFO - ============================================================
+2025-08-16 14:00:04,838 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_10
+2025-08-16 14:00:05,095 - INFO - Completed TUMAN_BORDER_2023_zoom_10: 18 valid files processed
+2025-08-16 14:00:05,095 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,095 - INFO - Found 7 district+FID duplicate groups
+2025-08-16 14:00:05,095 - INFO - Found 7 geometry duplicate groups
+2025-08-16 14:00:05,095 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,095 - INFO - Found 7 unique duplicate groups in TUMAN_BORDER_2023_zoom_10
+2025-08-16 14:00:05,095 - INFO - Removed 9 duplicate files from TUMAN_BORDER_2023_zoom_10
+2025-08-16 14:00:05,103 - INFO - 
+Processing layer 6/46: TUMAN_BORDER_2023_zoom_12
+2025-08-16 14:00:05,103 - INFO - 
+============================================================
+2025-08-16 14:00:05,104 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_12
+2025-08-16 14:00:05,104 - INFO - ============================================================
+2025-08-16 14:00:05,104 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_12
+2025-08-16 14:00:05,192 - INFO - Completed TUMAN_BORDER_2023_zoom_12: 8 valid files processed
+2025-08-16 14:00:05,192 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,192 - INFO - Found 2 district+FID duplicate groups
+2025-08-16 14:00:05,192 - INFO - Found 2 geometry duplicate groups
+2025-08-16 14:00:05,192 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,192 - INFO - Found 2 unique duplicate groups in TUMAN_BORDER_2023_zoom_12
+2025-08-16 14:00:05,195 - INFO - Removed 3 duplicate files from TUMAN_BORDER_2023_zoom_12
+2025-08-16 14:00:05,195 - INFO - 
+Processing layer 7/46: TUMAN_BORDER_2023_zoom_14
+2025-08-16 14:00:05,199 - INFO - 
+============================================================
+2025-08-16 14:00:05,199 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_14
+2025-08-16 14:00:05,199 - INFO - ============================================================
+2025-08-16 14:00:05,199 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_14
+2025-08-16 14:00:05,235 - INFO - Completed TUMAN_BORDER_2023_zoom_14: 3 valid files processed
+2025-08-16 14:00:05,236 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,236 - INFO - Found 1 district+FID duplicate groups
+2025-08-16 14:00:05,236 - INFO - Found 1 geometry duplicate groups
+2025-08-16 14:00:05,236 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,237 - INFO - Found 1 unique duplicate groups in TUMAN_BORDER_2023_zoom_14
+2025-08-16 14:00:05,237 - INFO - Removed 1 duplicate files from TUMAN_BORDER_2023_zoom_14
+2025-08-16 14:00:05,238 - INFO - 
+Processing layer 8/46: TUMAN_BORDER_2023_zoom_16
+2025-08-16 14:00:05,238 - INFO - 
+============================================================
+2025-08-16 14:00:05,238 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_16
+2025-08-16 14:00:05,238 - INFO - ============================================================
+2025-08-16 14:00:05,238 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_16
+2025-08-16 14:00:05,267 - INFO - Completed TUMAN_BORDER_2023_zoom_16: 2 valid files processed
+2025-08-16 14:00:05,267 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,267 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:05,267 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:05,267 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,267 - INFO - Found 0 unique duplicate groups in TUMAN_BORDER_2023_zoom_16
+2025-08-16 14:00:05,267 - INFO - No duplicates found in TUMAN_BORDER_2023_zoom_16
+2025-08-16 14:00:05,267 - INFO - 
+Processing layer 9/46: TUMAN_BORDER_2023_zoom_18
+2025-08-16 14:00:05,267 - INFO - 
+============================================================
+2025-08-16 14:00:05,267 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_18
+2025-08-16 14:00:05,267 - INFO - ============================================================
+2025-08-16 14:00:05,267 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_18
+2025-08-16 14:00:05,288 - INFO - Completed TUMAN_BORDER_2023_zoom_18: 1 valid files processed
+2025-08-16 14:00:05,294 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,295 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:05,295 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:05,295 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,296 - INFO - Found 0 unique duplicate groups in TUMAN_BORDER_2023_zoom_18
+2025-08-16 14:00:05,296 - INFO - No duplicates found in TUMAN_BORDER_2023_zoom_18
+2025-08-16 14:00:05,296 - INFO - 
+Processing layer 10/46: TUMAN_BORDER_2023_zoom_8
+2025-08-16 14:00:05,297 - INFO - 
+============================================================
+2025-08-16 14:00:05,297 - INFO - DEDUPLICATING LAYER: TUMAN_BORDER_2023_zoom_8
+2025-08-16 14:00:05,298 - INFO - ============================================================
+2025-08-16 14:00:05,298 - INFO - Processing layer: TUMAN_BORDER_2023_zoom_8
+2025-08-16 14:00:05,544 - INFO - Completed TUMAN_BORDER_2023_zoom_8: 18 valid files processed
+2025-08-16 14:00:05,544 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:05,544 - INFO - Found 7 district+FID duplicate groups
+2025-08-16 14:00:05,544 - INFO - Found 7 geometry duplicate groups
+2025-08-16 14:00:05,544 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:05,544 - INFO - Found 7 unique duplicate groups in TUMAN_BORDER_2023_zoom_8
+2025-08-16 14:00:05,614 - INFO - Removed 8 duplicate files from TUMAN_BORDER_2023_zoom_8
+2025-08-16 14:00:05,614 - INFO - 
+Processing layer 11/46: UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:05,614 - INFO - 
+============================================================
+2025-08-16 14:00:05,614 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:05,614 - INFO - ============================================================
+2025-08-16 14:00:05,614 - INFO - Processing layer: UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:05,960 - INFO - Processed 1000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:06,292 - INFO - Processed 2000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:06,590 - INFO - Processed 3000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:06,874 - INFO - Processed 4000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:07,203 - INFO - Processed 5000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:07,494 - INFO - Processed 6000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:07,794 - INFO - Processed 7000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:08,078 - INFO - Processed 8000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:08,376 - INFO - Processed 9000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:08,645 - INFO - Processed 10000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:08,925 - INFO - Processed 11000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:09,226 - INFO - Processed 12000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:09,530 - INFO - Processed 13000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:09,838 - INFO - Processed 14000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:10,164 - INFO - Processed 15000/15347 files in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:10,288 - INFO - Completed UZKAD_ALL_SPUNIT_AGR_zoom_10: 15347 valid files processed
+2025-08-16 14:00:10,288 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:10,288 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:10,298 - INFO - Found 2222 geometry duplicate groups
+2025-08-16 14:00:10,306 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:10,321 - INFO - Found 2222 unique duplicate groups in UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:10,438 - INFO - Processed 100/2222 duplicate groups
+2025-08-16 14:00:10,544 - INFO - Processed 200/2222 duplicate groups
+2025-08-16 14:00:10,598 - INFO - Processed 300/2222 duplicate groups
+2025-08-16 14:00:10,768 - INFO - Processed 400/2222 duplicate groups
+2025-08-16 14:00:10,833 - INFO - Processed 500/2222 duplicate groups
+2025-08-16 14:00:10,944 - INFO - Processed 600/2222 duplicate groups
+2025-08-16 14:00:11,028 - INFO - Processed 700/2222 duplicate groups
+2025-08-16 14:00:11,133 - INFO - Processed 800/2222 duplicate groups
+2025-08-16 14:00:11,198 - INFO - Processed 900/2222 duplicate groups
+2025-08-16 14:00:11,298 - INFO - Processed 1000/2222 duplicate groups
+2025-08-16 14:00:11,378 - INFO - Processed 1100/2222 duplicate groups
+2025-08-16 14:00:11,438 - INFO - Processed 1200/2222 duplicate groups
+2025-08-16 14:00:11,527 - INFO - Processed 1300/2222 duplicate groups
+2025-08-16 14:00:11,579 - INFO - Processed 1400/2222 duplicate groups
+2025-08-16 14:00:11,693 - INFO - Processed 1500/2222 duplicate groups
+2025-08-16 14:00:11,747 - INFO - Processed 1600/2222 duplicate groups
+2025-08-16 14:00:11,780 - INFO - Processed 1700/2222 duplicate groups
+2025-08-16 14:00:11,823 - INFO - Processed 1800/2222 duplicate groups
+2025-08-16 14:00:11,853 - INFO - Processed 1900/2222 duplicate groups
+2025-08-16 14:00:11,933 - INFO - Processed 2000/2222 duplicate groups
+2025-08-16 14:00:12,007 - INFO - Processed 2100/2222 duplicate groups
+2025-08-16 14:00:12,080 - INFO - Processed 2200/2222 duplicate groups
+2025-08-16 14:00:12,113 - INFO - Removed 2414 duplicate files from UZKAD_ALL_SPUNIT_AGR_zoom_10
+2025-08-16 14:00:12,187 - INFO - 
+Processing layer 12/46: UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:12,189 - INFO - 
+============================================================
+2025-08-16 14:00:12,189 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:12,189 - INFO - ============================================================
+2025-08-16 14:00:12,190 - INFO - Processing layer: UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:12,579 - INFO - Processed 1000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:12,953 - INFO - Processed 2000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:13,315 - INFO - Processed 3000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:13,671 - INFO - Processed 4000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:13,979 - INFO - Processed 5000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:14,301 - INFO - Processed 6000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:14,588 - INFO - Processed 7000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:14,888 - INFO - Processed 8000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:15,206 - INFO - Processed 9000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:15,512 - INFO - Processed 10000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:15,832 - INFO - Processed 11000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:16,138 - INFO - Processed 12000/12240 files in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:16,210 - INFO - Completed UZKAD_ALL_SPUNIT_AGR_zoom_12: 12240 valid files processed
+2025-08-16 14:00:16,210 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:16,218 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:16,220 - INFO - Found 3501 geometry duplicate groups
+2025-08-16 14:00:16,230 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:16,259 - INFO - Found 3501 unique duplicate groups in UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:16,458 - INFO - Processed 100/3501 duplicate groups
+2025-08-16 14:00:16,548 - INFO - Processed 200/3501 duplicate groups
+2025-08-16 14:00:16,679 - INFO - Processed 300/3501 duplicate groups
+2025-08-16 14:00:16,811 - INFO - Processed 400/3501 duplicate groups
+2025-08-16 14:00:16,967 - INFO - Processed 500/3501 duplicate groups
+2025-08-16 14:00:17,168 - INFO - Processed 600/3501 duplicate groups
+2025-08-16 14:00:17,348 - INFO - Processed 700/3501 duplicate groups
+2025-08-16 14:00:17,418 - INFO - Processed 800/3501 duplicate groups
+2025-08-16 14:00:17,568 - INFO - Processed 900/3501 duplicate groups
+2025-08-16 14:00:17,727 - INFO - Processed 1000/3501 duplicate groups
+2025-08-16 14:00:17,858 - INFO - Processed 1100/3501 duplicate groups
+2025-08-16 14:00:18,068 - INFO - Processed 1200/3501 duplicate groups
+2025-08-16 14:00:18,237 - INFO - Processed 1300/3501 duplicate groups
+2025-08-16 14:00:18,307 - INFO - Processed 1400/3501 duplicate groups
+2025-08-16 14:00:18,411 - INFO - Processed 1500/3501 duplicate groups
+2025-08-16 14:00:18,508 - INFO - Processed 1600/3501 duplicate groups
+2025-08-16 14:00:18,598 - INFO - Processed 1700/3501 duplicate groups
+2025-08-16 14:00:18,718 - INFO - Processed 1800/3501 duplicate groups
+2025-08-16 14:00:18,767 - INFO - Processed 1900/3501 duplicate groups
+2025-08-16 14:00:18,818 - INFO - Processed 2000/3501 duplicate groups
+2025-08-16 14:00:18,888 - INFO - Processed 2100/3501 duplicate groups
+2025-08-16 14:00:19,133 - INFO - Processed 2200/3501 duplicate groups
+2025-08-16 14:00:19,218 - INFO - Processed 2300/3501 duplicate groups
+2025-08-16 14:00:19,377 - INFO - Processed 2400/3501 duplicate groups
+2025-08-16 14:00:19,503 - INFO - Processed 2500/3501 duplicate groups
+2025-08-16 14:00:19,638 - INFO - Processed 2600/3501 duplicate groups
+2025-08-16 14:00:19,758 - INFO - Processed 2700/3501 duplicate groups
+2025-08-16 14:00:19,808 - INFO - Processed 2800/3501 duplicate groups
+2025-08-16 14:00:19,988 - INFO - Processed 2900/3501 duplicate groups
+2025-08-16 14:00:20,058 - INFO - Processed 3000/3501 duplicate groups
+2025-08-16 14:00:20,238 - INFO - Processed 3100/3501 duplicate groups
+2025-08-16 14:00:20,428 - INFO - Processed 3200/3501 duplicate groups
+2025-08-16 14:00:20,561 - INFO - Processed 3300/3501 duplicate groups
+2025-08-16 14:00:20,667 - INFO - Processed 3400/3501 duplicate groups
+2025-08-16 14:00:20,698 - INFO - Processed 3500/3501 duplicate groups
+2025-08-16 14:00:20,698 - INFO - Removed 5285 duplicate files from UZKAD_ALL_SPUNIT_AGR_zoom_12
+2025-08-16 14:00:20,742 - INFO - 
+Processing layer 13/46: UZKAD_ALL_SPUNIT_AGR_zoom_14
+2025-08-16 14:00:20,743 - INFO - 
+============================================================
+2025-08-16 14:00:20,743 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_AGR_zoom_14
+2025-08-16 14:00:20,743 - INFO - ============================================================
+2025-08-16 14:00:20,744 - INFO - Processing layer: UZKAD_ALL_SPUNIT_AGR_zoom_14
+2025-08-16 14:00:20,798 - INFO - Completed UZKAD_ALL_SPUNIT_AGR_zoom_14: 163 valid files processed
+2025-08-16 14:00:20,798 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:20,798 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:20,798 - INFO - Found 60 geometry duplicate groups
+2025-08-16 14:00:20,798 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:20,798 - INFO - Found 60 unique duplicate groups in UZKAD_ALL_SPUNIT_AGR_zoom_14
+2025-08-16 14:00:20,868 - INFO - Removed 69 duplicate files from UZKAD_ALL_SPUNIT_AGR_zoom_14
+2025-08-16 14:00:20,868 - INFO - 
+Processing layer 14/46: UZKAD_ALL_SPUNIT_AGR_zoom_16
+2025-08-16 14:00:20,868 - INFO - 
+============================================================
+2025-08-16 14:00:20,868 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_AGR_zoom_16
+2025-08-16 14:00:20,868 - INFO - ============================================================
+2025-08-16 14:00:20,868 - INFO - Processing layer: UZKAD_ALL_SPUNIT_AGR_zoom_16
+2025-08-16 14:00:20,993 - INFO - Completed UZKAD_ALL_SPUNIT_AGR_zoom_16: 244 valid files processed
+2025-08-16 14:00:20,993 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:20,993 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:20,998 - INFO - Found 78 geometry duplicate groups
+2025-08-16 14:00:20,998 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:20,998 - INFO - Found 78 unique duplicate groups in UZKAD_ALL_SPUNIT_AGR_zoom_16
+2025-08-16 14:00:21,167 - INFO - Removed 157 duplicate files from UZKAD_ALL_SPUNIT_AGR_zoom_16
+2025-08-16 14:00:21,167 - INFO - 
+Processing layer 15/46: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,167 - INFO - 
+============================================================
+2025-08-16 14:00:21,167 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,167 - INFO - ============================================================
+2025-08-16 14:00:21,167 - INFO - Processing layer: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,498 - INFO - Processed 1000/1297 files in UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,586 - INFO - Completed UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12: 1297 valid files processed
+2025-08-16 14:00:21,588 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:21,588 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:21,588 - INFO - Found 240 geometry duplicate groups
+2025-08-16 14:00:21,588 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:21,588 - INFO - Found 240 unique duplicate groups in UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,753 - INFO - Processed 100/240 duplicate groups
+2025-08-16 14:00:21,884 - INFO - Processed 200/240 duplicate groups
+2025-08-16 14:00:21,913 - INFO - Removed 276 duplicate files from UZKAD_ALL_SPUNIT_APPHOUSE_zoom_12
+2025-08-16 14:00:21,919 - INFO - 
+Processing layer 16/46: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14
+2025-08-16 14:00:21,920 - INFO - 
+============================================================
+2025-08-16 14:00:21,920 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14
+2025-08-16 14:00:21,920 - INFO - ============================================================
+2025-08-16 14:00:21,920 - INFO - Processing layer: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14
+2025-08-16 14:00:22,177 - INFO - Completed UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14: 785 valid files processed
+2025-08-16 14:00:22,177 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:22,177 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:22,177 - INFO - Found 173 geometry duplicate groups
+2025-08-16 14:00:22,177 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:22,177 - INFO - Found 173 unique duplicate groups in UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14
+2025-08-16 14:00:22,263 - INFO - Processed 100/173 duplicate groups
+2025-08-16 14:00:22,376 - INFO - Removed 204 duplicate files from UZKAD_ALL_SPUNIT_APPHOUSE_zoom_14
+2025-08-16 14:00:22,376 - INFO - 
+Processing layer 17/46: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16
+2025-08-16 14:00:22,376 - INFO - 
+============================================================
+2025-08-16 14:00:22,376 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16
+2025-08-16 14:00:22,376 - INFO - ============================================================
+2025-08-16 14:00:22,376 - INFO - Processing layer: UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16
+2025-08-16 14:00:22,557 - INFO - Completed UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16: 543 valid files processed
+2025-08-16 14:00:22,557 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:22,557 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:22,559 - INFO - Found 141 geometry duplicate groups
+2025-08-16 14:00:22,559 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:22,561 - INFO - Found 141 unique duplicate groups in UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16
+2025-08-16 14:00:22,680 - INFO - Processed 100/141 duplicate groups
+2025-08-16 14:00:22,713 - INFO - Removed 167 duplicate files from UZKAD_ALL_SPUNIT_APPHOUSE_zoom_16
+2025-08-16 14:00:22,713 - INFO - 
+Processing layer 18/46: UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:22,713 - INFO - 
+============================================================
+2025-08-16 14:00:22,713 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:22,713 - INFO - ============================================================
+2025-08-16 14:00:22,713 - INFO - Processing layer: UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:23,095 - INFO - Processed 1000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:23,370 - INFO - Processed 2000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:23,635 - INFO - Processed 3000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:23,900 - INFO - Processed 4000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:24,174 - INFO - Processed 5000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:24,448 - INFO - Processed 6000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:24,702 - INFO - Processed 7000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:24,949 - INFO - Processed 8000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:25,204 - INFO - Processed 9000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:25,457 - INFO - Processed 10000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:25,713 - INFO - Processed 11000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:25,968 - INFO - Processed 12000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:26,226 - INFO - Processed 13000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:26,476 - INFO - Processed 14000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:26,719 - INFO - Processed 15000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:26,990 - INFO - Processed 16000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:27,228 - INFO - Processed 17000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:27,478 - INFO - Processed 18000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:27,727 - INFO - Processed 19000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:27,966 - INFO - Processed 20000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:28,211 - INFO - Processed 21000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:28,477 - INFO - Processed 22000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:28,722 - INFO - Processed 23000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:28,976 - INFO - Processed 24000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:29,228 - INFO - Processed 25000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:29,473 - INFO - Processed 26000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:29,723 - INFO - Processed 27000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:29,977 - INFO - Processed 28000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:30,223 - INFO - Processed 29000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:30,477 - INFO - Processed 30000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:30,715 - INFO - Processed 31000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:30,972 - INFO - Processed 32000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:31,245 - INFO - Processed 33000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:31,511 - INFO - Processed 34000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:31,794 - INFO - Processed 35000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:32,061 - INFO - Processed 36000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:32,328 - INFO - Processed 37000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:32,603 - INFO - Processed 38000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:32,844 - INFO - Processed 39000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:33,094 - INFO - Processed 40000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:33,355 - INFO - Processed 41000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:33,611 - INFO - Processed 42000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:33,861 - INFO - Processed 43000/43054 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:33,877 - INFO - Completed UZKAD_ALL_SPUNIT_BUILDING_zoom_12: 43054 valid files processed
+2025-08-16 14:00:33,896 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:33,904 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:33,963 - INFO - Found 15825 geometry duplicate groups
+2025-08-16 14:00:33,985 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:34,139 - INFO - Found 15825 unique duplicate groups in UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:34,211 - INFO - Processed 100/15825 duplicate groups
+2025-08-16 14:00:34,294 - INFO - Processed 200/15825 duplicate groups
+2025-08-16 14:00:34,471 - INFO - Processed 300/15825 duplicate groups
+2025-08-16 14:00:34,561 - INFO - Processed 400/15825 duplicate groups
+2025-08-16 14:00:34,644 - INFO - Processed 500/15825 duplicate groups
+2025-08-16 14:00:34,790 - INFO - Processed 600/15825 duplicate groups
+2025-08-16 14:00:34,845 - INFO - Processed 700/15825 duplicate groups
+2025-08-16 14:00:34,990 - INFO - Processed 800/15825 duplicate groups
+2025-08-16 14:00:35,045 - INFO - Processed 900/15825 duplicate groups
+2025-08-16 14:00:35,158 - INFO - Processed 1000/15825 duplicate groups
+2025-08-16 14:00:35,311 - INFO - Processed 1100/15825 duplicate groups
+2025-08-16 14:00:35,527 - INFO - Processed 1200/15825 duplicate groups
+2025-08-16 14:00:35,626 - INFO - Processed 1300/15825 duplicate groups
+2025-08-16 14:00:35,710 - INFO - Processed 1400/15825 duplicate groups
+2025-08-16 14:00:35,793 - INFO - Processed 1500/15825 duplicate groups
+2025-08-16 14:00:35,923 - INFO - Processed 1600/15825 duplicate groups
+2025-08-16 14:00:35,994 - INFO - Processed 1700/15825 duplicate groups
+2025-08-16 14:00:36,194 - INFO - Processed 1800/15825 duplicate groups
+2025-08-16 14:00:36,276 - INFO - Processed 1900/15825 duplicate groups
+2025-08-16 14:00:36,409 - INFO - Processed 2000/15825 duplicate groups
+2025-08-16 14:00:36,544 - INFO - Processed 2100/15825 duplicate groups
+2025-08-16 14:00:36,659 - INFO - Processed 2200/15825 duplicate groups
+2025-08-16 14:00:36,774 - INFO - Processed 2300/15825 duplicate groups
+2025-08-16 14:00:36,890 - INFO - Processed 2400/15825 duplicate groups
+2025-08-16 14:00:36,993 - INFO - Processed 2500/15825 duplicate groups
+2025-08-16 14:00:37,045 - INFO - Processed 2600/15825 duplicate groups
+2025-08-16 14:00:37,178 - INFO - Processed 2700/15825 duplicate groups
+2025-08-16 14:00:37,213 - INFO - Processed 2800/15825 duplicate groups
+2025-08-16 14:00:37,293 - INFO - Processed 2900/15825 duplicate groups
+2025-08-16 14:00:37,408 - INFO - Processed 3000/15825 duplicate groups
+2025-08-16 14:00:37,478 - INFO - Processed 3100/15825 duplicate groups
+2025-08-16 14:00:37,611 - INFO - Processed 3200/15825 duplicate groups
+2025-08-16 14:00:37,709 - INFO - Processed 3300/15825 duplicate groups
+2025-08-16 14:00:37,841 - INFO - Processed 3400/15825 duplicate groups
+2025-08-16 14:00:38,010 - INFO - Processed 3500/15825 duplicate groups
+2025-08-16 14:00:38,093 - INFO - Processed 3600/15825 duplicate groups
+2025-08-16 14:00:38,194 - INFO - Processed 3700/15825 duplicate groups
+2025-08-16 14:00:38,276 - INFO - Processed 3800/15825 duplicate groups
+2025-08-16 14:00:38,329 - INFO - Processed 3900/15825 duplicate groups
+2025-08-16 14:00:38,492 - INFO - Processed 4000/15825 duplicate groups
+2025-08-16 14:00:38,578 - INFO - Processed 4100/15825 duplicate groups
+2025-08-16 14:00:38,659 - INFO - Processed 4200/15825 duplicate groups
+2025-08-16 14:00:38,727 - INFO - Processed 4300/15825 duplicate groups
+2025-08-16 14:00:38,794 - INFO - Processed 4400/15825 duplicate groups
+2025-08-16 14:00:38,845 - INFO - Processed 4500/15825 duplicate groups
+2025-08-16 14:00:38,977 - INFO - Processed 4600/15825 duplicate groups
+2025-08-16 14:00:39,126 - INFO - Processed 4700/15825 duplicate groups
+2025-08-16 14:00:39,241 - INFO - Processed 4800/15825 duplicate groups
+2025-08-16 14:00:39,360 - INFO - Processed 4900/15825 duplicate groups
+2025-08-16 14:00:39,544 - INFO - Processed 5000/15825 duplicate groups
+2025-08-16 14:00:39,643 - INFO - Processed 5100/15825 duplicate groups
+2025-08-16 14:00:39,734 - INFO - Processed 5200/15825 duplicate groups
+2025-08-16 14:00:39,779 - INFO - Processed 5300/15825 duplicate groups
+2025-08-16 14:00:39,958 - INFO - Processed 5400/15825 duplicate groups
+2025-08-16 14:00:40,091 - INFO - Processed 5500/15825 duplicate groups
+2025-08-16 14:00:40,286 - INFO - Processed 5600/15825 duplicate groups
+2025-08-16 14:00:40,411 - INFO - Processed 5700/15825 duplicate groups
+2025-08-16 14:00:40,528 - INFO - Processed 5800/15825 duplicate groups
+2025-08-16 14:00:40,627 - INFO - Processed 5900/15825 duplicate groups
+2025-08-16 14:00:40,720 - INFO - Processed 6000/15825 duplicate groups
+2025-08-16 14:00:40,794 - INFO - Processed 6100/15825 duplicate groups
+2025-08-16 14:00:40,884 - INFO - Processed 6200/15825 duplicate groups
+2025-08-16 14:00:40,961 - INFO - Processed 6300/15825 duplicate groups
+2025-08-16 14:00:41,060 - INFO - Processed 6400/15825 duplicate groups
+2025-08-16 14:00:41,178 - INFO - Processed 6500/15825 duplicate groups
+2025-08-16 14:00:41,325 - INFO - Processed 6600/15825 duplicate groups
+2025-08-16 14:00:41,441 - INFO - Processed 6700/15825 duplicate groups
+2025-08-16 14:00:41,630 - INFO - Processed 6800/15825 duplicate groups
+2025-08-16 14:00:41,758 - INFO - Processed 6900/15825 duplicate groups
+2025-08-16 14:00:41,829 - INFO - Processed 7000/15825 duplicate groups
+2025-08-16 14:00:41,931 - INFO - Processed 7100/15825 duplicate groups
+2025-08-16 14:00:42,011 - INFO - Processed 7200/15825 duplicate groups
+2025-08-16 14:00:42,062 - INFO - Processed 7300/15825 duplicate groups
+2025-08-16 14:00:42,146 - INFO - Processed 7400/15825 duplicate groups
+2025-08-16 14:00:42,280 - INFO - Processed 7500/15825 duplicate groups
+2025-08-16 14:00:42,319 - INFO - Processed 7600/15825 duplicate groups
+2025-08-16 14:00:42,441 - INFO - Processed 7700/15825 duplicate groups
+2025-08-16 14:00:42,597 - INFO - Processed 7800/15825 duplicate groups
+2025-08-16 14:00:42,653 - INFO - Processed 7900/15825 duplicate groups
+2025-08-16 14:00:42,789 - INFO - Processed 8000/15825 duplicate groups
+2025-08-16 14:00:42,918 - INFO - Processed 8100/15825 duplicate groups
+2025-08-16 14:00:43,043 - INFO - Processed 8200/15825 duplicate groups
+2025-08-16 14:00:43,111 - INFO - Processed 8300/15825 duplicate groups
+2025-08-16 14:00:43,227 - INFO - Processed 8400/15825 duplicate groups
+2025-08-16 14:00:43,390 - INFO - Processed 8500/15825 duplicate groups
+2025-08-16 14:00:43,460 - INFO - Processed 8600/15825 duplicate groups
+2025-08-16 14:00:43,561 - INFO - Processed 8700/15825 duplicate groups
+2025-08-16 14:00:43,595 - INFO - Processed 8800/15825 duplicate groups
+2025-08-16 14:00:43,744 - INFO - Processed 8900/15825 duplicate groups
+2025-08-16 14:00:43,843 - INFO - Processed 9000/15825 duplicate groups
+2025-08-16 14:00:43,926 - INFO - Processed 9100/15825 duplicate groups
+2025-08-16 14:00:44,027 - INFO - Processed 9200/15825 duplicate groups
+2025-08-16 14:00:44,144 - INFO - Processed 9300/15825 duplicate groups
+2025-08-16 14:00:44,167 - INFO - Processed 9400/15825 duplicate groups
+2025-08-16 14:00:44,307 - INFO - Processed 9500/15825 duplicate groups
+2025-08-16 14:00:44,442 - INFO - Processed 9600/15825 duplicate groups
+2025-08-16 14:00:44,558 - INFO - Processed 9700/15825 duplicate groups
+2025-08-16 14:00:44,674 - INFO - Processed 9800/15825 duplicate groups
+2025-08-16 14:00:44,759 - INFO - Processed 9900/15825 duplicate groups
+2025-08-16 14:00:44,795 - INFO - Processed 10000/15825 duplicate groups
+2025-08-16 14:00:44,894 - INFO - Processed 10100/15825 duplicate groups
+2025-08-16 14:00:45,025 - INFO - Processed 10200/15825 duplicate groups
+2025-08-16 14:00:45,126 - INFO - Processed 10300/15825 duplicate groups
+2025-08-16 14:00:45,211 - INFO - Processed 10400/15825 duplicate groups
+2025-08-16 14:00:45,327 - INFO - Processed 10500/15825 duplicate groups
+2025-08-16 14:00:45,427 - INFO - Processed 10600/15825 duplicate groups
+2025-08-16 14:00:45,511 - INFO - Processed 10700/15825 duplicate groups
+2025-08-16 14:00:45,577 - INFO - Processed 10800/15825 duplicate groups
+2025-08-16 14:00:45,674 - INFO - Processed 10900/15825 duplicate groups
+2025-08-16 14:00:45,728 - INFO - Processed 11000/15825 duplicate groups
+2025-08-16 14:00:45,795 - INFO - Processed 11100/15825 duplicate groups
+2025-08-16 14:00:45,877 - INFO - Processed 11200/15825 duplicate groups
+2025-08-16 14:00:45,993 - INFO - Processed 11300/15825 duplicate groups
+2025-08-16 14:00:46,060 - INFO - Processed 11400/15825 duplicate groups
+2025-08-16 14:00:46,111 - INFO - Processed 11500/15825 duplicate groups
+2025-08-16 14:00:46,162 - INFO - Processed 11600/15825 duplicate groups
+2025-08-16 14:00:46,228 - INFO - Processed 11700/15825 duplicate groups
+2025-08-16 14:00:46,293 - INFO - Processed 11800/15825 duplicate groups
+2025-08-16 14:00:46,361 - INFO - Processed 11900/15825 duplicate groups
+2025-08-16 14:00:46,478 - INFO - Processed 12000/15825 duplicate groups
+2025-08-16 14:00:46,513 - INFO - Processed 12100/15825 duplicate groups
+2025-08-16 14:00:46,627 - INFO - Processed 12200/15825 duplicate groups
+2025-08-16 14:00:46,725 - INFO - Processed 12300/15825 duplicate groups
+2025-08-16 14:00:46,828 - INFO - Processed 12400/15825 duplicate groups
+2025-08-16 14:00:46,910 - INFO - Processed 12500/15825 duplicate groups
+2025-08-16 14:00:46,978 - INFO - Processed 12600/15825 duplicate groups
+2025-08-16 14:00:47,127 - INFO - Processed 12700/15825 duplicate groups
+2025-08-16 14:00:47,210 - INFO - Processed 12800/15825 duplicate groups
+2025-08-16 14:00:47,327 - INFO - Processed 12900/15825 duplicate groups
+2025-08-16 14:00:47,411 - INFO - Processed 13000/15825 duplicate groups
+2025-08-16 14:00:47,462 - INFO - Processed 13100/15825 duplicate groups
+2025-08-16 14:00:47,594 - INFO - Processed 13200/15825 duplicate groups
+2025-08-16 14:00:47,728 - INFO - Processed 13300/15825 duplicate groups
+2025-08-16 14:00:47,827 - INFO - Processed 13400/15825 duplicate groups
+2025-08-16 14:00:47,960 - INFO - Processed 13500/15825 duplicate groups
+2025-08-16 14:00:48,094 - INFO - Processed 13600/15825 duplicate groups
+2025-08-16 14:00:48,223 - INFO - Processed 13700/15825 duplicate groups
+2025-08-16 14:00:48,341 - INFO - Processed 13800/15825 duplicate groups
+2025-08-16 14:00:48,410 - INFO - Processed 13900/15825 duplicate groups
+2025-08-16 14:00:48,511 - INFO - Processed 14000/15825 duplicate groups
+2025-08-16 14:00:48,590 - INFO - Processed 14100/15825 duplicate groups
+2025-08-16 14:00:48,644 - INFO - Processed 14200/15825 duplicate groups
+2025-08-16 14:00:48,793 - INFO - Processed 14300/15825 duplicate groups
+2025-08-16 14:00:48,910 - INFO - Processed 14400/15825 duplicate groups
+2025-08-16 14:00:48,993 - INFO - Processed 14500/15825 duplicate groups
+2025-08-16 14:00:49,092 - INFO - Processed 14600/15825 duplicate groups
+2025-08-16 14:00:49,227 - INFO - Processed 14700/15825 duplicate groups
+2025-08-16 14:00:49,327 - INFO - Processed 14800/15825 duplicate groups
+2025-08-16 14:00:49,425 - INFO - Processed 14900/15825 duplicate groups
+2025-08-16 14:00:49,528 - INFO - Processed 15000/15825 duplicate groups
+2025-08-16 14:00:49,610 - INFO - Processed 15100/15825 duplicate groups
+2025-08-16 14:00:49,692 - INFO - Processed 15200/15825 duplicate groups
+2025-08-16 14:00:49,824 - INFO - Processed 15300/15825 duplicate groups
+2025-08-16 14:00:49,961 - INFO - Processed 15400/15825 duplicate groups
+2025-08-16 14:00:50,042 - INFO - Processed 15500/15825 duplicate groups
+2025-08-16 14:00:50,192 - INFO - Processed 15600/15825 duplicate groups
+2025-08-16 14:00:50,344 - INFO - Processed 15700/15825 duplicate groups
+2025-08-16 14:00:50,394 - INFO - Processed 15800/15825 duplicate groups
+2025-08-16 14:00:50,410 - INFO - Removed 16561 duplicate files from UZKAD_ALL_SPUNIT_BUILDING_zoom_12
+2025-08-16 14:00:50,544 - INFO - 
+Processing layer 19/46: UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:50,544 - INFO - 
+============================================================
+2025-08-16 14:00:50,544 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:50,544 - INFO - ============================================================
+2025-08-16 14:00:50,544 - INFO - Processing layer: UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:50,863 - INFO - Processed 1000/5097 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:51,138 - INFO - Processed 2000/5097 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:51,418 - INFO - Processed 3000/5097 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:51,697 - INFO - Processed 4000/5097 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:51,969 - INFO - Processed 5000/5097 files in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:51,996 - INFO - Completed UZKAD_ALL_SPUNIT_BUILDING_zoom_14: 5097 valid files processed
+2025-08-16 14:00:51,996 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:51,996 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:51,996 - INFO - Found 179 geometry duplicate groups
+2025-08-16 14:00:52,008 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,009 - INFO - Found 179 unique duplicate groups in UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:52,125 - INFO - Processed 100/179 duplicate groups
+2025-08-16 14:00:52,243 - INFO - Removed 183 duplicate files from UZKAD_ALL_SPUNIT_BUILDING_zoom_14
+2025-08-16 14:00:52,260 - INFO - 
+Processing layer 20/46: UZKAD_ALL_SPUNIT_BUILDING_zoom_16
+2025-08-16 14:00:52,260 - INFO - 
+============================================================
+2025-08-16 14:00:52,261 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_BUILDING_zoom_16
+2025-08-16 14:00:52,261 - INFO - ============================================================
+2025-08-16 14:00:52,262 - INFO - Processing layer: UZKAD_ALL_SPUNIT_BUILDING_zoom_16
+2025-08-16 14:00:52,520 - INFO - Completed UZKAD_ALL_SPUNIT_BUILDING_zoom_16: 922 valid files processed
+2025-08-16 14:00:52,520 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:52,520 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:52,520 - INFO - Found 116 geometry duplicate groups
+2025-08-16 14:00:52,520 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,520 - INFO - Found 116 unique duplicate groups in UZKAD_ALL_SPUNIT_BUILDING_zoom_16
+2025-08-16 14:00:52,740 - INFO - Processed 100/116 duplicate groups
+2025-08-16 14:00:52,740 - INFO - Removed 129 duplicate files from UZKAD_ALL_SPUNIT_BUILDING_zoom_16
+2025-08-16 14:00:52,758 - INFO - 
+Processing layer 21/46: UZKAD_ALL_SPUNIT_BUILDING_zoom_18
+2025-08-16 14:00:52,758 - INFO - 
+============================================================
+2025-08-16 14:00:52,758 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_BUILDING_zoom_18
+2025-08-16 14:00:52,759 - INFO - ============================================================
+2025-08-16 14:00:52,759 - INFO - Processing layer: UZKAD_ALL_SPUNIT_BUILDING_zoom_18
+2025-08-16 14:00:52,761 - INFO - Completed UZKAD_ALL_SPUNIT_BUILDING_zoom_18: 6 valid files processed
+2025-08-16 14:00:52,761 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:52,762 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:52,762 - INFO - Found 1 geometry duplicate groups
+2025-08-16 14:00:52,762 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,763 - INFO - Found 1 unique duplicate groups in UZKAD_ALL_SPUNIT_BUILDING_zoom_18
+2025-08-16 14:00:52,763 - INFO - Removed 1 duplicate files from UZKAD_ALL_SPUNIT_BUILDING_zoom_18
+2025-08-16 14:00:52,765 - INFO - 
+Processing layer 22/46: UZKAD_ALL_SPUNIT_FOREST_zoom_10
+2025-08-16 14:00:52,765 - INFO - 
+============================================================
+2025-08-16 14:00:52,765 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_FOREST_zoom_10
+2025-08-16 14:00:52,765 - INFO - ============================================================
+2025-08-16 14:00:52,765 - INFO - Processing layer: UZKAD_ALL_SPUNIT_FOREST_zoom_10
+2025-08-16 14:00:52,785 - INFO - Completed UZKAD_ALL_SPUNIT_FOREST_zoom_10: 32 valid files processed
+2025-08-16 14:00:52,786 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:52,786 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:52,786 - INFO - Found 5 geometry duplicate groups
+2025-08-16 14:00:52,787 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,787 - INFO - Found 5 unique duplicate groups in UZKAD_ALL_SPUNIT_FOREST_zoom_10
+2025-08-16 14:00:52,790 - INFO - Removed 7 duplicate files from UZKAD_ALL_SPUNIT_FOREST_zoom_10
+2025-08-16 14:00:52,795 - INFO - 
+Processing layer 23/46: UZKAD_ALL_SPUNIT_FOREST_zoom_12
+2025-08-16 14:00:52,795 - INFO - 
+============================================================
+2025-08-16 14:00:52,795 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_FOREST_zoom_12
+2025-08-16 14:00:52,795 - INFO - ============================================================
+2025-08-16 14:00:52,796 - INFO - Processing layer: UZKAD_ALL_SPUNIT_FOREST_zoom_12
+2025-08-16 14:00:52,799 - INFO - Completed UZKAD_ALL_SPUNIT_FOREST_zoom_12: 4 valid files processed
+2025-08-16 14:00:52,800 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:52,800 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:52,800 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:52,800 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,800 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_FOREST_zoom_12
+2025-08-16 14:00:52,800 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_FOREST_zoom_12
+2025-08-16 14:00:52,801 - INFO - 
+Processing layer 24/46: UZKAD_ALL_SPUNIT_FOREST_zoom_14
+2025-08-16 14:00:52,801 - INFO - 
+============================================================
+2025-08-16 14:00:52,801 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_FOREST_zoom_14
+2025-08-16 14:00:52,801 - INFO - ============================================================
+2025-08-16 14:00:52,801 - INFO - Processing layer: UZKAD_ALL_SPUNIT_FOREST_zoom_14
+2025-08-16 14:00:52,802 - INFO - Completed UZKAD_ALL_SPUNIT_FOREST_zoom_14: 1 valid files processed
+2025-08-16 14:00:52,802 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:52,802 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:52,802 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:52,803 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:52,803 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_FOREST_zoom_14
+2025-08-16 14:00:52,803 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_FOREST_zoom_14
+2025-08-16 14:00:52,803 - INFO - 
+Processing layer 25/46: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12
+2025-08-16 14:00:52,803 - INFO - 
+============================================================
+2025-08-16 14:00:52,803 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12
+2025-08-16 14:00:52,803 - INFO - ============================================================
+2025-08-16 14:00:52,803 - INFO - Processing layer: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12
+2025-08-16 14:00:53,178 - INFO - Completed UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12: 177 valid files processed
+2025-08-16 14:00:53,178 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,178 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,178 - INFO - Found 53 geometry duplicate groups
+2025-08-16 14:00:53,178 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,178 - INFO - Found 53 unique duplicate groups in UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12
+2025-08-16 14:00:53,277 - INFO - Removed 108 duplicate files from UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_12
+2025-08-16 14:00:53,293 - INFO - 
+Processing layer 26/46: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14
+2025-08-16 14:00:53,293 - INFO - 
+============================================================
+2025-08-16 14:00:53,293 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14
+2025-08-16 14:00:53,293 - INFO - ============================================================
+2025-08-16 14:00:53,293 - INFO - Processing layer: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14
+2025-08-16 14:00:53,334 - INFO - Completed UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14: 32 valid files processed
+2025-08-16 14:00:53,334 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,335 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,335 - INFO - Found 8 geometry duplicate groups
+2025-08-16 14:00:53,335 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,335 - INFO - Found 8 unique duplicate groups in UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14
+2025-08-16 14:00:53,335 - INFO - Removed 11 duplicate files from UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_14
+2025-08-16 14:00:53,343 - INFO - 
+Processing layer 27/46: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16
+2025-08-16 14:00:53,343 - INFO - 
+============================================================
+2025-08-16 14:00:53,344 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16
+2025-08-16 14:00:53,344 - INFO - ============================================================
+2025-08-16 14:00:53,344 - INFO - Processing layer: UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16
+2025-08-16 14:00:53,352 - INFO - Completed UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16: 12 valid files processed
+2025-08-16 14:00:53,361 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,361 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,362 - INFO - Found 2 geometry duplicate groups
+2025-08-16 14:00:53,362 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,362 - INFO - Found 2 unique duplicate groups in UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16
+2025-08-16 14:00:53,364 - INFO - Removed 2 duplicate files from UZKAD_ALL_SPUNIT_HIGHWAYS_zoom_16
+2025-08-16 14:00:53,368 - INFO - 
+Processing layer 28/46: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12
+2025-08-16 14:00:53,368 - INFO - 
+============================================================
+2025-08-16 14:00:53,368 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12
+2025-08-16 14:00:53,368 - INFO - ============================================================
+2025-08-16 14:00:53,369 - INFO - Processing layer: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12
+2025-08-16 14:00:53,578 - INFO - Completed UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12: 63 valid files processed
+2025-08-16 14:00:53,578 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,578 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,578 - INFO - Found 19 geometry duplicate groups
+2025-08-16 14:00:53,578 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,578 - INFO - Found 19 unique duplicate groups in UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12
+2025-08-16 14:00:53,644 - INFO - Removed 26 duplicate files from UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_12
+2025-08-16 14:00:53,647 - INFO - 
+Processing layer 29/46: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14
+2025-08-16 14:00:53,647 - INFO - 
+============================================================
+2025-08-16 14:00:53,647 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14
+2025-08-16 14:00:53,647 - INFO - ============================================================
+2025-08-16 14:00:53,647 - INFO - Processing layer: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14
+2025-08-16 14:00:53,647 - INFO - Completed UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14: 1 valid files processed
+2025-08-16 14:00:53,647 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,647 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,647 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:53,653 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,653 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14
+2025-08-16 14:00:53,653 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_14
+2025-08-16 14:00:53,653 - INFO - 
+Processing layer 30/46: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16
+2025-08-16 14:00:53,653 - INFO - 
+============================================================
+2025-08-16 14:00:53,653 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16
+2025-08-16 14:00:53,654 - INFO - ============================================================
+2025-08-16 14:00:53,654 - INFO - Processing layer: UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16
+2025-08-16 14:00:53,655 - INFO - Completed UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16: 1 valid files processed
+2025-08-16 14:00:53,656 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,656 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,656 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:00:53,656 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,656 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16
+2025-08-16 14:00:53,656 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_LAND_STOCK_zoom_16
+2025-08-16 14:00:53,657 - INFO - 
+Processing layer 31/46: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10
+2025-08-16 14:00:53,657 - INFO - 
+============================================================
+2025-08-16 14:00:53,657 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10
+2025-08-16 14:00:53,657 - INFO - ============================================================
+2025-08-16 14:00:53,657 - INFO - Processing layer: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10
+2025-08-16 14:00:53,794 - INFO - Completed UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10: 99 valid files processed
+2025-08-16 14:00:53,810 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,810 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,810 - INFO - Found 29 geometry duplicate groups
+2025-08-16 14:00:53,810 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,810 - INFO - Found 29 unique duplicate groups in UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10
+2025-08-16 14:00:53,880 - INFO - Removed 36 duplicate files from UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_10
+2025-08-16 14:00:53,880 - INFO - 
+Processing layer 32/46: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12
+2025-08-16 14:00:53,880 - INFO - 
+============================================================
+2025-08-16 14:00:53,880 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12
+2025-08-16 14:00:53,880 - INFO - ============================================================
+2025-08-16 14:00:53,880 - INFO - Processing layer: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12
+2025-08-16 14:00:53,993 - INFO - Completed UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12: 106 valid files processed
+2025-08-16 14:00:53,993 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:53,993 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:53,993 - INFO - Found 28 geometry duplicate groups
+2025-08-16 14:00:53,993 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:53,993 - INFO - Found 28 unique duplicate groups in UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12
+2025-08-16 14:00:54,046 - INFO - Removed 67 duplicate files from UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_12
+2025-08-16 14:00:54,046 - INFO - 
+Processing layer 33/46: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14
+2025-08-16 14:00:54,046 - INFO - 
+============================================================
+2025-08-16 14:00:54,046 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14
+2025-08-16 14:00:54,046 - INFO - ============================================================
+2025-08-16 14:00:54,046 - INFO - Processing layer: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14
+2025-08-16 14:00:54,080 - INFO - Completed UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14: 23 valid files processed
+2025-08-16 14:00:54,080 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:54,080 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:54,084 - INFO - Found 5 geometry duplicate groups
+2025-08-16 14:00:54,084 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:54,084 - INFO - Found 5 unique duplicate groups in UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14
+2025-08-16 14:00:54,098 - INFO - Removed 10 duplicate files from UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_14
+2025-08-16 14:00:54,102 - INFO - 
+Processing layer 34/46: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16
+2025-08-16 14:00:54,102 - INFO - 
+============================================================
+2025-08-16 14:00:54,102 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16
+2025-08-16 14:00:54,102 - INFO - ============================================================
+2025-08-16 14:00:54,102 - INFO - Processing layer: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16
+2025-08-16 14:00:54,114 - INFO - Completed UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16: 13 valid files processed
+2025-08-16 14:00:54,115 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:54,115 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:54,115 - INFO - Found 4 geometry duplicate groups
+2025-08-16 14:00:54,115 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:54,116 - INFO - Found 4 unique duplicate groups in UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16
+2025-08-16 14:00:54,118 - INFO - Removed 4 duplicate files from UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_16
+2025-08-16 14:00:54,119 - INFO - 
+Processing layer 35/46: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8
+2025-08-16 14:00:54,119 - INFO - 
+============================================================
+2025-08-16 14:00:54,119 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8
+2025-08-16 14:00:54,119 - INFO - ============================================================
+2025-08-16 14:00:54,119 - INFO - Processing layer: UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8
+2025-08-16 14:00:54,419 - INFO - Completed UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8: 163 valid files processed
+2025-08-16 14:00:54,419 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:54,419 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:54,419 - INFO - Found 52 geometry duplicate groups
+2025-08-16 14:00:54,419 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:54,419 - INFO - Found 52 unique duplicate groups in UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8
+2025-08-16 14:00:54,491 - INFO - Removed 73 duplicate files from UZKAD_ALL_SPUNIT_MAHALLA_NEW_zoom_8
+2025-08-16 14:00:54,495 - INFO - 
+Processing layer 36/46: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:54,496 - INFO - 
+============================================================
+2025-08-16 14:00:54,496 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:54,496 - INFO - ============================================================
+2025-08-16 14:00:54,496 - INFO - Processing layer: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:54,832 - INFO - Processed 1000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:55,115 - INFO - Processed 2000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:55,400 - INFO - Processed 3000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:55,689 - INFO - Processed 4000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:55,975 - INFO - Processed 5000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:56,248 - INFO - Processed 6000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:56,522 - INFO - Processed 7000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:56,798 - INFO - Processed 8000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:57,095 - INFO - Processed 9000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:57,379 - INFO - Processed 10000/10958 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:57,654 - INFO - Completed UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12: 10958 valid files processed
+2025-08-16 14:00:57,656 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:00:57,657 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:00:57,663 - INFO - Found 3371 geometry duplicate groups
+2025-08-16 14:00:57,677 - INFO - Found 0 content duplicate groups
+2025-08-16 14:00:57,701 - INFO - Found 3371 unique duplicate groups in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:00:57,858 - INFO - Processed 100/3371 duplicate groups
+2025-08-16 14:00:57,953 - INFO - Processed 200/3371 duplicate groups
+2025-08-16 14:00:58,069 - INFO - Processed 300/3371 duplicate groups
+2025-08-16 14:00:58,185 - INFO - Processed 400/3371 duplicate groups
+2025-08-16 14:00:58,332 - INFO - Processed 500/3371 duplicate groups
+2025-08-16 14:00:58,388 - INFO - Processed 600/3371 duplicate groups
+2025-08-16 14:00:58,506 - INFO - Processed 700/3371 duplicate groups
+2025-08-16 14:00:58,659 - INFO - Processed 800/3371 duplicate groups
+2025-08-16 14:00:58,759 - INFO - Processed 900/3371 duplicate groups
+2025-08-16 14:00:58,914 - INFO - Processed 1000/3371 duplicate groups
+2025-08-16 14:00:59,059 - INFO - Processed 1100/3371 duplicate groups
+2025-08-16 14:00:59,172 - INFO - Processed 1200/3371 duplicate groups
+2025-08-16 14:00:59,224 - INFO - Processed 1300/3371 duplicate groups
+2025-08-16 14:00:59,309 - INFO - Processed 1400/3371 duplicate groups
+2025-08-16 14:00:59,389 - INFO - Processed 1500/3371 duplicate groups
+2025-08-16 14:00:59,454 - INFO - Processed 1600/3371 duplicate groups
+2025-08-16 14:00:59,517 - INFO - Processed 1700/3371 duplicate groups
+2025-08-16 14:00:59,553 - INFO - Processed 1800/3371 duplicate groups
+2025-08-16 14:00:59,643 - INFO - Processed 1900/3371 duplicate groups
+2025-08-16 14:00:59,752 - INFO - Processed 2000/3371 duplicate groups
+2025-08-16 14:00:59,822 - INFO - Processed 2100/3371 duplicate groups
+2025-08-16 14:00:59,914 - INFO - Processed 2200/3371 duplicate groups
+2025-08-16 14:01:00,052 - INFO - Processed 2300/3371 duplicate groups
+2025-08-16 14:01:00,149 - INFO - Processed 2400/3371 duplicate groups
+2025-08-16 14:01:00,212 - INFO - Processed 2500/3371 duplicate groups
+2025-08-16 14:01:00,299 - INFO - Processed 2600/3371 duplicate groups
+2025-08-16 14:01:00,362 - INFO - Processed 2700/3371 duplicate groups
+2025-08-16 14:01:00,437 - INFO - Processed 2800/3371 duplicate groups
+2025-08-16 14:01:00,500 - INFO - Processed 2900/3371 duplicate groups
+2025-08-16 14:01:00,579 - INFO - Processed 3000/3371 duplicate groups
+2025-08-16 14:01:00,729 - INFO - Processed 3100/3371 duplicate groups
+2025-08-16 14:01:00,779 - INFO - Processed 3200/3371 duplicate groups
+2025-08-16 14:01:00,839 - INFO - Processed 3300/3371 duplicate groups
+2025-08-16 14:01:00,899 - INFO - Removed 3761 duplicate files from UZKAD_ALL_SPUNIT_NORES_LAND_zoom_12
+2025-08-16 14:01:00,930 - INFO - 
+Processing layer 37/46: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:00,930 - INFO - 
+============================================================
+2025-08-16 14:01:00,931 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:00,931 - INFO - ============================================================
+2025-08-16 14:01:00,931 - INFO - Processing layer: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:01,262 - INFO - Processed 1000/1522 files in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:01,417 - INFO - Completed UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14: 1522 valid files processed
+2025-08-16 14:01:01,418 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:01,418 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:01,419 - INFO - Found 131 geometry duplicate groups
+2025-08-16 14:01:01,420 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:01,421 - INFO - Found 131 unique duplicate groups in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:01,583 - INFO - Processed 100/131 duplicate groups
+2025-08-16 14:01:01,619 - INFO - Removed 146 duplicate files from UZKAD_ALL_SPUNIT_NORES_LAND_zoom_14
+2025-08-16 14:01:01,627 - INFO - 
+Processing layer 38/46: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16
+2025-08-16 14:01:01,627 - INFO - 
+============================================================
+2025-08-16 14:01:01,627 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16
+2025-08-16 14:01:01,627 - INFO - ============================================================
+2025-08-16 14:01:01,627 - INFO - Processing layer: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16
+2025-08-16 14:01:01,802 - INFO - Completed UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16: 423 valid files processed
+2025-08-16 14:01:01,802 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:01,802 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:01,803 - INFO - Found 58 geometry duplicate groups
+2025-08-16 14:01:01,803 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:01,804 - INFO - Found 58 unique duplicate groups in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16
+2025-08-16 14:01:01,857 - INFO - Removed 77 duplicate files from UZKAD_ALL_SPUNIT_NORES_LAND_zoom_16
+2025-08-16 14:01:01,862 - INFO - 
+Processing layer 39/46: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18
+2025-08-16 14:01:01,862 - INFO - 
+============================================================
+2025-08-16 14:01:01,862 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18
+2025-08-16 14:01:01,863 - INFO - ============================================================
+2025-08-16 14:01:01,863 - INFO - Processing layer: UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18
+2025-08-16 14:01:01,887 - INFO - Completed UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18: 9 valid files processed
+2025-08-16 14:01:01,887 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:01,888 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:01,888 - INFO - Found 3 geometry duplicate groups
+2025-08-16 14:01:01,888 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:01,888 - INFO - Found 3 unique duplicate groups in UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18
+2025-08-16 14:01:01,890 - INFO - Removed 3 duplicate files from UZKAD_ALL_SPUNIT_NORES_LAND_zoom_18
+2025-08-16 14:01:01,893 - INFO - 
+Processing layer 40/46: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:01,893 - INFO - 
+============================================================
+2025-08-16 14:01:01,893 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:01,894 - INFO - ============================================================
+2025-08-16 14:01:01,894 - INFO - Processing layer: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:02,178 - INFO - Processed 1000/3204 files in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:02,472 - INFO - Processed 2000/3204 files in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:02,759 - INFO - Processed 3000/3204 files in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:02,816 - INFO - Completed UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12: 3204 valid files processed
+2025-08-16 14:01:02,817 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:02,817 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:02,818 - INFO - Found 927 geometry duplicate groups
+2025-08-16 14:01:02,819 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:02,826 - INFO - Found 927 unique duplicate groups in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:02,920 - INFO - Processed 100/927 duplicate groups
+2025-08-16 14:01:03,056 - INFO - Processed 200/927 duplicate groups
+2025-08-16 14:01:03,163 - INFO - Processed 300/927 duplicate groups
+2025-08-16 14:01:03,342 - INFO - Processed 400/927 duplicate groups
+2025-08-16 14:01:03,428 - INFO - Processed 500/927 duplicate groups
+2025-08-16 14:01:03,543 - INFO - Processed 600/927 duplicate groups
+2025-08-16 14:01:03,611 - INFO - Processed 700/927 duplicate groups
+2025-08-16 14:01:03,713 - INFO - Processed 800/927 duplicate groups
+2025-08-16 14:01:03,819 - INFO - Processed 900/927 duplicate groups
+2025-08-16 14:01:03,855 - INFO - Removed 1049 duplicate files from UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_12
+2025-08-16 14:01:03,867 - INFO - 
+Processing layer 41/46: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14
+2025-08-16 14:01:03,868 - INFO - 
+============================================================
+2025-08-16 14:01:03,868 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14
+2025-08-16 14:01:03,868 - INFO - ============================================================
+2025-08-16 14:01:03,868 - INFO - Processing layer: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14
+2025-08-16 14:01:03,951 - INFO - Completed UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14: 272 valid files processed
+2025-08-16 14:01:03,952 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:03,952 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:03,953 - INFO - Found 15 geometry duplicate groups
+2025-08-16 14:01:03,953 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:03,953 - INFO - Found 15 unique duplicate groups in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14
+2025-08-16 14:01:03,958 - INFO - Removed 15 duplicate files from UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_14
+2025-08-16 14:01:03,963 - INFO - 
+Processing layer 42/46: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16
+2025-08-16 14:01:03,963 - INFO - 
+============================================================
+2025-08-16 14:01:03,964 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16
+2025-08-16 14:01:03,964 - INFO - ============================================================
+2025-08-16 14:01:03,964 - INFO - Processing layer: UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16
+2025-08-16 14:01:04,002 - INFO - Completed UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16: 116 valid files processed
+2025-08-16 14:01:04,002 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:04,003 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:04,003 - INFO - Found 8 geometry duplicate groups
+2025-08-16 14:01:04,003 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:04,004 - INFO - Found 8 unique duplicate groups in UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16
+2025-08-16 14:01:04,007 - INFO - Removed 8 duplicate files from UZKAD_ALL_SPUNIT_SHARED_LAND_zoom_16
+2025-08-16 14:01:04,010 - INFO - 
+Processing layer 43/46: UZKAD_ALL_SPUNIT_WATER_zoom_12
+2025-08-16 14:01:04,011 - INFO - 
+============================================================
+2025-08-16 14:01:04,011 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_WATER_zoom_12
+2025-08-16 14:01:04,011 - INFO - ============================================================
+2025-08-16 14:01:04,011 - INFO - Processing layer: UZKAD_ALL_SPUNIT_WATER_zoom_12
+2025-08-16 14:01:04,064 - INFO - Completed UZKAD_ALL_SPUNIT_WATER_zoom_12: 40 valid files processed
+2025-08-16 14:01:04,065 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:04,065 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:04,065 - INFO - Found 12 geometry duplicate groups
+2025-08-16 14:01:04,065 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:04,066 - INFO - Found 12 unique duplicate groups in UZKAD_ALL_SPUNIT_WATER_zoom_12
+2025-08-16 14:01:04,085 - INFO - Removed 16 duplicate files from UZKAD_ALL_SPUNIT_WATER_zoom_12
+2025-08-16 14:01:04,089 - INFO - 
+Processing layer 44/46: UZKAD_ALL_SPUNIT_WATER_zoom_14
+2025-08-16 14:01:04,089 - INFO - 
+============================================================
+2025-08-16 14:01:04,089 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_WATER_zoom_14
+2025-08-16 14:01:04,089 - INFO - ============================================================
+2025-08-16 14:01:04,089 - INFO - Processing layer: UZKAD_ALL_SPUNIT_WATER_zoom_14
+2025-08-16 14:01:04,099 - INFO - Completed UZKAD_ALL_SPUNIT_WATER_zoom_14: 5 valid files processed
+2025-08-16 14:01:04,100 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:04,100 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:04,100 - INFO - Found 2 geometry duplicate groups
+2025-08-16 14:01:04,100 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:04,101 - INFO - Found 2 unique duplicate groups in UZKAD_ALL_SPUNIT_WATER_zoom_14
+2025-08-16 14:01:04,102 - INFO - Removed 2 duplicate files from UZKAD_ALL_SPUNIT_WATER_zoom_14
+2025-08-16 14:01:04,104 - INFO - 
+Processing layer 45/46: UZKAD_ALL_SPUNIT_WATER_zoom_16
+2025-08-16 14:01:04,104 - INFO - 
+============================================================
+2025-08-16 14:01:04,104 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_WATER_zoom_16
+2025-08-16 14:01:04,104 - INFO - ============================================================
+2025-08-16 14:01:04,105 - INFO - Processing layer: UZKAD_ALL_SPUNIT_WATER_zoom_16
+2025-08-16 14:01:04,109 - INFO - Completed UZKAD_ALL_SPUNIT_WATER_zoom_16: 1 valid files processed
+2025-08-16 14:01:04,109 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:04,109 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:04,109 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:01:04,109 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:04,109 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_WATER_zoom_16
+2025-08-16 14:01:04,110 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_WATER_zoom_16
+2025-08-16 14:01:04,110 - INFO - 
+Processing layer 46/46: UZKAD_ALL_SPUNIT_WATER_zoom_18
+2025-08-16 14:01:04,110 - INFO - 
+============================================================
+2025-08-16 14:01:04,110 - INFO - DEDUPLICATING LAYER: UZKAD_ALL_SPUNIT_WATER_zoom_18
+2025-08-16 14:01:04,110 - INFO - ============================================================
+2025-08-16 14:01:04,110 - INFO - Processing layer: UZKAD_ALL_SPUNIT_WATER_zoom_18
+2025-08-16 14:01:04,115 - INFO - Completed UZKAD_ALL_SPUNIT_WATER_zoom_18: 1 valid files processed
+2025-08-16 14:01:04,115 - INFO - Found 0 cadastrial number duplicate groups
+2025-08-16 14:01:04,115 - INFO - Found 0 district+FID duplicate groups
+2025-08-16 14:01:04,116 - INFO - Found 0 geometry duplicate groups
+2025-08-16 14:01:04,116 - INFO - Found 0 content duplicate groups
+2025-08-16 14:01:04,116 - INFO - Found 0 unique duplicate groups in UZKAD_ALL_SPUNIT_WATER_zoom_18
+2025-08-16 14:01:04,116 - INFO - No duplicates found in UZKAD_ALL_SPUNIT_WATER_zoom_18
+2025-08-16 14:01:04,117 - INFO - 
+============================================================
+2025-08-16 14:01:04,117 - INFO - DEDUPLICATION COMPLETE
+2025-08-16 14:01:04,117 - INFO - ============================================================
+2025-08-16 14:01:04,117 - INFO - Total files scanned: 135,766
+2025-08-16 14:01:04,117 - INFO - Duplicates removed: 2
+2025-08-16 14:01:04,118 - INFO - Unique files kept: 135,764
+2025-08-16 14:01:04,118 - INFO - Layers processed: 46
+2025-08-16 14:01:04,118 - INFO - Space saved: 0.10 MB
+2025-08-16 14:01:04,118 - INFO - Processing time: 1.2 minutes
+2025-08-16 14:01:04,118 - INFO - Backup directory: jizzax_duplicates_backup
