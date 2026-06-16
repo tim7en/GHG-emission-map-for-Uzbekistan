@@ -1,16 +1,16 @@
 year,rank,region,factor_total_proxy,quality_note
-2018,1,Tashkent,0.39223227917778786,CO stable; CH4 very stable; CH4 lower coverage
-2018,2,Fergana Valley,0.18205698912519908,CO stable; CH4 very stable; CH4 lower coverage
-2018,3,Karakalpakstan,0.13007565040328664,CO stable; CH4 very stable; CH4 lower coverage
-2019,1,Tashkent,0.5177937261423973,CO stable; CH4 very stable; CH4 lower coverage
-2019,2,Fergana Valley,0.23790007415576947,CO stable; CH4 very stable; CH4 lower coverage
-2019,3,Samarkand,0.08806328461057648,CO stable; CH4 very stable; CH4 lower coverage
-2020,1,Tashkent,0.43088827686431536,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
-2020,2,Fergana Valley,0.28637884481765746,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
-2020,3,Samarkand,0.10878169579564928,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
-2021,1,Tashkent,0.5195100392018392,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
-2021,2,Fergana Valley,0.23631699445812657,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
-2021,3,Samarkand,0.08780423733771277,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2018,1,Tashkent,0.43541949597823704,CO stable; CH4 very stable; CH4 lower coverage
+2018,2,Fergana Valley,0.19711351130066632,CO stable; CH4 very stable; CH4 lower coverage
+2018,3,Karakalpakstan,0.1034594701018115,CO stable; CH4 very stable; CH4 lower coverage
+2019,1,Tashkent,0.5185090403288036,CO stable; CH4 very stable; CH4 lower coverage
+2019,2,Fergana Valley,0.23769288247476622,CO stable; CH4 very stable; CH4 lower coverage
+2019,3,Samarkand,0.0878572381530783,CO stable; CH4 very stable; CH4 lower coverage
+2020,1,Tashkent,0.4537570360885551,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,2,Fergana Valley,0.27492961407889016,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,3,Samarkand,0.10321414074974648,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,1,Tashkent,0.5195100392018391,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,2,Fergana Valley,0.2363169944581265,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,3,Samarkand,0.08780423733771275,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
 2022,1,Tashkent,0.518019122084561,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
 2022,2,Fergana Valley,0.238651233851835,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
 2022,3,Samarkand,0.08742844304742112,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
@@ -18,11 +18,11 @@ year,rank,region,factor_total_proxy,quality_note
 2023,2,Fergana Valley,0.23762925492255826,CO stable; CH4 very stable
 2023,3,Samarkand,0.08806090556709971,CO stable; CH4 very stable
 2024,1,Tashkent,0.5134236689662142,NO2 high variability; CO stable; CH4 very stable
-2024,2,Fergana Valley,0.24097171467343562,NO2 high variability; CO stable; CH4 very stable
+2024,2,Fergana Valley,0.24097171467343556,NO2 high variability; CO stable; CH4 very stable
 2024,3,Samarkand,0.0892383843626937,NO2 high variability; CO stable; CH4 very stable
 2025,1,Tashkent,0.51110923787874,NO2 high variability; CO stable; CH4 very stable
 2025,2,Fergana Valley,0.24369129384384466,NO2 high variability; CO stable; CH4 very stable
 2025,3,Samarkand,0.08924418353558825,NO2 high variability; CO stable; CH4 very stable
 2026,1,Tashkent,0.509723731005587,CO stable; CH4 very stable
-2026,2,Fergana Valley,0.2461536015132903,CO stable; CH4 very stable
+2026,2,Fergana Valley,0.24615360151329035,CO stable; CH4 very stable
 2026,3,Samarkand,0.08793337452718426,CO stable; CH4 very stable

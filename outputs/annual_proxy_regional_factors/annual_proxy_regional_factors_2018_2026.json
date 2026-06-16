@@ -39,15 +39,15 @@
       "top_regions": [
         {
           "region": "Tashkent",
-          "factor_total_proxy": 0.39223227917778786
+          "factor_total_proxy": 0.43541949597823704
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.18205698912519908
+          "factor_total_proxy": 0.19711351130066632
         },
         {
           "region": "Karakalpakstan",
-          "factor_total_proxy": 0.13007565040328664
+          "factor_total_proxy": 0.1034594701018115
         }
       ],
       "factor_sum_check": 1.0,
@@ -57,54 +57,54 @@
       "top_regions": [
         {
           "region": "Tashkent",
-          "factor_total_proxy": 0.5177937261423973
+          "factor_total_proxy": 0.5185090403288036
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.23790007415576947
+          "factor_total_proxy": 0.23769288247476622
         },
         {
           "region": "Samarkand",
-          "factor_total_proxy": 0.08806328461057648
+          "factor_total_proxy": 0.0878572381530783
         }
       ],
-      "factor_sum_check": 1.0,
+      "factor_sum_check": 1.0000000000000002,
       "quality_note": "CO stable; CH4 very stable; CH4 lower coverage"
     },
     "2020": {
       "top_regions": [
         {
           "region": "Tashkent",
-          "factor_total_proxy": 0.43088827686431536
+          "factor_total_proxy": 0.4537570360885551
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.28637884481765746
+          "factor_total_proxy": 0.27492961407889016
         },
         {
           "region": "Samarkand",
-          "factor_total_proxy": 0.10878169579564928
+          "factor_total_proxy": 0.10321414074974648
         }
       ],
-      "factor_sum_check": 1.0,
+      "factor_sum_check": 0.9999999999999999,
       "quality_note": "NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage"
     },
     "2021": {
       "top_regions": [
         {
           "region": "Tashkent",
-          "factor_total_proxy": 0.5195100392018392
+          "factor_total_proxy": 0.5195100392018391
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.23631699445812657
+          "factor_total_proxy": 0.2363169944581265
         },
         {
           "region": "Samarkand",
-          "factor_total_proxy": 0.08780423733771277
+          "factor_total_proxy": 0.08780423733771275
         }
       ],
-      "factor_sum_check": 1.0000000000000002,
+      "factor_sum_check": 0.9999999999999999,
       "quality_note": "NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage"
     },
     "2022": {
@@ -151,7 +151,7 @@
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.24097171467343562
+          "factor_total_proxy": 0.24097171467343556
         },
         {
           "region": "Samarkand",
@@ -187,14 +187,14 @@
         },
         {
           "region": "Fergana Valley",
-          "factor_total_proxy": 0.2461536015132903
+          "factor_total_proxy": 0.24615360151329035
         },
         {
           "region": "Samarkand",
           "factor_total_proxy": 0.08793337452718426
         }
       ],
-      "factor_sum_check": 1.0,
+      "factor_sum_check": 1.0000000000000002,
       "quality_note": "CO stable; CH4 very stable"
     }
   }

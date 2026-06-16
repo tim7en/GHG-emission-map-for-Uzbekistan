@@ -1,0 +1,383 @@
+{
+  "method": {
+    "type": "14-unit administrative annual proxy factors",
+    "bridge_rule": "Each annual macro-zone factor is distributed across member administrative units using the unit's 2022 static factor share within that macro-zone.",
+    "important_note": "These are annual administrative proxy weights, not direct observed emissions by province."
+  },
+  "macro_zone_membership": {
+    "Central": [
+      {
+        "region": "Navoiy viloyati",
+        "within_macro_static_share": 0.7396331184928111,
+        "mapping_basis": "nearest western-central observation anchor is Bukhara/Central"
+      },
+      {
+        "region": "Buxoro viloyati",
+        "within_macro_static_share": 0.2603668815071888,
+        "mapping_basis": "direct Central observation province"
+      }
+    ],
+    "Fergana Valley": [
+      {
+        "region": "Namangan viloyati",
+        "within_macro_static_share": 0.4033876007235655,
+        "mapping_basis": "direct Fergana Valley observation province"
+      },
+      {
+        "region": "Farg‘ona viloyati",
+        "within_macro_static_share": 0.3649070876500571,
+        "mapping_basis": "direct Fergana Valley observation province"
+      },
+      {
+        "region": "Andijon viloyati",
+        "within_macro_static_share": 0.2317053116263775,
+        "mapping_basis": "direct Fergana Valley observation province"
+      }
+    ],
+    "Karakalpakstan": [
+      {
+        "region": "Qoraqalpog‘iston respublikasi",
+        "within_macro_static_share": 1.0,
+        "mapping_basis": "direct Karakalpakstan observation province"
+      }
+    ],
+    "Kashkadarya": [
+      {
+        "region": "Qashqadaryo viloyati",
+        "within_macro_static_share": 0.588851742317089,
+        "mapping_basis": "direct Kashkadarya observation province"
+      },
+      {
+        "region": "Surxondaryo viloyati",
+        "within_macro_static_share": 0.41114825768291097,
+        "mapping_basis": "southern corridor anchored by Qarshi/Kashkadarya"
+      }
+    ],
+    "Khorezm": [
+      {
+        "region": "Xorazm viloyati",
+        "within_macro_static_share": 1.0,
+        "mapping_basis": "direct Khorezm observation province"
+      }
+    ],
+    "Samarkand": [
+      {
+        "region": "Jizzax viloyati",
+        "within_macro_static_share": 0.5578785921859863,
+        "mapping_basis": "nearest eastern-central observation anchor is Samarkand"
+      },
+      {
+        "region": "Samarqand viloyati",
+        "within_macro_static_share": 0.44212140781401366,
+        "mapping_basis": "direct Samarkand observation province"
+      }
+    ],
+    "Tashkent": [
+      {
+        "region": "Toshkent viloyati",
+        "within_macro_static_share": 0.7653682288496674,
+        "mapping_basis": "direct Tashkent observation province"
+      },
+      {
+        "region": "Sirdaryo viloyati",
+        "within_macro_static_share": 0.21287279367011502,
+        "mapping_basis": "nearest corridor observation anchor is Tashkent"
+      },
+      {
+        "region": "Toshkent shahri",
+        "within_macro_static_share": 0.02175897748021753,
+        "mapping_basis": "direct Tashkent observation province"
+      }
+    ]
+  },
+  "year_summaries": {
+    "2018": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.3332562484434781
+        },
+        {
+          "region": "Qoraqalpog‘iston respublikasi",
+          "macro_zone": "Karakalpakstan",
+          "factor_total_admin_proxy": 0.1034594701018115
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.09268896452732071
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.07951314639377319
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.07192811734520276
+        }
+      ],
+      "factor_sum_check": 0.9999999999999998,
+      "admin_unit_count": 14,
+      "year_quality_note": "CO stable; CH4 very stable; CH4 lower coverage"
+    },
+    "2019": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.3968503458389972
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.11037646795800277
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09588236157056436
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08673581749901423
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.05507470340518762
+        }
+      ],
+      "factor_sum_check": 1.0,
+      "admin_unit_count": 14,
+      "year_quality_note": "CO stable; CH4 very stable; CH4 lower coverage"
+    },
+    "2020": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.34729121903917204
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.11090319739113927
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.10032376478228192
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.09659252791964193
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.06370265190546893
+        }
+      ],
+      "factor_sum_check": 0.9999999999999998,
+      "admin_unit_count": 14,
+      "year_quality_note": "NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage"
+    },
+    "2021": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.3976164785735329
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.11058955338456647
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09532734540466778
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08623374620992963
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.05475590284352913
+        }
+      ],
+      "factor_sum_check": 0.9999999999999997,
+      "admin_unit_count": 14,
+      "year_quality_note": "NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage"
+    },
+    "2022": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.39647537798012006
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.11027217769268088
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09626894863321028
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08708552670896583
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.05529675850965892
+        }
+      ],
+      "factor_sum_check": 0.9999999999999998,
+      "admin_unit_count": 14,
+      "year_quality_note": "NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage"
+    },
+    "2023": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.395410361991126
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.10997596350409188
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09585669500493928
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.0867125993542437
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.05505996056337525
+        }
+      ],
+      "factor_sum_check": 0.9999999999999997,
+      "admin_unit_count": 14,
+      "year_quality_note": "CO stable; CH4 very stable"
+    },
+    "2024": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.39295816416616924
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.10929393074919834
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09720500182436075
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08793228660752388
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.0558344262415509
+        }
+      ],
+      "factor_sum_check": 0.9999999999999997,
+      "admin_unit_count": 14,
+      "year_quality_note": "NO2 high variability; CO stable; CH4 very stable"
+    },
+    "2025": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.39118677214395453
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.10880125133785075
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09830204634088986
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08892468032223162
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.056464567180723145
+        }
+      ],
+      "factor_sum_check": 0.9999999999999996,
+      "admin_unit_count": 14,
+      "year_quality_note": "NO2 high variability; CO stable; CH4 very stable"
+    },
+    "2026": {
+      "top_regions": [
+        {
+          "region": "Toshkent viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.3901263492023904
+        },
+        {
+          "region": "Sirdaryo viloyati",
+          "macro_zone": "Tashkent",
+          "factor_total_admin_proxy": 0.10850631461911353
+        },
+        {
+          "region": "Namangan viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.09929531072391079
+        },
+        {
+          "region": "Farg‘ona viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.08982319384278745
+        },
+        {
+          "region": "Andijon viloyati",
+          "macro_zone": "Fergana Valley",
+          "factor_total_admin_proxy": 0.057035096946592076
+        }
+      ],
+      "factor_sum_check": 0.9999999999999999,
+      "admin_unit_count": 14,
+      "year_quality_note": "CO stable; CH4 very stable"
+    }
+  }
+}

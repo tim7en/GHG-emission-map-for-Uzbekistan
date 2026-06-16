@@ -1,0 +1,46 @@
+year,rank,region,macro_zone,factor_total_admin_proxy,year_quality_note
+2018,1,Toshkent viloyati,Tashkent,0.3332562484434781,CO stable; CH4 very stable; CH4 lower coverage
+2018,2,Qoraqalpog‘iston respublikasi,Karakalpakstan,0.1034594701018115,CO stable; CH4 very stable; CH4 lower coverage
+2018,3,Sirdaryo viloyati,Tashkent,0.09268896452732071,CO stable; CH4 very stable; CH4 lower coverage
+2018,4,Namangan viloyati,Fergana Valley,0.07951314639377319,CO stable; CH4 very stable; CH4 lower coverage
+2018,5,Farg‘ona viloyati,Fergana Valley,0.07192811734520276,CO stable; CH4 very stable; CH4 lower coverage
+2019,1,Toshkent viloyati,Tashkent,0.3968503458389972,CO stable; CH4 very stable; CH4 lower coverage
+2019,2,Sirdaryo viloyati,Tashkent,0.11037646795800277,CO stable; CH4 very stable; CH4 lower coverage
+2019,3,Namangan viloyati,Fergana Valley,0.09588236157056436,CO stable; CH4 very stable; CH4 lower coverage
+2019,4,Farg‘ona viloyati,Fergana Valley,0.08673581749901423,CO stable; CH4 very stable; CH4 lower coverage
+2019,5,Andijon viloyati,Fergana Valley,0.05507470340518762,CO stable; CH4 very stable; CH4 lower coverage
+2020,1,Toshkent viloyati,Tashkent,0.34729121903917204,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,2,Namangan viloyati,Fergana Valley,0.11090319739113927,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,3,Farg‘ona viloyati,Fergana Valley,0.10032376478228192,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,4,Sirdaryo viloyati,Tashkent,0.09659252791964193,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2020,5,Andijon viloyati,Fergana Valley,0.06370265190546893,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,1,Toshkent viloyati,Tashkent,0.3976164785735329,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,2,Sirdaryo viloyati,Tashkent,0.11058955338456647,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,3,Namangan viloyati,Fergana Valley,0.09532734540466778,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,4,Farg‘ona viloyati,Fergana Valley,0.08623374620992963,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2021,5,Andijon viloyati,Fergana Valley,0.05475590284352913,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2022,1,Toshkent viloyati,Tashkent,0.39647537798012006,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2022,2,Sirdaryo viloyati,Tashkent,0.11027217769268088,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2022,3,Namangan viloyati,Fergana Valley,0.09626894863321028,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2022,4,Farg‘ona viloyati,Fergana Valley,0.08708552670896583,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2022,5,Andijon viloyati,Fergana Valley,0.05529675850965892,NO2 high variability; CO stable; CH4 very stable; CH4 lower coverage
+2023,1,Toshkent viloyati,Tashkent,0.395410361991126,CO stable; CH4 very stable
+2023,2,Sirdaryo viloyati,Tashkent,0.10997596350409188,CO stable; CH4 very stable
+2023,3,Namangan viloyati,Fergana Valley,0.09585669500493928,CO stable; CH4 very stable
+2023,4,Farg‘ona viloyati,Fergana Valley,0.0867125993542437,CO stable; CH4 very stable
+2023,5,Andijon viloyati,Fergana Valley,0.05505996056337525,CO stable; CH4 very stable
+2024,1,Toshkent viloyati,Tashkent,0.39295816416616924,NO2 high variability; CO stable; CH4 very stable
+2024,2,Sirdaryo viloyati,Tashkent,0.10929393074919834,NO2 high variability; CO stable; CH4 very stable
+2024,3,Namangan viloyati,Fergana Valley,0.09720500182436075,NO2 high variability; CO stable; CH4 very stable
+2024,4,Farg‘ona viloyati,Fergana Valley,0.08793228660752388,NO2 high variability; CO stable; CH4 very stable
+2024,5,Andijon viloyati,Fergana Valley,0.0558344262415509,NO2 high variability; CO stable; CH4 very stable
+2025,1,Toshkent viloyati,Tashkent,0.39118677214395453,NO2 high variability; CO stable; CH4 very stable
+2025,2,Sirdaryo viloyati,Tashkent,0.10880125133785075,NO2 high variability; CO stable; CH4 very stable
+2025,3,Namangan viloyati,Fergana Valley,0.09830204634088986,NO2 high variability; CO stable; CH4 very stable
+2025,4,Farg‘ona viloyati,Fergana Valley,0.08892468032223162,NO2 high variability; CO stable; CH4 very stable
+2025,5,Andijon viloyati,Fergana Valley,0.056464567180723145,NO2 high variability; CO stable; CH4 very stable
+2026,1,Toshkent viloyati,Tashkent,0.3901263492023904,CO stable; CH4 very stable
+2026,2,Sirdaryo viloyati,Tashkent,0.10850631461911353,CO stable; CH4 very stable
+2026,3,Namangan viloyati,Fergana Valley,0.09929531072391079,CO stable; CH4 very stable
+2026,4,Farg‘ona viloyati,Fergana Valley,0.08982319384278745,CO stable; CH4 very stable
+2026,5,Andijon viloyati,Fergana Valley,0.057035096946592076,CO stable; CH4 very stable

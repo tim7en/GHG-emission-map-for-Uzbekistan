@@ -113,6 +113,9 @@ def pivot_factors(region_year_gas: pd.DataFrame, uncertainty: pd.DataFrame) -> p
     result["factor_no2_proxy"] = result["factor_no2_proxy"].fillna(result["factor_co_proxy"])
     result["factor_ch4_proxy"] = result["factor_ch4_proxy"].fillna(result["factor_co_proxy"])
 
+    for column in ["factor_co_proxy", "factor_no2_proxy", "factor_ch4_proxy"]:
+        result[column] = result[column] / result.groupby("year")[column].transform("sum")
+
     result["factor_combustion_proxy"] = (
         result["factor_co_proxy"] * CO_PROXY_WEIGHT
         + result["factor_no2_proxy"] * NO2_PROXY_WEIGHT
