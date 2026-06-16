@@ -1,0 +1,168 @@
+{
+  "observation_window": {
+    "start": "2018-06-15",
+    "end": "2026-05-15",
+    "total_measurements": 2477,
+    "cities": 10
+  },
+  "gas_summaries": {
+    "CH4": {
+      "latest_year": 2026,
+      "latest_metrics": {
+        "gas": "CH4",
+        "year": 2026,
+        "measurement_count": 45,
+        "cities_covered": 10,
+        "months_covered": 5,
+        "expected_months_in_window": 5,
+        "completeness_percent": 90.0,
+        "mean_concentration": 1924.2666912512373,
+        "std_concentration": 15.82451240948606,
+        "temporal_cv_percent": 0.705097427898896,
+        "spatial_cv_percent": 0.42209952986108146,
+        "monthly_cv_percent": 0.29021248023180024,
+        "running_interannual_cv_percent": 0.9921480769758259,
+        "ci95_lower": 1919.6430923513396,
+        "ci95_upper": 1928.8902901511349
+      },
+      "mean_temporal_cv_percent": 0.7620740566406682,
+      "mean_spatial_cv_percent": 0.384582539362757,
+      "mean_monthly_cv_percent": 0.6429414439492204,
+      "uncertainty_trend_per_year": {
+        "temporal_cv_percent": 0.01979736336944783,
+        "spatial_cv_percent": -0.009762364347024769,
+        "monthly_cv_percent": -0.004087437265429587,
+        "running_interannual_cv_percent": 0.07252681751686345
+      }
+    },
+    "CO": {
+      "latest_year": 2026,
+      "latest_metrics": {
+        "gas": "CO",
+        "year": 2026,
+        "measurement_count": 50,
+        "cities_covered": 10,
+        "months_covered": 5,
+        "expected_months_in_window": 5,
+        "completeness_percent": 100.0,
+        "mean_concentration": 0.03298314097397678,
+        "std_concentration": 0.004256759261253494,
+        "temporal_cv_percent": 9.080022827562113,
+        "spatial_cv_percent": 7.638177604376908,
+        "monthly_cv_percent": 8.465617258885489,
+        "running_interannual_cv_percent": 3.1974259813848334,
+        "ci95_lower": 0.031803227504888475,
+        "ci95_upper": 0.03416305444306509
+      },
+      "mean_temporal_cv_percent": 8.802263121391249,
+      "mean_spatial_cv_percent": 5.615956354934557,
+      "mean_monthly_cv_percent": 7.911150739680407,
+      "uncertainty_trend_per_year": {
+        "temporal_cv_percent": 0.16764052737100021,
+        "spatial_cv_percent": 0.2894248150849452,
+        "monthly_cv_percent": 0.12970540635801248,
+        "running_interannual_cv_percent": 0.07632460431770953
+      }
+    },
+    "NO2": {
+      "latest_year": 2026,
+      "latest_metrics": {
+        "gas": "NO2",
+        "year": 2026,
+        "measurement_count": 50,
+        "cities_covered": 10,
+        "months_covered": 5,
+        "expected_months_in_window": 5,
+        "completeness_percent": 100.0,
+        "mean_concentration": 9.314294058813725e-05,
+        "std_concentration": 7.627366132348096e-05,
+        "temporal_cv_percent": 34.40046401687869,
+        "spatial_cv_percent": 73.05231686199288,
+        "monthly_cv_percent": 30.268317353813927,
+        "running_interannual_cv_percent": 12.854731387232698,
+        "ci95_lower": 7.200096031421553e-05,
+        "ci95_upper": 0.00011428492086205898
+      },
+      "mean_temporal_cv_percent": 42.58745884421324,
+      "mean_spatial_cv_percent": 73.9669435579636,
+      "mean_monthly_cv_percent": 39.339180813602965,
+      "uncertainty_trend_per_year": {
+        "temporal_cv_percent": -0.28087920947184514,
+        "spatial_cv_percent": -0.028147742242848994,
+        "monthly_cv_percent": -0.21965787467215786,
+        "running_interannual_cv_percent": 1.595147899837364
+      }
+    }
+  },
+  "reference_inventory_uncertainty_2022": {
+    "CH4": {
+      "weighted_uncertainty_percent": 8.411613983526061,
+      "total_emissions_gg": 59080.349,
+      "sector_count": 6,
+      "uncertainty_range": {
+        "min": 0.9,
+        "max": 11.1,
+        "mean": 4.683333333333334
+      },
+      "sector_contributions": {
+        "Agriculture": {
+          "emissions_2022_co2_eq": 25299.117,
+          "uncertainty_percent": 6.0
+        },
+        "Energy": {
+          "emissions_2022_co2_eq": 24072.943,
+          "uncertainty_percent": 5.75
+        },
+        "Waste": {
+          "emissions_2022_co2_eq": 9708.289,
+          "uncertainty_percent": 2.3
+        }
+      }
+    },
+    "CO2": {
+      "weighted_uncertainty_percent": 8.824614011328894,
+      "total_emissions_gg": 130075.385,
+      "sector_count": 13,
+      "uncertainty_range": {
+        "min": 0.5,
+        "max": 14.5,
+        "mean": 4.76923076923077
+      },
+      "sector_contributions": {
+        "Energy": {
+          "emissions_2022_co2_eq": 74081.0,
+          "uncertainty_percent": 7.08
+        },
+        "Industry": {
+          "emissions_2022_co2_eq": 39978.762,
+          "uncertainty_percent": 3.1666666666666665
+        },
+        "Transport": {
+          "emissions_2022_co2_eq": 16015.623,
+          "uncertainty_percent": 3.8
+        }
+      }
+    },
+    "N2O": {
+      "weighted_uncertainty_percent": 1.7996713206376083,
+      "total_emissions_gg": 10991.259,
+      "sector_count": 4,
+      "uncertainty_range": {
+        "min": 0.8,
+        "max": 2.7,
+        "mean": 1.325
+      },
+      "sector_contributions": {
+        "Agriculture": {
+          "emissions_2022_co2_eq": 9331.83,
+          "uncertainty_percent": 1.5
+        },
+        "Industry": {
+          "emissions_2022_co2_eq": 1659.429,
+          "uncertainty_percent": 0.8
+        }
+      }
+    }
+  },
+  "note_on_regional_factors": "Current regional emission factors in this repo are static 2022 factors; they are not year-specific unless annual spatial emission rasters are generated."
+}

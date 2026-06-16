@@ -1,0 +1,235 @@
+{
+  "method": "Region shares from 2 km gas-specific emission rasters, weighted by national gas totals",
+  "boundary_path": "D:\\dev\\GHG-emission-map-for-Uzbekistan\\complete_uzbekistan_cadastral_data\\VILOYAT_BORDER_2023_zoom_1\\VILOYAT_BORDER_2023_zoom_1_qgis_combined.geojson",
+  "raster_paths": {
+    "CO2": "D:\\dev\\GHG-emission-map-for-Uzbekistan\\GHG-emission-map-for-Uzbekistan\\outputs\\country_wide_ghg_analysis\\geotiff_maps\\UZB_GHG_CO2_2022_2km_001.tif",
+    "CH4": "D:\\dev\\GHG-emission-map-for-Uzbekistan\\GHG-emission-map-for-Uzbekistan\\outputs\\country_wide_ghg_analysis\\geotiff_maps\\UZB_GHG_CH2_2022_2km_001.tif",
+    "N2O": "D:\\dev\\GHG-emission-map-for-Uzbekistan\\GHG-emission-map-for-Uzbekistan\\outputs\\country_wide_ghg_analysis\\geotiff_maps\\UZB_GHG_N2O_2022_2km_001.tif"
+  },
+  "national_totals_gg_2022": {
+    "CO2": 120990.86499999999,
+    "CH4": 59080.349,
+    "N2O": 11021.259
+  },
+  "country_total_gg_2022": 191092.47299999997,
+  "country_total_input": null,
+  "notes": [
+    "Use factor_total * country_total to estimate approximate regional total emissions.",
+    "Gas-specific shares are derived from country-wide 2 km rasters in outputs/country_wide_ghg_analysis/geotiff_maps.",
+    "The CH4 raster is stored as CH2 in the source filenames and analysis summary; this script remaps it to CH4."
+  ],
+  "raster_metadata": {
+    "CO2": {
+      "crs": "EPSG:4326",
+      "shape": [
+        487,
+        964
+      ],
+      "resolution": [
+        0.01796630568239043,
+        0.01796630568239043
+      ],
+      "raster_sum": 34125.89057478787,
+      "regional_sum": 10924.881934778492,
+      "regional_coverage_ratio": 0.32013470566683966
+    },
+    "CH4": {
+      "crs": "EPSG:4326",
+      "shape": [
+        487,
+        964
+      ],
+      "resolution": [
+        0.01796630568239043,
+        0.01796630568239043
+      ],
+      "raster_sum": 15500.00813062577,
+      "regional_sum": 4962.090540731504,
+      "regional_coverage_ratio": 0.32013470566683977
+    },
+    "N2O": {
+      "crs": "EPSG:4326",
+      "shape": [
+        487,
+        964
+      ],
+      "resolution": [
+        0.01796630568239043,
+        0.01796630568239043
+      ],
+      "raster_sum": 2891.4792651230314,
+      "regional_sum": 925.6628634819328,
+      "regional_coverage_ratio": 0.3201347056668401
+    }
+  },
+  "regions": [
+    {
+      "region": "Qoraqalpog‘iston respublikasi",
+      "factor_total": 0.38025057720585803,
+      "factor_co2": 0.3802505772058579,
+      "factor_ch4": 0.3802505772058579,
+      "factor_n2o": 0.3802505772058579,
+      "estimated_total_gg_2022": 72663.02315794483,
+      "estimated_co2_gg_2022": 46006.84625288603,
+      "estimated_ch4_gg_2022": 22465.336808773533,
+      "estimated_n2o_gg_2022": 4190.840096285257,
+      "boundary_feature_count": 16
+    },
+    {
+      "region": "Navoiy viloyati",
+      "factor_total": 0.24815527003919013,
+      "factor_co2": 0.2481552700391901,
+      "factor_ch4": 0.24815527003919005,
+      "factor_n2o": 0.24815527003919008,
+      "estimated_total_gg_2022": 47420.604239771645,
+      "estimated_co2_gg_2022": 30024.520776350193,
+      "estimated_ch4_gg_2022": 14661.099960104593,
+      "estimated_n2o_gg_2022": 2734.9835033168542,
+      "boundary_feature_count": 20
+    },
+    {
+      "region": "Buxoro viloyati",
+      "factor_total": 0.08735603121901886,
+      "factor_co2": 0.08735603121901887,
+      "factor_ch4": 0.08735603121901883,
+      "factor_n2o": 0.08735603121901885,
+      "estimated_total_gg_2022": 16693.080037107517,
+      "estimated_co2_gg_2022": 10569.281780156098,
+      "estimated_ch4_gg_2022": 5161.024811674528,
+      "estimated_n2o_gg_2022": 962.7734452768924,
+      "boundary_feature_count": 14
+    },
+    {
+      "region": "Qashqadaryo viloyati",
+      "factor_total": 0.06094096198758427,
+      "factor_co2": 0.06094096198758427,
+      "factor_ch4": 0.060940961987584245,
+      "factor_n2o": 0.060940961987584245,
+      "estimated_total_gg_2022": 11645.359133206472,
+      "estimated_co2_gg_2022": 7373.29970480994,
+      "estimated_ch4_gg_2022": 3600.413302622211,
+      "estimated_n2o_gg_2022": 671.6461257743208,
+      "boundary_feature_count": 20
+    },
+    {
+      "region": "Jizzax viloyati",
+      "factor_total": 0.04598351220615732,
+      "factor_co2": 0.04598351220615732,
+      "factor_ch4": 0.0459835122061573,
+      "factor_n2o": 0.045983512206157304,
+      "estimated_total_gg_2022": 8787.103064700286,
+      "estimated_co2_gg_2022": 5563.584917561032,
+      "estimated_ch4_gg_2022": 2716.721949385533,
+      "estimated_n2o_gg_2022": 506.79619775372106,
+      "boundary_feature_count": 24
+    },
+    {
+      "region": "Surxondaryo viloyati",
+      "factor_total": 0.04255021857305399,
+      "factor_co2": 0.04255021857305399,
+      "factor_ch4": 0.042550218573053966,
+      "factor_n2o": 0.04255021857305396,
+      "estimated_total_gg_2022": 8131.026493815416,
+      "estimated_co2_gg_2022": 5148.187751092867,
+      "estimated_ch4_gg_2022": 2513.8817633223102,
+      "estimated_n2o_gg_2022": 468.9569794002381,
+      "boundary_feature_count": 16
+    },
+    {
+      "region": "Samarqand viloyati",
+      "factor_total": 0.03644214966764921,
+      "factor_co2": 0.0364421496676492,
+      "factor_ch4": 0.036442149667649186,
+      "factor_n2o": 0.03644214966764919,
+      "estimated_total_gg_2022": 6963.8205014272135,
+      "estimated_co2_gg_2022": 4409.167210748339,
+      "estimated_ch4_gg_2022": 2153.014920674948,
+      "estimated_n2o_gg_2022": 401.6383700039257,
+      "boundary_feature_count": 12
+    },
+    {
+      "region": "Toshkent viloyati",
+      "factor_total": 0.033467959252925956,
+      "factor_co2": 0.03346795925292596,
+      "factor_ch4": 0.03346795925292594,
+      "factor_n2o": 0.03346795925292594,
+      "estimated_total_gg_2022": 6395.475099904853,
+      "estimated_co2_gg_2022": 4049.317339796266,
+      "estimated_ch4_gg_2022": 1977.298712980644,
+      "estimated_n2o_gg_2022": 368.8590471279433,
+      "boundary_feature_count": 16
+    },
+    {
+      "region": "Namangan viloyati",
+      "factor_total": 0.01632145209690405,
+      "factor_co2": 0.01632145209690405,
+      "factor_ch4": 0.016321452096904044,
+      "factor_n2o": 0.016321452096904047,
+      "estimated_total_gg_2022": 3118.90664414843,
+      "estimated_co2_gg_2022": 1974.7466072604848,
+      "estimated_ch4_gg_2022": 964.2770860718728,
+      "estimated_n2o_gg_2022": 179.8829508160726,
+      "boundary_feature_count": 12
+    },
+    {
+      "region": "Farg‘ona viloyati",
+      "factor_total": 0.014764493356310674,
+      "factor_co2": 0.014764493356310675,
+      "factor_ch4": 0.01476449335631067,
+      "factor_n2o": 0.014764493356310672,
+      "estimated_total_gg_2022": 2821.3835480494763,
+      "estimated_co2_gg_2022": 1786.3688224667817,
+      "estimated_ch4_gg_2022": 872.2914202990157,
+      "estimated_n2o_gg_2022": 162.7233052836792,
+      "boundary_feature_count": 6
+    },
+    {
+      "region": "Xorazm viloyati",
+      "factor_total": 0.014132394722309092,
+      "factor_co2": 0.014132394722309092,
+      "factor_ch4": 0.014132394722309087,
+      "factor_n2o": 0.014132394722309085,
+      "estimated_total_gg_2022": 2700.5942568981923,
+      "estimated_co2_gg_2022": 1709.8906619736117,
+      "estimated_ch4_gg_2022": 834.946812399779,
+      "estimated_n2o_gg_2022": 155.7567825248015,
+      "boundary_feature_count": 16
+    },
+    {
+      "region": "Andijon viloyati",
+      "factor_total": 0.009375020792718224,
+      "factor_co2": 0.009375020792718224,
+      "factor_ch4": 0.009375020792718222,
+      "factor_n2o": 0.009375020792718222,
+      "estimated_total_gg_2022": 1791.4959077069457,
+      "estimated_co2_gg_2022": 1134.2918751039635,
+      "estimated_ch4_gg_2022": 553.8795003160492,
+      "estimated_n2o_gg_2022": 103.32453228693284,
+      "boundary_feature_count": 14
+    },
+    {
+      "region": "Sirdaryo viloyati",
+      "factor_total": 0.009308484094402268,
+      "factor_co2": 0.00930848409440227,
+      "factor_ch4": 0.009308484094402266,
+      "factor_n2o": 0.009308484094402264,
+      "estimated_total_gg_2022": 1778.7812454804946,
+      "estimated_co2_gg_2022": 1126.2415424204721,
+      "estimated_ch4_gg_2022": 549.9484889582349,
+      "estimated_n2o_gg_2022": 102.5912141017878,
+      "boundary_feature_count": 12
+    },
+    {
+      "region": "Toshkent shahri",
+      "factor_total": 0.0009514747859181731,
+      "factor_co2": 0.0009514747859181732,
+      "factor_ch4": 0.0009514747859181729,
+      "factor_n2o": 0.0009514747859181732,
+      "estimated_total_gg_2022": 181.81966983824924,
+      "estimated_co2_gg_2022": 115.11975737392959,
+      "estimated_ch4_gg_2022": 56.21346241674594,
+      "estimated_n2o_gg_2022": 10.48645004757374,
+      "boundary_feature_count": 6
+    }
+  ]
+}
