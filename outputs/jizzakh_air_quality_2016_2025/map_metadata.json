@@ -1,0 +1,65 @@
+[
+  {
+    "pollutant": "NO2",
+    "file": "maps\\NO2_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 1.82249687292237e-05,
+    "visualization_max_p98": 5.258100990380022e-05,
+    "unit": "mol/m^2",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "CO",
+    "file": "maps\\CO_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 0.022758974842654822,
+    "visualization_max_p98": 0.033051489468153145,
+    "unit": "mol/m^2",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "SO2",
+    "file": "maps\\SO2_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 4.515926780757449e-05,
+    "visualization_max_p98": 0.0002987290049453817,
+    "unit": "mol/m^2",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "O3",
+    "file": "maps\\O3_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 0.13705087136604965,
+    "visualization_max_p98": 0.1415242831258486,
+    "unit": "mol/m^2",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "HCHO",
+    "file": "maps\\HCHO_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 8.764934878675382e-05,
+    "visualization_max_p98": 0.00013091571583933212,
+    "unit": "mol/m^2",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "CH4",
+    "file": "maps\\CH4_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": 1859.3956707965046,
+    "visualization_max_p98": 1941.4120555665309,
+    "unit": "ppb",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  },
+  {
+    "pollutant": "AER_AI",
+    "file": "maps\\AER_AI_mean_2025_jizzakh_region.png",
+    "visualization_min_p2": -0.5350318061485965,
+    "visualization_max_p98": 0.2700411518600006,
+    "unit": "dimensionless",
+    "period": "2025",
+    "note": "Annual mean; transparent pixels are outside GAUL region boundary."
+  }
+]
