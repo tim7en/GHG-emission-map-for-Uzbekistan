@@ -207,15 +207,55 @@ def download_maps(composites, region, metadata):
 
 
 def make_charts(df):
-    for code, group in df[df["status"] == "available"].groupby("pollutant"):
-        fig, ax = plt.subplots(figsize=(9, 5))
+    chart_data = df.copy()
+    chart_data["year"] = pd.to_numeric(chart_data["year"], errors="coerce")
+    chart_data["mean"] = pd.to_numeric(chart_data["mean"], errors="coerce")
+    for code, group in chart_data.groupby("pollutant"):
+        fig, ax = plt.subplots(figsize=(11, 6))
+        plotted = 0
         for area, values in group.groupby("area"):
-            ax.plot(values["year"], values["mean"], marker="o", label=area)
-        ax.set(title=f"{code}: annual satellite-column mean", xlabel="Year", ylabel=f"{code} ({group['unit'].iloc[0]})")
-        ax.legend(fontsize=8)
+            values = values.sort_values("year")
+            valid = values[(values["status"] == "available") & values["mean"].notna()]
+            if valid.empty:
+                continue
+            ax.plot(valid["year"].to_numpy(), valid["mean"].to_numpy(),
+                    linewidth=2.2, marker="o", markersize=6, label=area)
+            plotted += 1
+        if plotted == 0:
+            raise ValueError(f"No valid annual values available to plot for {code}")
+        for year in range(START_YEAR, END_YEAR + 1):
+            year_rows = group[group["year"] == year]
+            if year_rows.empty or not year_rows["status"].eq("available").any():
+                ax.axvspan(year - 0.48, year + 0.48, color="0.88", alpha=0.8, zorder=0)
+        ax.set_title(f"{code}: annual satellite-column mean ({START_YEAR}–{END_YEAR})", fontsize=14)
+        ax.set_xlabel("Calendar year")
+        ax.set_ylabel(f"{code} ({group['unit'].iloc[0]})")
+        ax.set_xlim(START_YEAR - 0.5, END_YEAR + 0.5)
+        ax.set_xticks(range(START_YEAR, END_YEAR + 1))
+        ax.tick_params(axis="x", rotation=45)
+        ax.grid(True, alpha=0.3)
+        ax.legend(fontsize=9, loc="best")
+        ax.text(0.01, 0.02, "Grey years: unavailable or no valid pixels",
+                transform=ax.transAxes, fontsize=8, color="0.35")
+        if group["unit"].iloc[0] == "mol/m^2":
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(-3, 3))
         fig.tight_layout()
         fig.savefig(MAPS / f"{code}_annual_trend_city_region.png", dpi=180)
         plt.close(fig)
+
+    keys = ["year", "pollutant", "unit"]
+    trend_table = chart_data[keys].drop_duplicates()
+    for area_name, prefix in [("Jizzakh City (10 km radius)", "city"),
+                              ("Jizzakh Region", "region")]:
+        area_table = chart_data[chart_data["area"] == area_name][
+            keys + ["mean", "spatial_stddev", "status", "image_count"]
+        ].rename(columns={
+            "mean": f"{prefix}_mean", "spatial_stddev": f"{prefix}_spatial_stddev",
+            "status": f"{prefix}_status", "image_count": f"{prefix}_image_count",
+        })
+        trend_table = trend_table.merge(area_table, on=keys, how="left")
+    trend_table = trend_table.sort_values(["pollutant", "year"])
+    trend_table.to_csv(OUT / "annual_trends_table.csv", index=False)
 
 
 def write_report(df, metadata, map_records, gaul_name):
@@ -255,6 +295,7 @@ def write_report(df, metadata, map_records, gaul_name):
         "- Ground-monitor validation, meteorological normalization, seasonal analysis and uncertainty-aware trend tests are recommended before policy use.", "",
         "## Output inventory", "",
         "- `annual_city_region_statistics.csv`: annual values, image counts, and explicit no-data rows.",
+        "- `annual_trends_table.csv`: one row per pollutant and year with paired city/region values, uncertainty fields, image counts, and quality status.",
         "- `period_summary.csv`: compact city/region summary.",
         "- `satellite_metadata.json`: collection, band, instrument, units, projection and processing metadata.",
         "- `maps/`: long-period spatial maps and annual city-versus-region trend figures.",

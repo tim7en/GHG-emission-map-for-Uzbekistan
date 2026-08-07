@@ -1,6 +1,6 @@
 # Jizzakh air-quality satellite analysis, 2016–2025
 
-Generated: 2026-08-07T16:37:12+05:00
+Generated: 2026-08-07T16:48:52+05:00
 
 ## Executive summary
 
@@ -61,6 +61,7 @@ No quality-assurance band was applied because the Earth Engine Level-3 ingestion
 ## Output inventory
 
 - `annual_city_region_statistics.csv`: annual values, image counts, and explicit no-data rows.
+- `annual_trends_table.csv`: one row per pollutant and year with paired city/region values, uncertainty fields, image counts, and quality status.
 - `period_summary.csv`: compact city/region summary.
 - `satellite_metadata.json`: collection, band, instrument, units, projection and processing metadata.
 - `maps/`: long-period spatial maps and annual city-versus-region trend figures.
